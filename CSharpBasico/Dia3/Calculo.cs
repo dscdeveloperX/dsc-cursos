@@ -11,8 +11,8 @@ namespace CSharpBasico.Dia3
         public double CalculoIess (double miSueldo)
         {
             double porcentaje = 10;
-            double respuesta = (miSueldo / 100 * porcentaje);
-            return respuesta;
+            //double respuesta = (miSueldo / 100 * porcentaje);
+            return (miSueldo / 100 * porcentaje);
 
         }
 
