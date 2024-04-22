@@ -1,0 +1,14 @@
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\bin\Debug\CSharpBasico.exe.config
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\bin\Debug\CSharpBasico.exe
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\bin\Debug\CSharpBasico.pdb
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.csproj.AssemblyReference.cache
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.Dia1.CrudBasico.resources
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.Properties.Resources.resources
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.csproj.GenerateResource.cache
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.csproj.CoreCompileInputs.cache
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.exe
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.pdb
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.Dia1.pruebaBasica.resources
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.Dia1.pruebaBasica2.resources
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.Dia2.FormPrincipal.resources
+X:\DSC\DARWINET\slnAlasBinarias\CSharpBasico\obj\Debug\CSharpBasico.Dia3.FormularioPrincipal.resources
