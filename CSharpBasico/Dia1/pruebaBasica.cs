@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CSharpBasico.Dia3.darwin;
 
 namespace CSharpBasico.Dia1
 {
@@ -22,6 +23,10 @@ namespace CSharpBasico.Dia1
         private void btnEnviarSaludo_Click(object sender, EventArgs e)
         {
             lblSaludo.Text = tbxNombre.Text;
+
+            EjemploCampo clase1 = new EjemploCampo();
+
+
             
         }
 
