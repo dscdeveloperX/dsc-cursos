@@ -36,6 +36,8 @@ namespace CSharpBasico.Dia3
             this.label2 = new System.Windows.Forms.Label();
             this.lblIess = new System.Windows.Forms.Label();
             this.btnDatosPersonales = new System.Windows.Forms.Button();
+            this.btnAnimal = new System.Windows.Forms.Button();
+            this.btnEjemploCampo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConsultar
@@ -101,11 +103,33 @@ namespace CSharpBasico.Dia3
             this.btnDatosPersonales.UseVisualStyleBackColor = true;
             this.btnDatosPersonales.Click += new System.EventHandler(this.btnDatosPersonales_Click);
             // 
+            // btnAnimal
+            // 
+            this.btnAnimal.Location = new System.Drawing.Point(125, 259);
+            this.btnAnimal.Name = "btnAnimal";
+            this.btnAnimal.Size = new System.Drawing.Size(75, 23);
+            this.btnAnimal.TabIndex = 7;
+            this.btnAnimal.Text = "Animal";
+            this.btnAnimal.UseVisualStyleBackColor = true;
+            this.btnAnimal.Click += new System.EventHandler(this.btnAnimal_Click);
+            // 
+            // btnEjemploCampo
+            // 
+            this.btnEjemploCampo.Location = new System.Drawing.Point(206, 259);
+            this.btnEjemploCampo.Name = "btnEjemploCampo";
+            this.btnEjemploCampo.Size = new System.Drawing.Size(122, 23);
+            this.btnEjemploCampo.TabIndex = 8;
+            this.btnEjemploCampo.Text = "Ejemplo Campos";
+            this.btnEjemploCampo.UseVisualStyleBackColor = true;
+            this.btnEjemploCampo.Click += new System.EventHandler(this.btnEjemploCampo_Click);
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 300);
+            this.Controls.Add(this.btnEjemploCampo);
+            this.Controls.Add(this.btnAnimal);
             this.Controls.Add(this.btnDatosPersonales);
             this.Controls.Add(this.lblIess);
             this.Controls.Add(this.label2);
@@ -129,5 +153,7 @@ namespace CSharpBasico.Dia3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblIess;
         private System.Windows.Forms.Button btnDatosPersonales;
+        private System.Windows.Forms.Button btnAnimal;
+        private System.Windows.Forms.Button btnEjemploCampo;
     }
 }

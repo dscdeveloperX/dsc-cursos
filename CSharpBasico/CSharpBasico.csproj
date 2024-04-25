@@ -71,6 +71,8 @@
     <Compile Include="Dia2\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dia3\EjemploCampo.cs" />
+    <Compile Include="Dia3\F1.cs" />
     <Compile Include="Dia3\Calculo.cs" />
     <Compile Include="Dia3\DatosPersonales.cs" />
     <Compile Include="Dia3\FormularioPrincipal.cs">
