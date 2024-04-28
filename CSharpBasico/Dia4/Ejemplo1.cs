@@ -31,10 +31,13 @@ namespace CSharpBasico.Dia4
 
 
 
-    public class Ejemplo2 { 
-    
-        public string Cedula { get; set; }
-        
+    public class Ejemplo2 {
+
+        //a esta propiedad le agregamos un valor inicial de 777777777
+        //en la clase ejemplo1 este valor inicial se agrega usando el constructor
+        public string Cedula { get; set; } = "777777777";
+
+
 
     }
 
