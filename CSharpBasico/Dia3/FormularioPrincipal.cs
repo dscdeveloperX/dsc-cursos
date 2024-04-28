@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CSharpBasico.Dia33;
+using CSharpBasico.Dia3;
 
 namespace CSharpBasico.Dia3
 {
@@ -75,8 +75,7 @@ namespace CSharpBasico.Dia3
         private void btnEjemploCampo_Click(object sender, EventArgs e)
         {
             //creamos una nueva instancia del objeto de clase ejemplocampo
-            EjemploCampo clase1 = new EjemploCampo();
-            clase1.Hola();
+            
             //clase1.Adios();
             
             
