@@ -27,3 +27,4 @@ X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.csproj.Core
 X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.exe
 X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.pdb
 X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia4.FormularioPropiedades.resources
+X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia5.FormularioDia5.resources
