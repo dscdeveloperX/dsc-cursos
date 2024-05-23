@@ -30,3 +30,5 @@ X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia4.Formul
 X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia5.FormularioDia5.resources
 X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia6.FormularioDia6.resources
 X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia7.FormularioDia7.resources
+X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Form1.resources
+X:\DSC\DARWINET\darwincitoPrueba\CSharpBasico\obj\Debug\CSharpBasico.Dia8.FormDia8.resources

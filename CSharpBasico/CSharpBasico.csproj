@@ -110,6 +110,12 @@
     <Compile Include="Dia7\FormularioDia7.Designer.cs">
       <DependentUpon>FormularioDia7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dia8\FormDia8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dia8\FormDia8.Designer.cs">
+      <DependentUpon>FormDia8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dia7\FormularioDia7.resx">
       <DependentUpon>FormularioDia7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dia8\FormDia8.resx">
+      <DependentUpon>FormDia8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
