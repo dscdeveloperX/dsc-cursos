@@ -16,7 +16,7 @@ namespace CSharpBasico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dia7.FormularioDia7());
+            Application.Run(new Dia8.FormDia8());
         }
     }
 }

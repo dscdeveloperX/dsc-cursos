@@ -1,7 +1,7 @@
 ﻿
-namespace CSharpBasico
+namespace CSharpBasico.Dia8
 {
-    partial class Form1
+    partial class FormDia8
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,44 @@ namespace CSharpBasico
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSelect = new System.Windows.Forms.Button();
+            this.btnSelect1 = new System.Windows.Forms.Button();
+            this.tbxTipo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnSelect
+            // btnSelect1
             // 
-            this.btnSelect.Location = new System.Drawing.Point(42, 29);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(75, 23);
-            this.btnSelect.TabIndex = 0;
-            this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            this.btnSelect1.Location = new System.Drawing.Point(59, 38);
+            this.btnSelect1.Name = "btnSelect1";
+            this.btnSelect1.Size = new System.Drawing.Size(75, 23);
+            this.btnSelect1.TabIndex = 0;
+            this.btnSelect1.Text = "Select-1";
+            this.btnSelect1.UseVisualStyleBackColor = true;
+            this.btnSelect1.Click += new System.EventHandler(this.btnSelect1_Click);
             // 
-            // Form1
+            // tbxTipo
+            // 
+            this.tbxTipo.Location = new System.Drawing.Point(217, 38);
+            this.tbxTipo.Name = "tbxTipo";
+            this.tbxTipo.Size = new System.Drawing.Size(100, 20);
+            this.tbxTipo.TabIndex = 1;
+            // 
+            // FormDia8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSelect);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.tbxTipo);
+            this.Controls.Add(this.btnSelect1);
+            this.Name = "FormDia8";
+            this.Text = "FormDia8";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Button btnSelect1;
+        private System.Windows.Forms.TextBox tbxTipo;
     }
 }
-
