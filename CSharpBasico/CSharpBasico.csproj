@@ -116,6 +116,7 @@
     <Compile Include="Dia8\FormDia8.Designer.cs">
       <DependentUpon>FormDia8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dia8\Persona.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
