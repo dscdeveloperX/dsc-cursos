@@ -31,6 +31,8 @@ namespace CSharpBasico.Dia8
         {
             this.btnSelect1 = new System.Windows.Forms.Button();
             this.tbxTipo = new System.Windows.Forms.TextBox();
+            this.GridPersona = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.GridPersona)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelect1
@@ -50,15 +52,25 @@ namespace CSharpBasico.Dia8
             this.tbxTipo.Size = new System.Drawing.Size(100, 20);
             this.tbxTipo.TabIndex = 1;
             // 
+            // GridPersona
+            // 
+            this.GridPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridPersona.Location = new System.Drawing.Point(59, 301);
+            this.GridPersona.Name = "GridPersona";
+            this.GridPersona.Size = new System.Drawing.Size(647, 150);
+            this.GridPersona.TabIndex = 2;
+            // 
             // FormDia8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GridPersona);
             this.Controls.Add(this.tbxTipo);
             this.Controls.Add(this.btnSelect1);
             this.Name = "FormDia8";
             this.Text = "FormDia8";
+            ((System.ComponentModel.ISupportInitialize)(this.GridPersona)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,5 +80,6 @@ namespace CSharpBasico.Dia8
 
         private System.Windows.Forms.Button btnSelect1;
         private System.Windows.Forms.TextBox tbxTipo;
+        private System.Windows.Forms.DataGridView GridPersona;
     }
 }
