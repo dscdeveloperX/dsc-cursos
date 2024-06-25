@@ -21,14 +21,14 @@ namespace CSharpBasico.Dia8
         private void btnSelect1_Click(object sender, EventArgs e)
         {
             //select();
-            SelectPersona(tbxTipo.Text);
+            SelectPersona(tbxTipo.Text,Convert.ToDecimal( tbxSueldo.Text));
 
 
 
 
         }
 
-        private void SelectPersona (string es)
+        private void SelectPersona (string es,decimal sld)
         {
             //cadena de conexion
             string cadenaConexion = @"Data source=DSC-PC\ISQL; Initial Catalog=darwincito_db; Integrated Security=True; Password=son200420052012";
@@ -57,6 +57,12 @@ namespace CSharpBasico.Dia8
             //agregar parametros a la clase comando
             cmd.Parameters.Add(prmEstadoCivil);
 
+            SqlParameter prmSueldo = new SqlParameter();
+            prmSueldo.ParameterName = "@Sueldo";
+            prmSueldo.SqlDbType = SqlDbType.Decimal;
+            prmSueldo.Value = sld;
+            cmd.Parameters.Add(prmSueldo);
+            
 
             //abrir la conexion de la clase conexion
             cnn.Open();

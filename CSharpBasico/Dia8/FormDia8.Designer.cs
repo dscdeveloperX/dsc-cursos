@@ -32,6 +32,7 @@ namespace CSharpBasico.Dia8
             this.btnSelect1 = new System.Windows.Forms.Button();
             this.tbxTipo = new System.Windows.Forms.TextBox();
             this.GridPersona = new System.Windows.Forms.DataGridView();
+            this.tbxSueldo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridPersona)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +61,19 @@ namespace CSharpBasico.Dia8
             this.GridPersona.Size = new System.Drawing.Size(647, 150);
             this.GridPersona.TabIndex = 2;
             // 
+            // tbxSueldo
+            // 
+            this.tbxSueldo.Location = new System.Drawing.Point(383, 38);
+            this.tbxSueldo.Name = "tbxSueldo";
+            this.tbxSueldo.Size = new System.Drawing.Size(100, 20);
+            this.tbxSueldo.TabIndex = 3;
+            // 
             // FormDia8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbxSueldo);
             this.Controls.Add(this.GridPersona);
             this.Controls.Add(this.tbxTipo);
             this.Controls.Add(this.btnSelect1);
@@ -81,5 +90,6 @@ namespace CSharpBasico.Dia8
         private System.Windows.Forms.Button btnSelect1;
         private System.Windows.Forms.TextBox tbxTipo;
         private System.Windows.Forms.DataGridView GridPersona;
+        private System.Windows.Forms.TextBox tbxSueldo;
     }
 }
