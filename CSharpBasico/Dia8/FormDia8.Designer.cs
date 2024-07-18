@@ -56,7 +56,7 @@ namespace CSharpBasico.Dia8
             // GridPersona
             // 
             this.GridPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridPersona.Location = new System.Drawing.Point(59, 301);
+            this.GridPersona.Location = new System.Drawing.Point(50, 279);
             this.GridPersona.Name = "GridPersona";
             this.GridPersona.Size = new System.Drawing.Size(647, 150);
             this.GridPersona.TabIndex = 2;
