@@ -3,7 +3,17 @@
 
 <head>
 <title>Mi primera pagina</title>
+<link href="Index.css" type="text/css" rel="stylesheet">
+<style>
+
+</style>
 </head>
+
+
+
+
+
+
 
 <body>
   <h1>Soy h1</h1>  
@@ -11,15 +21,17 @@
   <span>Soy un span </span>
   <div>soy un div </div>
   <strong>soy strong </strong>
-  <img src="image/foca.jpg" width="200"/>
-  <div>
-    <h1>Soy la foca</h1>
-    <img src="image/Foca2.jpg" width="200"/>
-    <p>la foca de agua dulce mejor conocida como nerpa y por estos lares como tommy </p>
+  <img src="image/foca.jpg" width="200" id="foca1" onclick="focaColor()"/>
+
+
+  <div style="background-color: aqua;">
+    <h1 style="background-color:navy;color: whitesmoke; text-align: center;">Soy la foca</h1>
+    <img src="image/Foca2.jpg" width="200" style="border: solid 2px gray; border-radius: 10px;" />
+    <p style="background-color:rgb(125, 224, 173); font-size: 18px;padding: 10px; ">la foca de agua dulce mejor conocida como nerpa y por estos lares como tommy </p>
   </div>
   
 
-<table> 
+<table class="tabla1 tablita"> 
     <thead>
         <tr>
             <th>Nombre</th>
@@ -47,6 +59,38 @@
         </tr>
     </tfoot>
 </table>
+<!--<br/>-->
+
+
+<table class="tabla2 tablita"> 
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Sueldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Darwin</td>
+            <td>100 $</td>
+        </tr>
+        <tr>
+            <td>Wilson</td>
+            <td>200$</td>
+        </tr>
+        <tr>
+            <td>Tommy</td>
+            <td>555$</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>total</td>
+            <td>855</td>
+        </tr>
+    </tfoot>
+</table>
+
 
 <form>
     <div>
@@ -128,8 +172,17 @@
 
 </form>
 
-<button>soy un button fuera de form</button>
+<button onclick="mensaje()">soy un button fuera de form</button>
 
+
+<script src="index.js"></script>
+
+<script> 
+
+
+
+
+</script>
 </body>
 </html>
 

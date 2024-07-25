@@ -1,0 +1,22 @@
+/*table{
+    background-color: yellow;
+}*/
+.tabla1{
+    background-color: aquamarine;
+}
+.tabla2{
+    background-color: blueviolet;
+}
+.tablita{
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 2px 2px  gray;
+    margin: 10px;
+}
+.tablita td{
+    border: dotted 2px yellow;
+}
+#foca1{
+    border: double 5px rebeccapurple;
+    padding: 15px 5px 10px 20px;
+}
