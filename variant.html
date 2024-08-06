@@ -1,0 +1,281 @@
+/*************************************************************
+EJEMPLO
+*************************************************************/
+tb_Consulta=[
+ConsultaID,
+Usuario,
+Descripcion,
+Adjunto,
+Fecha,
+Estado (ingresada, atendida),
+Respuesta,
+FechaRespusta
+]
+
+tb_Usuario=[
+Usuario,
+Clave,
+Rol
+]
+
+
+/*************************************************************
+SQL
+*************************************************************/
+
+SET IDENTITY_INSERT tb_Cliente ON;
+
+constraint pk_tb_Usuario_UsuarioID primary key (UsuarioID)
+constraint ck_tb_Usuario_Usuario check(len(Usuario) >= 6)
+
+WHERE  FORMAT(FechaIngreso, 'yyyy-MM-dd') between 
+FORMAT(@FechaIngresoDesde, 'yyyy-MM-dd') and 
+FORMAT(@FechaIngresoHasta, 'yyyy-MM-dd') and
+
+
+/*************************************************************
+appsettings.json
+*************************************************************/
+  "ConnectionStrings": {
+    "DscConnection": "
+    Server=DSC-PC\\ISQL;
+    Database=DSANCHEZ_DB;
+    User Id=dscuser;
+    Password=dsc123456;
+    Trusted_Connection=true;
+    TrustServerCertificate=true"
+  }
+
+  "Kestrel": {
+    "Endpoints": {
+      "http": {"Url": "http://localhost:1977"}
+    }
+  }
+
+/**************************************************************
+Program.cs
+**************************************************************/
+
+builder.Services.AddScoped<SolicitudRepository>();
+builder.Services.AddScoped<IPersonaRespository,PersonaRepository>();
+/*********************************/
+
+builder.Services.AddCors(options => {
+  options.AddPolicy("dscCors",
+      policy => {
+          policy.WithOrigins("http://localhost:4200")
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+      }
+      );
+});
+
+app.UseCors("dscCors");
+
+
+[EnableCors("dscCors")]
+
+
+
+/**************************************************************
+Encription.cs
+**************************************************************/
+
+
+using (SHA256 sha256 = SHA256.Create())
+{
+// Convierte la cadena de entrada en un arreglo de bytes
+byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+// Calcula el hash
+byte[] hashBytes = sha256.ComputeHash(inputBytes);
+// Convierte el hash en una cadena hexadecimal
+return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+}
+
+
+
+/**************************************************************
+SolicitudRepository
+**************************************************************/
+private readonly string dscConnetion;
+
+public SolicitudRepository(IConfiguration configuration) {
+  dscConnetion = configuration.GetConnectionString("DscConnection");
+ }
+
+
+ async Task<IEnumerable<Solicitud>>
+
+ using(SqlConnection cnn = new SqlConnection(dscConnetion))
+ using (SqlCommand cmd = new SqlCommand("sp_SolicitudUserSelectAll", cnn))
+ cmd.CommandType = CommandType.StoredProcedure;
+
+ cmd.Parameters.AddWithValue("@Estado", request.Estado);
+cmd.Parameters.AddWithValue("@PersonaID", personaID.HasValue ? (object)personaID.Value : DBNull.Value );
+
+ await cnn.OpenAsync();
+ using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+
+ while (await dr.ReadAsync())
+ dr["FechaGestion"] != DBNull.Value ? Convert.ToDateTime(dr["FechaGestion"]) :(DateTime?)null
+
+Convert.ToBoolean(await cmd.ExecuteNonQueryAsync())
+
+/**************************************************************
+SolicitudController
+**************************************************************/
+
+[EnableCors("dscCors")]
+[ApiController]
+[Route("api/[controller]")]
+
+private readonly SolicitudRepository _repSolicitud;
+
+public SolicitudController(SolicitudRepository repSolicitud) {
+    _repSolicitud = repSolicitud;
+}n
+
+
+[HttpPost("solicitud-all")]
+Task<ActionResult<SolicitudResponse>>
+    response.Data = await _repSolicitud.SolicitudAll(request);
+    response.CodigoError = 0;
+    response.MensajeError = "Transacción Exitosa";
+    return Ok(response);
+    return BadRequest(response);
+
+
+
+/**************************************************************
+app.config.ts
+**************************************************************/
+
+importProvidersFrom(HttpClientModule),
+provideRouter(routes)
+
+/**************************************************************
+routes.ts
+**************************************************************/
+
+
+export const routes:Routes = [
+    {path:'', pathMatch:'full', component:LoginComponent},
+    {path:'login', component:LoginComponent}
+  ]
+
+
+/**************************************************************
+html.ts
+**************************************************************/
+
+<a [routerLink]="['/login']">Login</a>
+<router-outlet></router-outlet>
+
+
+/**************************************************************
+constantes.ts
+**************************************************************/
+export const httpApi = 'http://localhost:1977/api';
+
+
+/**************************************************************
+ISolicitud.ts
+**************************************************************/
+export interface ISolicitudAllRequest
+{
+    fechaIngresoDesde:Date;
+}
+
+
+/**************************************************************
+solicitud-rest.service.ts
+**************************************************************/
+
+constructor(private http:HttpClient) { }
+
+public SolicitudAll(request:ISolicitudAllRequest):Observable<ISolicitudResponse>{
+    return this.http.post<ISolicitudResponse>(`${httpApi}/solicitud/solicitud-all`, 
+    JSON.stringify(request), 
+    {headers:new HttpHeaders({'content-type':'application/json'})});
+}
+
+
+/**************************************************************
+solicitud-agregar.component.ts
+**************************************************************/
+
+  imports: [CommonModule,FormsModule,ReactiveFormsModule]
+  changeDetection:ChangeDetectionStrategy.OnPush
+
+  public dataSolicitud:WritableSignal<ISolicitud[]> = signal<ISolicitud[]>([]);
+  public formGroupFiltro:FormGroup;
+
+this.dataSesion = JSON.parse(localStorage.getItem('sesion')!.toString());
+
+this.formGroupFiltro = new FormGroup(
+      {
+        fechaIngresoDesde: new FormControl('',Validators.compose([Validators.required])),
+        
+      }
+);
+
+
+fechaIngresoDesde: new Date(this.formGroupFiltro.get("fechaIngresoDesde")?.value), 
+//new Date('2024-07-26T00:00:00Z'
+
+
+
+
+public dataImage:WritableSignal<string>= signal<string>('');
+
+
+  public ConvertToBase64(files:any):void{
+    const reader = new FileReader();
+    reader.readAsDataURL(files.target.files[0]);
+    reader.onload = ()=>{
+      console.log(reader.result!.toString());
+      this.dataImage.set(reader.result!.toString());
+    };
+  }
+
+
+  public FileDownload():void{
+
+    const base64Array = this.dataImage().split(',');
+    const base64 = base64Array[1];
+    const tipo = base64Array[0].replace('data:','').replace(';base64','');
+    const extension = tipo.split('/')[1];
+
+    const blob = new Blob(
+      [Uint8Array.from(
+        atob(base64),
+        c => c.charCodeAt(0)
+      )],
+      {type:tipo}
+    );
+
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = 'dsc-descargar.' + extension;
+    link.click();
+
+  }
+
+
+
+
+/**************************************************************
+solicitud-agregar.component.html
+**************************************************************/
+
+
+<form [formGroup]="formGroupSolicitud" (submit)="Agregar()">
+      <input type="file" formControlName="justificativo" (change)="capturarFilePhoto($event)" accept="image/png,image/jpg,application/pdf" />
+      <textarea formControlName="tipo"></textarea>
+       <div *ngIf="formGroupSolicitud.get('tipo')?.errors && (formGroupSolicitud.get('tipo')?.dirty || formGroupSolicitud.get('tipo')?.touched)">
+              <div *ngIf="formGroupSolicitud.get('tipo')?.hasError('required')">Requiere un valor</div>
+          </div>
+        <button [disabled]="formGroupSolicitud.invalid">Agregar</button> 
+</form>
+
+
