@@ -1,0 +1,93 @@
+using System.Security.Cryptography;
+using System.Text;
+
+namespace Api2.Security
+{
+    public static class Encriptador
+    {
+
+
+        private static readonly string llave = "12345678901234567890123456789012";//32 caracteres
+
+
+        public static string Encriptar(string texto) {
+
+            if (texto == null || texto.Length <= 0) 
+                throw new ArgumentNullException("texto");
+
+            byte[] resultado;
+            byte[] IV = new byte[16];
+
+
+            using (Aes aesAlgoritmo = Aes.Create()) {
+
+                aesAlgoritmo.Key = Encoding.UTF8.GetBytes(llave);
+                aesAlgoritmo.IV = IV;
+
+
+                ICryptoTransform cryptoTransform = aesAlgoritmo.CreateEncryptor(aesAlgoritmo.Key, aesAlgoritmo.IV);
+
+                using (MemoryStream memoryStream = new MemoryStream()) {
+
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, cryptoTransform, CryptoStreamMode.Write)) {
+
+                        using (StreamWriter streamWriter = new StreamWriter(cryptoStream)) {
+
+                            streamWriter.Write(texto);
+                        
+                        }
+                        resultado = memoryStream.ToArray();
+                    }
+
+                }
+
+            }
+            return Convert.ToBase64String(resultado);
+        }
+
+        public static string Desencriptar(string texto)
+        {
+
+            if (texto == null || texto.Length <= 0)
+               throw new ArgumentNullException("texto");
+
+            string resultado = string.Empty;
+            byte[] IV = new byte[16];
+
+
+            using (Aes aesAlgoritmo = Aes.Create())
+            {
+
+                aesAlgoritmo.Key = Encoding.UTF8.GetBytes(llave);
+                aesAlgoritmo.IV = IV;
+
+
+                ICryptoTransform cryptoTransform = aesAlgoritmo.CreateDecryptor(aesAlgoritmo.Key, aesAlgoritmo.IV);
+
+                using (MemoryStream memoryStream = new MemoryStream(Convert.FromBase64String(texto)))
+                {
+
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, cryptoTransform, CryptoStreamMode.Read))
+                    {
+
+                        using (StreamReader streamReader = new StreamReader(cryptoStream))
+                        {
+
+                            resultado = streamReader.ReadToEnd();
+
+                        }
+                        
+                    }
+
+                }
+                
+            }
+
+            return resultado;
+
+        }
+
+
+
+    }
+}

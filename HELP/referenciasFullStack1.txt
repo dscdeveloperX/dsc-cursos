@@ -12,6 +12,15 @@ Respuesta,
 FechaRespusta
 ]
 
+tb_Libro=[
+Descripcion,
+Adjunto,
+FechaIngreso,
+Estado
+FechaAprobacion
+]
+
+
 tb_Usuario=[
 Usuario,
 Clave,
