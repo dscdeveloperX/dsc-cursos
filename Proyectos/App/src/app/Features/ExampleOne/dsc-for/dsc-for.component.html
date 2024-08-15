@@ -1,0 +1,23 @@
+<h1>static list</h1>
+<ul>
+    <li>cebolla</li>
+    <li>tomate</li>
+    <li>pepino</li>
+    <li>perejil</li>
+</ul>
+
+<hr/>
+<h1>dynamic list</h1>
+<ul>
+    <ng-container *ngFor="let item of ['cebolla','tomate','pepino','perejil','apio']" >
+    <li>{{item}}</li>
+    </ng-container>
+</ul>
+<hr/>
+<h1>dynamic list data</h1>
+<ul>
+    <ng-container *ngFor="let item of ingredientesData" >
+    <li>{{item}}</li>
+    </ng-container>
+</ul>
+<button (click)="AgregarIngrediente()">agregar ingrediente</button>
