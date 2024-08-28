@@ -1,0 +1,32 @@
+<h1>A3-DIRECTIVAS FOR</h1>
+<section>
+    <h2>ngFor json persona (con señales y sin tipo de dato)</h2>
+    <div>
+        
+        <table border="1" cellSpacing="0">
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Sueldo</td>
+                    <td>Fecha de nacimiento</td>
+                    <td>edad</td>
+                    <td>discapacitado</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <ng-container *ngFor="let item of persona()" >
+                    <tr>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.sueldo}}</td>
+                        <td>{{item.fechaNacimiento}}</td>
+                        <td>{{item.edad}}</td>
+                        <td>{{item.discapacitado}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+

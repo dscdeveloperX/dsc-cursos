@@ -1,0 +1,34 @@
+<h1>A5-DIRECTIVAS FOR</h1>
+<section>
+    <h2>ngFor json persona (con señales , Interface)</h2>
+    <p>declaramos la variable signal "persona" y la inicializamos con un valor de array vacio, luego le asignamos el array de datos desde el constructor de la clase </p>
+    <div>
+        
+        <table border="1" cellSpacing="0">
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Sueldo</td>
+                    <td>Fecha de nacimiento</td>
+                    <td>edad</td>
+                    <td>discapacitado</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <ng-container *ngFor="let item of persona()" >
+                    <tr>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.sueldo}}</td>
+                        <td>{{item.fechaNacimiento}}</td>
+                        <td>{{item.edad}}</td>
+                        <td>{{item.discapacitado}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+

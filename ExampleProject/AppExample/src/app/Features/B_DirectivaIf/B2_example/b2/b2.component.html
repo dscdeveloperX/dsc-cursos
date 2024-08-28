@@ -1,0 +1,69 @@
+<h1>B2-DIRECTIVAS IF</h1>
+
+<section>
+    <h2>ngIf solo numeros mayor o igual a 18</h2>
+    <p></p>
+    <div>
+    
+        <ul>
+            <ng-container *ngFor="let item of [10,20,13,14,50,16,27,58,19,11]" >
+
+                <li *ngIf="item >= 18" >{{item}}</li>
+
+            </ng-container>
+            
+        </ul>
+    
+    </div>
+</section>
+
+
+
+<!--..................................................................-->
+
+<section>
+    <h2>ngIf solo mostrara numeros pares</h2>
+    <p>Un número es par si el residuo de su división por 2 es 0. el operador % se encarga de dividir el numero para 2 hasta obtener un residuo <code>( numero % 2 === 0; )</code> </p>
+    <div>
+    
+        <ul>
+            <ng-container *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]" >
+
+                <li *ngIf="(item % 2) === 0 " >{{item}}</li>
+
+            </ng-container>
+            
+        </ul>
+    
+    </div>
+</section>
+
+
+
+<!--..................................................................-->
+
+<section>
+    <h2>ngIf con else</h2>
+    <p>se visualizan todos los numeros, pero si es menor de edad su color sera rojo</p>
+    <div>
+    
+        <ul>
+            <ng-container *ngFor="let item of [10,20,13,14,50,16,27,58,19,11]" >
+
+                <li *ngIf=" item >= 18; else menorEdad " > {{ item }} </li>
+
+                <ng-template #menorEdad>
+                    <li style="color:red"> {{ item }} </li>
+                </ng-template>
+                
+            </ng-container>
+
+            
+            
+        </ul>
+    
+    </div>
+</section>
+
+
+
