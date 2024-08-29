@@ -7,11 +7,12 @@ import { A4Component } from './Features/A_DirectivaFor/A4_example/a4/a4.componen
 import { A5Component } from './Features/A_DirectivaFor/A5_example/a5/a5.component';
 import { B1Component } from './Features/B_DirectivaIf/B1_example/b1/b1.component';
 import { B3Component } from './Features/B_DirectivaIf/B3_example/b3/b3.component';
+import { C1Component } from './Features/C_EventoClick/C1_example/c1/c1.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, B3Component],
+  imports: [CommonModule, A2Component],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

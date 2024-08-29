@@ -1,0 +1,23 @@
+<p>tabla-mascota works!</p>
+
+<table>
+<thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Color</th>
+        <th>Edad</th>
+    </tr>
+</thead>
+<tbody>
+   <ng-container *ngFor="let item of mascotaData()">
+    <tr>
+        <td>{{item.nombre}}</td>
+        <td>{{item.color}}</td>
+        <td>{{item.edad}}</td>
+    </tr>
+</ng-container>
+</tbody>
+
+
+
+</table>
