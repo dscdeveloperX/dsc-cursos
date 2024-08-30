@@ -1,0 +1,16 @@
+figure img{
+    width: 300px;
+    border: solid 5px white;
+    border-radius: 15px;
+}
+.dsc-inicio{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 50px 1fr 150px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.dsc-inicio h1{font-size: 20pt;
+    text-shadow: 1px 1px 1px #ffffff;
+    color: #daca52;}

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+body,html, a{
+    color:white;
+    font-family: 'Consolas';
+    background-color: rgb(37, 37, 37);
+}
+
+
+h1{
+    color: #006cbe;
+}
+h2{
+    color: #dfa7e0;
+}
+h3{
+    color: #7bfff3;
+}
+p{
+    color: #63b763;
+}
+section > blockquote{
+    background-color: #252525;
+    border: dashed 1px #fff067;
+    padding: 10px;
+    margin: 5px 0px;
+}

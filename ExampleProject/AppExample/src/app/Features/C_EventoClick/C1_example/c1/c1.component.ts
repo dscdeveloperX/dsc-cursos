@@ -24,12 +24,7 @@ export class C1Component {
     alert("Hola saludo-3");
   }
 
-  public Saludo4(evento:any):void{
-    console.log(evento);//objeto total
-    console.log(evento.target);//objeto button
-    console.log(evento.target.dataset.cedula);//atributo dataset
-  }
-
+ 
 
 
 }

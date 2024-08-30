@@ -2,74 +2,74 @@
 
 <section>
 <h2>ngFor con array directo en html</h2>
-<div>
+<blockquote>
     <ul>
         <ng-container *ngFor="let item of ['a','e','i','o','u']">
             <li>{{item}}</li>
         </ng-container>
     </ul>
-</div>
+</blockquote>
 </section>
 
 <section>
 
     <h2>ngFor con variable array desde "ts"</h2>
     
-    <div>
+    <blockquote>
         <ul>
             <ng-container *ngFor="let item of vocales">
                 <li>{{item}}</li>
             </ng-container>
         </ul>
-    </div>
+    </blockquote>
 </section>
 
 
     <section>
         <h2>ngFor con variables signal (señales)</h2>
 <!--..................................................................-->
-        <div>
+        <blockquote>
             <h3>signal-1</h3>
             <ul>
                 <ng-container *ngFor="let item of vocalesSignal1()">
                     <li>{{item}}</li>
                 </ng-container>
             </ul>
-        </div>
+        </blockquote>
 <!--..................................................................-->
-        <div>
+        <blockquote>
             <h3>signal-2</h3>
             <ul>
                 <ng-container *ngFor="let item of vocalesSignal2()">
                     <li>{{item}}</li>
                 </ng-container>
             </ul>
-        </div>
+        </blockquote>
 <!--..................................................................-->
-        <div>
+        <blockquote>
             <h3>signal-3</h3>
             <ul>
                 <ng-container *ngFor="let item of vocalesSignal3()">
                     <li>{{item}}</li>
                 </ng-container>
             </ul>
-        </div>
+        </blockquote>
 
 <!--..................................................................-->
 
-        <div>
+        <blockquote>
             <h3>signal-4</h3>
             <ul>
                 <ng-container *ngFor="let item of vocalesSignal4()">
                     <li>{{item}}</li>
                 </ng-container>
             </ul>
-        </div>
+        </blockquote>
 
 
 <!--..................................................................-->
 
-<div>
+<blockquote>
     <h3>signal-5</h3>
     <p>declaramos la variable signal "vocalesSignal5" y la inicializamos con un valor de array vacio, luego le asignamos el array de datos desde el constructor de la clase</p>
     <ul>
@@ -77,7 +77,7 @@
             <li>{{item}}</li>
         </ng-container>
     </ul>
-</div>
+</blockquote>
 
 
         </section>

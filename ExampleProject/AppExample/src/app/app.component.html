@@ -1,1 +1,24 @@
-<app-a2></app-a2> 
+<main>
+    <nav>
+        <h2>A - DIRECTIVA FOR</h2>
+        <a [routerLink]="['a1']" >A-1</a>
+        <a [routerLink]="['a2']" >A-2</a>
+        <a [routerLink]="['a3']" >A-3</a>
+        <a [routerLink]="['a4']" >A-4</a>
+        <a [routerLink]="['a5']" >A-5</a>
+        <h2>B - DIRECTIVA IF</h2>
+        <a [routerLink]="['b1']" >B-1</a>
+        <a [routerLink]="['b2']" >B-2</a>
+        <a [routerLink]="['b3']" >B-3</a>
+        <h2>C - EVENTO CLICK</h2>
+        <a [routerLink]="['c1']" >C-1</a>
+        <a [routerLink]="['c2']" >C-2</a>
+        <a [routerLink]="['c3']" >C-3</a>
+        <a [routerLink]="['c4']" >C-4</a>
+        <a [routerLink]="['c5']" >C-5</a>
+
+    </nav>    
+    <article>
+        <router-outlet></router-outlet>
+    </article>
+</main>
