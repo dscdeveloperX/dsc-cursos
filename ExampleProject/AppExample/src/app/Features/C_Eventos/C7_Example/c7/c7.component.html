@@ -1,0 +1,40 @@
+<h1>C6-Eventos</h1>
+
+
+<!--..................................................................-->
+
+<section>
+    <h2>Evento click obtener valor de un atributo dataset (consola)</h2>
+    <p>dataset: es un atributo personalizado del objeto usado para guardar datos</p>
+    <p>dataset: el nombre del atributo siempre inician con "data-" y prosigue con el nombre elegido por ejemplo: data-cedula = '0918723453'  </p>
+    <p>dataset: para obtener el valor del atributo: data-cedula solo buscar por cedula y obviar "data-" </p>
+    
+    <blockquote>
+
+        <table border="1" cellSpacing="0">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Sueldo</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <ng-container *ngFor="let item of persona()" >
+                    <tr>
+                        
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.sueldo}}</td>
+                        <td><button (click)="Eliminar($event, item.cedula)" >Eliminar</button></td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+
+        <h6>{{resultado() | json}}</h6>
+        
+    </blockquote>
+</section>
+
+

@@ -1,0 +1,25 @@
+<h1>C6-Eventos</h1>
+
+
+<!--..................................................................-->
+
+<section>
+    <h2>Evento click obtener valor de un atributo dataset (consola)</h2>
+    <p>dataset: es un atributo personalizado del objeto usado para guardar datos</p>
+    <p>dataset: el nombre del atributo siempre inician con "data-" y prosigue con el nombre elegido por ejemplo: data-cedula = '0918723453'  </p>
+    <p>dataset: para obtener el valor del atributo: data-cedula solo buscar por cedula y obviar "data-" </p>
+    
+    <blockquote>
+
+        <button (click)="MostrarResultado1()" >Mostrar resultado</button>
+       
+        <h6>{{resultado1() | json}}</h6>
+
+        <h6>{{ resultado2() | json}}</h6>
+
+
+        
+    </blockquote>
+</section>
+
+

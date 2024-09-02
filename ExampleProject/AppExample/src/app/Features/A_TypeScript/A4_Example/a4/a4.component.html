@@ -1,0 +1,38 @@
+<h1>A4 - TYPESCRIPT</h1>
+<section>
+    <h2>Agregar una persona</h2>
+    <p>Ejemplo con signals</p>
+    <blockquote>
+        
+        <button (click)="AgregarPersona()">Agregar una persona</button>
+
+        <table border="1" cellSpacing="0">
+            <thead>
+                <tr>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Sueldo</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>edad</th>
+                    <th>discapacitado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <ng-container *ngFor="let item of personasData()" >
+                    <tr>
+                        <td>{{item.cedula}}</td>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.sueldo}}</td>
+                        <td>{{item.fechaNacimiento | date :'yyyy-MM-dd' }}</td>
+                        <td>{{item.edad}}</td>
+                        <td>{{item.discapacitado}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+
+    </blockquote>
+</section>
+
+
