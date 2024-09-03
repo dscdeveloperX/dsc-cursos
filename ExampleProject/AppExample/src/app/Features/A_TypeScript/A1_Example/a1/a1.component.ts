@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-a1',
   standalone: true,
@@ -22,8 +23,13 @@ export class A1Component {
 
 public MostrarResultado():void{
 
-  //Let: tiene valor variable y se usa para declarar variables que están limitadas al bloque en el que se definen
+  let nombre:string = 'pepe';
+  console.log(`nombre campo de clase: ${this.nombre}`);
+
+
+  //Let: tiene un valor variable y se usa para declarar variables que están limitadas al bloque en el que se definen
   let edad : number = 42;
+  edad = 95;
   //const: tiene valor constante y se usa para declarar variables que están limitadas al bloque en el que se definen
   const PI:number = 3.14;
   //respuesta con interpolacion de texto (se muestra en consola)

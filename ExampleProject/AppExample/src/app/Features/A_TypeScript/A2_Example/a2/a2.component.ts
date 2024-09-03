@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class A2Component {
 
+
+  
   public constructor(){
 
     //tipos basicos
@@ -32,9 +34,9 @@ export class A2Component {
     let valorIndefinido:undefined = undefined;
     //Define tipos personalizados usando combinaciones de tipos existentes
     //------------------------------------------------------------------------------
-    let cantidad: number | null;
-    cantidad = null;
-    cantidad = 125.22;
+    let hijos: number | null;
+    hijos = null;
+    hijos = 3;
 
   }
 

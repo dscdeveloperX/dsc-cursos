@@ -48,7 +48,7 @@ export class A3Component {
 
     vocales.forEach(
       
-      (item) => {
+      (item:string) => {
         //mostrar en consola cada item del array
         console.log(item);
       }
