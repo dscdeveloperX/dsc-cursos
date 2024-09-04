@@ -1,0 +1,35 @@
+<h1>E1-FORMULARIOS</h1>
+
+<section>
+    <h2>formulario buscar nombre</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formLogin" (submit)="Login()">
+            <div>
+                <label for="usuario">Usuario: </label>
+                <input type="text" formControlName="Usuario" />
+                <div *ngIf="ctrlUsuario.errors && (ctrlUsuario.dirty || ctrlUsuario.touched)">
+                    <em *ngIf="ctrlUsuario.hasError('required')" >Usuario es requerido</em>
+                </div>
+            </div>
+
+            <div>
+                <label for="clave">Clave: </label>
+                <input type="password" formControlName="Clave" />
+                <div *ngIf="ctrlClave.errors && (ctrlClave.dirty || ctrlClave.touched)">
+                    <em *ngIf="ctrlClave.hasError('required')" >Clave es requerida</em>
+                    <em *ngIf="ctrlClave.hasError('minlength')" >Clave mínimo 6 caracteres</em>
+                </div>
+            </div>
+
+            <button>Iniciar Sesión</button>
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+

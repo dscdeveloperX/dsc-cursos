@@ -18,6 +18,17 @@ import { A1Component } from "./Features/A_TypeScript/A1_Example/a1/a1.component"
 import { A2Component } from "./Features/A_TypeScript/A2_Example/a2/a2.component";
 import { A3Component } from "./Features/A_TypeScript/A3_Example/a3/a3.component";
 import { A4Component } from "./Features/A_TypeScript/A4_Example/a4/a4.component";
+import { E1Component } from "./Features/E_Formularios/E1_Example/e1/e1.component";
+import { E2Component } from "./Features/E_Formularios/E2_Example/e2/e2.component";
+import { E3Component } from "./Features/E_Formularios/E3_Example/e3/e3.component";
+import { E4Component } from "./Features/E_Formularios/E4_Example/e4/e4.component";
+import { E5Component } from "./Features/E_Formularios/E5_Example/e5/e5.component";
+import { E6Component } from "./Features/E_Formularios/E6_Example/e6/e6.component";
+import { E7Component } from "./Features/E_Formularios/E7_Example/e7/e7.component";
+import { E8Component } from "./Features/E_Formularios/E8_Example/e8/e8.component";
+import { E9Component } from "./Features/E_Formularios/E9_Example/e9/e9.component";
+import { E10Component } from "./Features/E_Formularios/E10_Example/e10/e10.component";
+import { E11Component } from "./Features/E_Formularios/E11_Example/e11/e11.component";
 
 export const routes:Routes=[
     {
@@ -95,6 +106,54 @@ export const routes:Routes=[
     {
         path:'d5',
         component:D5Component
+    },
+    {
+        path:'e1',
+        component:E1Component
+    },
+    {
+        path:'e2',
+        component:E2Component
+    },
+    {
+        path:'e3',
+        component:E3Component
+    },
+    {
+        path:'e4',
+        component:E4Component
+    },
+    {
+        path:'e5',
+        component:E5Component
+    },
+    {
+        path:'e6',
+        component:E6Component
+    },
+    {
+        path:'e7',
+        component:E7Component
+    },
+    {
+        path:'e8',
+        component:E8Component
+    },
+    {
+        path:'e9',
+        component:E9Component
+    },
+    {
+        path:'e10',
+        component:E10Component
+    },
+    {
+        path:'e11',
+        component:E11Component
+    },
+    {
+        path:'e1',
+        component:E1Component
     }
 
 ];

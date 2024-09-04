@@ -1,10 +1,26 @@
 <h1>A4 - TYPESCRIPT</h1>
 <section>
-    <h2>Agregar una persona</h2>
-    <p>Ejemplo con signals</p>
+    <h2>CRUD persona</h2>
+    <p>Ejemplo con signals y json</p>
     <blockquote>
+
+        <ul class="dsc-list-button">
+            <li><button (click)="LlenarPersonasData()">volver a llenar lista personas con datos iniciales</button></li>
+            <li><button (click)="AgregarPersona()">Agregar una registro persona</button></li>
+            <li>
+                <button (click)="BuscarPersonaPorEdad($event, 20)">Buscar lista de personas con edad mayor a 20</button>
+                <button (click)="BuscarPersonaPorDiscapacitada($event, true)">Buscar lista de personas con discapacidad</button>
+                <button (click)="BuscarPersonaPorNombre($event, 'av')">Buscar lista de personas cuyo nombre contenga la palabra "av"</button>
+            </li>
+            <li><button (click)="BuscarPersonaPorCedula($event, '0000000002')">Buscar una persona por numero de cédula "0000000002" </button></li>
+            <li><button (click)="EliminarPersonaPorCedula($event, '0000000002')">Eliminar una persona por numero de cédula "0000000002" </button></li>
+            <li><button (click)="EditarPersonaPorCedula($event, '0000000002')">Editar una persona por numero de cédula "0000000002" </button></li>
+
+        </ul>
         
-        <button (click)="AgregarPersona()">Agregar una persona</button>
+            
+        
+        
 
         <table border="1" cellSpacing="0">
             <thead>
@@ -34,5 +50,6 @@
 
     </blockquote>
 </section>
+
 
 

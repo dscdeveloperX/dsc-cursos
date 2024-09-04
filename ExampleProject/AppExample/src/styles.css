@@ -24,3 +24,18 @@ section > blockquote{
     padding: 10px;
     margin: 5px 0px;
 }
+.dsc-list-button{
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+}
+.dsc-list-button li{
+    
+    padding: 5px;
+}
+
+form em{
+    color:rgb(249, 107, 79);
+    display: block;
+    padding:5px;
+}
