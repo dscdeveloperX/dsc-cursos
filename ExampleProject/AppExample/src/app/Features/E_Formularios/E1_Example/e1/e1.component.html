@@ -8,7 +8,7 @@
         <form [formGroup]="formLogin" (submit)="Login()">
             <div>
                 <label for="usuario">Usuario: </label>
-                <input type="text" formControlName="Usuario" />
+                <input type="text"  />
                 <div *ngIf="ctrlUsuario.errors && (ctrlUsuario.dirty || ctrlUsuario.touched)">
                     <em *ngIf="ctrlUsuario.hasError('required')" >Usuario es requerido</em>
                 </div>

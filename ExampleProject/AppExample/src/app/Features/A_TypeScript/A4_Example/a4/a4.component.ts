@@ -18,9 +18,13 @@ export class A4Component {
     //forEach: Ejecuta una función proporcionada una vez para cada elemento del arreglo.
     console.info("------ Foreach ------");
     let numeros:number[] = [1, 2, 3, 4];
-    numeros.forEach((item) => {
-    console.log(item);
-    });
+    numeros.forEach(
+      (item) => {
+                  console.log(item);
+                }
+  );
+
+
 
   }
 
@@ -28,8 +32,9 @@ export class A4Component {
     
     //find: Devuelve el primer elemento que cumple con la condición establecida por la función proporcionada.
     console.info("------ Find ------");
-    let numeros = [1, 2, 3, 4];
-    let resultado = numeros.find(item => item > 2);
+    let numeros:number[] = [1, 2, 3, 4];
+
+    let resultado:number | undefined = numeros.find( (item) => item > 2);
     console.log(resultado); // 3
 
   }
@@ -38,8 +43,8 @@ export class A4Component {
 
     //filter: Crea un nuevo arreglo con todos los elementos que pasan la prueba implementada por la función proporcionada.
     console.info("------ Filter ------");
-    let numeros = [1, 2, 3, 4];
-    let resultado = numeros.filter(item => item > 2);
+    let numeros:number[] = [1, 2, 3, 4];
+    let resultado:number[] | undefined = numeros.filter(item => item > 2);
     console.log(resultado); // [3, 4]
   }
 
@@ -48,8 +53,8 @@ export class A4Component {
 
     //some: Prueba si al menos un elemento en el arreglo cumple con la condición implementada por la función proporcionada.
     console.info("------ Some ------");
-    let numeros = [1, 2, 3, 4];
-    let resultado = numeros.some(item => item > 3);
+    let numeros:number[] = [1, 2, 3, 4];
+    let resultado:boolean = numeros.some( (item) => item > 3);
     console.log(resultado); // true
   }
 
@@ -58,8 +63,8 @@ export class A4Component {
 
     //every: Prueba si todos los elementos en el arreglo cumplen con la condición implementada por la función proporcionada.
     console.info("------ Every ------");
-    let numeros = [1, 2, 3, 4];
-    let resultado = numeros.every(item => item > 0);
+    let numeros:number[] = [1, 2, 3, 4];
+    let resultado:boolean = numeros.every(item => item > 0);
     console.log(resultado); // true
   }
 
@@ -73,13 +78,16 @@ export class A4Component {
     console.log(resultado); // [2, 4, 6, 8]
 
   }
+
+
   public EjemploReduce():void{
 
     //reduce: Ejecuta una función reductora (que proporcionas) sobre cada elemento del arreglo, resultando en un único valor de salida.
     console.info("------ Reduce ------");
-    let numeros = [1, 2, 3, 4];
-    let resultado = numeros.reduce((acumulado, item) => acumulado + item, 0);
-    console.log(resultado); // 10
+    let numeros:number[] = [10, 5, 8, 3];
+    let resultado:number = numeros.reduce((acumulado, item) => acumulado + item, 0);
+    
+    console.log(resultado); // 26
     
   }
 
@@ -87,9 +95,9 @@ export class A4Component {
 
     //indexOf: Devuelve el primer índice en el que se puede encontrar un elemento dado en el arreglo, o -1 si no está presente.
     console.info("------ IndexOf ------");
-    let numeros = [1, 2, 3, 4];
-    let indice = numeros.indexOf(3);
-    console.log(indice); // 2
+    let letras:string[] = ["A","B","C"];
+    let indice = letras.indexOf("B");
+    console.log(indice); // 1
 
   }
 
