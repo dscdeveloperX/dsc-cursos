@@ -29,6 +29,13 @@ import { E8Component } from "./Features/E_Formularios/E8_Example/e8/e8.component
 import { E9Component } from "./Features/E_Formularios/E9_Example/e9/e9.component";
 import { E10Component } from "./Features/E_Formularios/E10_Example/e10/e10.component";
 import { E11Component } from "./Features/E_Formularios/E11_Example/e11/e11.component";
+import { A11Component } from "./Features/A_TypeScript/A11_Example/a11/a11.component";
+import { A10Component } from "./Features/A_TypeScript/A10_Example/a10/a10.component";
+import { A9Component } from "./Features/A_TypeScript/A9_Example/a9/a9.component";
+import { A8Component } from "./Features/A_TypeScript/A8_Example/a8/a8.component";
+import { A7Component } from "./Features/A_TypeScript/A7_Example/a7/a7.component";
+import { A6Component } from "./Features/A_TypeScript/A6_Example/a6/a6.component";
+import { A5Component } from "./Features/A_TypeScript/A5_Example/a5/a5.component";
 
 export const routes:Routes=[
     {
@@ -51,6 +58,34 @@ export const routes:Routes=[
     {
         path:'a4',
         component:A4Component
+    },
+    {
+        path:'a5',
+        component:A5Component
+    },
+    {
+        path:'a6',
+        component:A6Component
+    },
+    {
+        path:'a7',
+        component:A7Component
+    },
+    {
+        path:'a8',
+        component:A8Component
+    },
+    {
+        path:'a9',
+        component:A9Component
+    },
+    {
+        path:'a10',
+        component:A10Component
+    },
+    {
+        path:'a11',
+        component:A11Component
     },
     {
         path:'b1',
