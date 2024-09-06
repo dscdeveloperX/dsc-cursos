@@ -1,14 +1,14 @@
 <h1>E1-FORMULARIOS</h1>
 
 <section>
-    <h2>formulario buscar nombre</h2>
+    <h2>login</h2>
     <p></p>
     <blockquote>
 
         <form [formGroup]="formLogin" (submit)="Login()">
             <div>
                 <label for="usuario">Usuario: </label>
-                <input type="text"  />
+                <input type="text" formControlName="Usuario" />
                 <div *ngIf="ctrlUsuario.errors && (ctrlUsuario.dirty || ctrlUsuario.touched)">
                     <em *ngIf="ctrlUsuario.hasError('required')" >Usuario es requerido</em>
                 </div>
@@ -22,8 +22,9 @@
                     <em *ngIf="ctrlClave.hasError('minlength')" >Clave mínimo 6 caracteres</em>
                 </div>
             </div>
-
-            <button>Iniciar Sesión</button>
+        <div>
+            <button [disabled]="!formLogin.valid">Iniciar Sesión</button>
+        </div>
         </form>
      
 

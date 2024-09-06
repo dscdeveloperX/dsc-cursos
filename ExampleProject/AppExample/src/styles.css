@@ -15,6 +15,10 @@ h2{
 h3{
     color: #7bfff3;
 }
+h6{
+    color:rgb(156, 86, 235);
+    font-size: 1.3em;
+}
 p{
     color: #63b763;
 }
@@ -38,4 +42,12 @@ form em{
     color:rgb(249, 107, 79);
     display: block;
     padding:5px;
+}
+
+form div > button{
+    margin:10px 0px;
+}
+
+form label {
+    display: block;
 }
