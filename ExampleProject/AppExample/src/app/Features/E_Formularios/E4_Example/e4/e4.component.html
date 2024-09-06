@@ -1,1 +1,38 @@
-<p>e4 works!</p>
+<h1>E4-FORMULARIOS</h1>
+
+<section>
+    <h2>formularios evitar multiples envios</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formPersona" (submit)="Enviar()">
+            <div>
+                <label>Nombre : </label>
+                <input type="text" formControlName="Nombre" />
+                <div *ngIf="ctrlNombre.errors && (ctrlNombre.dirty || ctrlNombre.touched)">
+                    <em *ngIf="ctrlNombre.hasError('required')" >Nombre es requerido</em>
+                </div>
+            </div>
+          
+
+            <div>
+                <button [disabled]="(!formPersona.valid) || deshabilitarEnvioFormPersona()"  >Iniciar Sesión</button>
+            </div>
+
+
+            
+        </form>
+     
+
+        
+        <h6>Botón deshabilidato: {{(!formPersona.valid) || deshabilitarEnvioFormPersona()}}</h6>
+        
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+

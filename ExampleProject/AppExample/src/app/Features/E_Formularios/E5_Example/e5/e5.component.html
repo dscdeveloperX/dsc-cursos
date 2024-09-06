@@ -1,1 +1,70 @@
-<p>e5 works!</p>
+<h1>E5-FORMULARIOS</h1>
+
+<section>
+    <h2>formularios select</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formPersona" (submit)="Enviar()">
+            <div>
+                <label>Nombre : </label>
+                <input type="text" formControlName="Nombre" />
+                <div *ngIf="ctrlNombre.errors && (ctrlNombre.dirty || ctrlNombre.touched)">
+                    <em *ngIf="ctrlNombre.hasError('required')" >Nombre es requerido</em>
+                </div>
+            </div>
+          
+            
+                <div>
+                    <label>Lista de gatos : </label>
+                    <select formControlName="Gato">
+
+                        <option value="">Selecionar un gato</option>
+
+                        <ng-container *ngFor="let item of gatoData()">
+                            <option value="{{item.valor}}">{{item.texto}}</option>
+                        </ng-container>
+                    </select>
+                    <div *ngIf="ctrlGato.errors && (ctrlGato.dirty || ctrlGato.touched)">
+                        <em *ngIf="ctrlGato.hasError('required')" >Gato es requerido</em>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label>Lista de autos : </label>
+                    <select formControlName="Auto">
+                        <option value="">Selecionar un auto</option>
+
+                        <ng-container *ngFor="let item of autoData()">
+                            <option value="{{item.valor}}">{{item.texto}}</option>
+                        </ng-container>
+
+                    </select>
+                    <div *ngIf="ctrlAuto.errors && (ctrlAuto.dirty || ctrlAuto.touched)">
+                        <em *ngIf="ctrlAuto.hasError('required')" >Auto es requerido</em>
+                    </div>
+                </div>
+                
+
+            <div>
+                <button [disabled]="(!formPersona.valid)">Iniciar Sesión</button>
+            </div>
+
+
+            
+        </form>
+     
+
+        
+
+        
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+
