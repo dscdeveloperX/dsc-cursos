@@ -1,1 +1,52 @@
-<p>e6 works!</p>
+<h1>E6-FORMULARIOS</h1>
+
+<section>
+    <h2>formularios y checkbox (avanzado)</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formVideo" (submit)="Enviar()">
+            <div>
+                <label>Título : </label>
+                <input type="text" formControlName="Titulo" autocomplete="false" />
+                <div *ngIf="ctrlTitulo.errors && (ctrlTitulo.dirty || ctrlTitulo.touched)">
+                    <em *ngIf="ctrlTitulo.hasError('required')" >Título es requerido</em>
+                </div>
+            </div>
+
+            <div>
+                <label>Duración video (minutos): </label>
+                <input type="number" formControlName="Duracion" />
+                <div *ngIf="ctrlDuracion.errors && (ctrlDuracion.dirty || ctrlDuracion.touched)">
+                    <em *ngIf="ctrlDuracion.hasError('required')" >duración es requerido</em>
+                    <em *ngIf="ctrlDuracion.hasError('min')" >duración mínima es 1</em>
+                </div>
+            </div>
+            
+            <h3>Categoría del video: </h3>
+            
+            <ng-container *ngFor="let item of categoriaVideoData">
+            <div>
+                <label> 
+                <input type="checkbox" [formControlName]="item.categoriaId" />
+                {{item.categoriaNombre}}
+                </label>
+            </div>
+            </ng-container>
+
+            <div>
+                <button [disabled]="!formVideo.valid"  >Iniciar Sesión</button>
+            </div>
+
+            
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+
