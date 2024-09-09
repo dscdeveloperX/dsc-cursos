@@ -1,11 +1,11 @@
 <h1>E6-FORMULARIOS</h1>
 
 <section>
-    <h2>formularios y checkbox (avanzado)</h2>
+    <h2>formularios </h2>
     <p></p>
     <blockquote>
 
-        <form [formGroup]="formVideo" (submit)="Enviar()">
+        <!--<form [formGroup]="formVideo" (submit)="EnviarFormVideo()">
             <div>
                 <label>Título : </label>
                 <input type="text" formControlName="Titulo" autocomplete="false" />
@@ -23,23 +23,12 @@
                 </div>
             </div>
             
-            <h3>Categoría del video: </h3>
-            
-            <ng-container *ngFor="let item of categoriaVideoData">
             <div>
-                <label> 
-                <input type="checkbox" [formControlName]="item.categoriaId" />
-                {{item.categoriaNombre}}
-                </label>
-            </div>
-            </ng-container>
-
-            <div>
-                <button [disabled]="!formVideo.valid"  >Iniciar Sesión</button>
+                <button type="submit" [disabled]="!formVideo.valid"  >Iniciar Sesión</button>
             </div>
 
             
-        </form>
+        </form>-->
      
 
     </blockquote>

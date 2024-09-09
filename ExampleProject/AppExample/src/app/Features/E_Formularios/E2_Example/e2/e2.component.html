@@ -5,7 +5,7 @@
     <p></p>
     <blockquote>
 
-        <form [formGroup]="formAficionado" (submit)="Enviar()">
+        <form [formGroup]="formAficionado" (submit)="EnviarFormAficionado()">
             <div>
                 <label for="NombreAficionado">Nombre de aficionado: </label>
                 <input type="text" formControlName="NombreAficionado" />
@@ -34,7 +34,7 @@
             </div>
 
             <div>
-                <button [disabled]="!formAficionado.valid"  >Iniciar Sesión</button>
+                <button type="submit" [disabled]="!formAficionado.valid"  >Iniciar Sesión</button>
             </div>
 
             

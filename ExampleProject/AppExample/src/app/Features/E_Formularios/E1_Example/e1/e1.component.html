@@ -5,7 +5,7 @@
     <p></p>
     <blockquote>
 
-        <form [formGroup]="formLogin" (submit)="Login()">
+        <form [formGroup]="formLogin" (submit)="EnviarFormLogin()">
             <div>
                 <label for="usuario">Usuario: </label>
                 <input type="text" formControlName="Usuario" />
@@ -23,7 +23,7 @@
                 </div>
             </div>
         <div>
-            <button [disabled]="!formLogin.valid">Iniciar Sesión</button>
+            <button type="submit" [disabled]="!formLogin.valid">Iniciar Sesión</button>
         </div>
         </form>
      

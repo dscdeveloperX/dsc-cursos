@@ -28,6 +28,10 @@ section > blockquote{
     padding: 10px;
     margin: 5px 0px;
 }
+form button {
+    padding: 5px 10px;
+}
+
 .dsc-list-button{
     list-style: none;
     padding: 5px;
@@ -50,4 +54,33 @@ form div > button{
 
 form label {
     display: block;
+}
+
+form .dsc-btn-add{
+    color: #023502;
+    background-color: #6fcf6f;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+form .dsc-btn-delete{
+    color: #280707;
+    background-color: #ec9494;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+form .dsc-btn-primary, button[type="submit"]{
+    color: #07273f;
+    background-color: #69afe4;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+form .dsc-btn-primary:disabled, button[type="submit"]:disabled {
+    color: #706f6f;
+    background-color: #a7a7a7;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: no-drop;
 }

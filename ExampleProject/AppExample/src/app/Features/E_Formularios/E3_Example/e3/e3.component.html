@@ -5,7 +5,7 @@
     <p></p>
     <blockquote>
 
-        <form [formGroup]="formAnimal" (submit)="Enviar()">
+        <form [formGroup]="formAnimal" (submit)="EnviarFormAnimal()">
             <div>
                 <label>Nombre : </label>
                 <input type="text" formControlName="Nombre" />
@@ -25,7 +25,7 @@
             </ng-container>
 
             <div>
-                <button [disabled]="!formAnimal.valid"  >Iniciar Sesión</button>
+                <button type="submit" [disabled]="!formAnimal.valid"  >Iniciar Sesión</button>
             </div>
 
             

@@ -75,6 +75,15 @@ export class A3Component {
     item => console.log(item)
     );
 
+
+
+    // Eliminar todos los elementos desde el índice 0
+    vocales.splice(0, vocales.length);
+    //mostrar en consola
+    console.info('Eliminamos todos los items');
+    console.log(vocales);
+    
+
   }
 
 }

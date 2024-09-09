@@ -5,7 +5,7 @@
     <p></p>
     <blockquote>
 
-        <form [formGroup]="formPersona" (submit)="Enviar()">
+        <form [formGroup]="formPersona" (submit)="EnviarFormPersona()">
             <div>
                 <label>Nombre : </label>
                 <input type="text" formControlName="Nombre" />
@@ -16,7 +16,7 @@
           
 
             <div>
-                <button [disabled]="(!formPersona.valid) || deshabilitarEnvioFormPersona()"  >Iniciar Sesión</button>
+                <button type="submit" [disabled]="(!formPersona.valid) || deshabilitarEnvioFormPersona()"  >Iniciar Sesión</button>
             </div>
 
 

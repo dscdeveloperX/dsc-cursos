@@ -14,30 +14,31 @@ export class E4Component {
 
   public deshabilitarEnvioFormPersona = signal<boolean>(false);
 
-  public formPersona:FormGroup;
-
-  public ctrlNombre:FormControl;
+  public formPersona!:FormGroup;
+  public ctrlNombre!:FormControl;
   
 
   constructor(){
 
-    //creamos instancias de los controles de formulario
-    this.ctrlNombre = new FormControl('', Validators.compose([Validators.required]));
-  
-  
-    //creamos una nueva instancia de formulario
-    this.formPersona = new FormGroup(
-      {
-        Nombre:this.ctrlNombre,
-      }
-    );
+    this.CrearFormPersona();   
 
   }
 
 
+  private CrearFormPersona():void{
+     //creamos instancias de los controles de formulario
+     this.ctrlNombre = new FormControl('', Validators.compose([Validators.required]));
+  
+     //creamos una nueva instancia de formulario
+     this.formPersona = new FormGroup(
+       {
+         Nombre:this.ctrlNombre,
+       }
+     );
+  }
 
   
-  public Enviar():void{
+  public EnviarFormPersona():void{
 
     if(this.formPersona.valid){
       this.deshabilitarEnvioFormPersona.set(true);
