@@ -1,1 +1,15 @@
-<p>e9 works!</p>
+<form [formGroup]="formGroup1" (submit)="EnviarFormulario()">
+    <input type="text" formControlName="nombre" />
+    <input type="text" formControlName="apellido" />
+    <button type="submit">Enviar</button>
+</form>
+<h1>mi formulario</h1>
+<form [formGroup]="formAnimal" (submit)="EnviarFormulario2()">
+<div> <label >introduzca nombre</label>
+    <input type="text" formControlName="nombre"/></div>
+<div> <label >introduzca raza</label>
+<input type="text" formControlName="raza"/></div>
+<div> <label >introduzca color</label>
+    <input type="text" formControlName="color"/></div>
+<div><button type="submit">Enviar solicitud</button></div>
+</form>
