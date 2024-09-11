@@ -4,3 +4,8 @@ export interface IAnimal {
 }
 
 
+export interface IMiMascota{
+    foto:string;
+    nombre:string;
+    descripcion:string;
+}

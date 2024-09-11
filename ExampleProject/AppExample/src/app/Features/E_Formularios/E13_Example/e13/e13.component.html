@@ -1,0 +1,48 @@
+<h1>E13-FORMULARIOS</h1>
+
+<section>
+    <h2>FormControls StatusChange - ValuesChange</h2>
+    <p>Eventos que escuchan y reaccionan a los cambios en el estado y valores del control ctrlProductoNombre.</p>
+    <blockquote>
+        
+        <ul class="dsc-list-button">
+            <li></li>
+        </ul>
+
+        <form [formGroup]="formProducto" (submit)="EnviarFormProducto()">
+            <div>
+                <label>Nombre de producto: </label>
+                <!--control-->
+                <input type="text" formControlName="productoNombre" />
+                <!--validaciones-->
+                <div *ngIf="ctrlProductoNombre.errors && (ctrlProductoNombre.dirty || ctrlProductoNombre.touched)">
+                    <em *ngIf="ctrlProductoNombre.hasError('required')" >Nombre es requerido</em>
+                </div>
+            </div>
+
+            <div>
+                <label>Precio: </label>
+                <!--control-->
+                <input type="number" formControlName="productoPrecio" />
+                <!--validaciones-->
+                <div *ngIf="ctrlProductoPrecio.errors && (ctrlProductoPrecio.dirty || ctrlProductoPrecio.touched)">
+                    <em *ngIf="ctrlProductoPrecio.hasError('required')" >Precio es requerido</em>
+                    <em *ngIf="ctrlProductoPrecio.hasError('min')" >Precio mínimo $1</em>
+                </div>
+            </div>
+
+        <!--boton para enviar datos del formulario-->
+        <div>
+            <button type="submit" [disabled]="!formProducto.valid">Enviar producto</button>
+        </div>
+
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+

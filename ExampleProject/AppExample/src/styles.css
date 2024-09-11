@@ -84,3 +84,38 @@ form .dsc-btn-primary:disabled, button[type="submit"]:disabled {
     padding: 5px 10px;
     cursor: no-drop;
 }
+
+figure{
+    border: dashed 1px gray;
+    padding: 10px;
+    background-color: #282727;
+    border-radius: 30px;
+}
+
+figure img{
+    border-radius: 50%;
+}
+
+
+figure figcaption{
+    color: #dac149;
+    font-weight: bold;
+    padding: 5px;
+}
+
+figure p{
+    color: #668cda;
+    padding: 5px;
+}
+
+figure h3{
+
+}
+
+figure ul{
+
+}
+
+figure ul li{
+
+}
