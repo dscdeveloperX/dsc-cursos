@@ -19,7 +19,8 @@ import {
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './e6.component.html',
-  styleUrls: ['./e6.component.css']
+  styleUrls: ['./e6.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class E6Component implements OnInit {
 
@@ -35,7 +36,9 @@ export class E6Component implements OnInit {
 
 
 
-  constructor(private changeDetectorRef:ChangeDetectorRef) {
+
+
+  constructor() {
     this.CrearFormMusico();
     this.CargarCategoriaInstrumento();
     this.CargarInstrumento();
@@ -53,12 +56,15 @@ export class E6Component implements OnInit {
         
       );
       
+
       if(valor.length == 0 ){
-        this.instrumentoFiltroData.set([]);  
+        this.instrumentoFiltroData.set([]);
+        
       }else{
         this.instrumentoFiltroData.set(instrumentoFiltro);
       }
-      
+      //establece en el control instumedoId el valor ''
+      this.ctrlInstrumentoId.setValue('');
       
 
     });

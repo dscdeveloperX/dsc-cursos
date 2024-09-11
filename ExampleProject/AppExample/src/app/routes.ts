@@ -36,6 +36,8 @@ import { A8Component } from "./Features/A_TypeScript/A8_Example/a8/a8.component"
 import { A7Component } from "./Features/A_TypeScript/A7_Example/a7/a7.component";
 import { A6Component } from "./Features/A_TypeScript/A6_Example/a6/a6.component";
 import { A5Component } from "./Features/A_TypeScript/A5_Example/a5/a5.component";
+import { E0Component } from "./Features/E_Formularios/E0_Example/e0/e0.component";
+import { E12Component } from "./Features/E_Formularios/E12_Example/e12/e12.component";
 
 export const routes:Routes=[
     {
@@ -143,6 +145,10 @@ export const routes:Routes=[
         component:D5Component
     },
     {
+        path:'e0',
+        component:E0Component
+    },
+    {
         path:'e1',
         component:E1Component
     },
@@ -187,8 +193,8 @@ export const routes:Routes=[
         component:E11Component
     },
     {
-        path:'e1',
-        component:E1Component
+        path:'e12',
+        component:E12Component
     }
 
 ];

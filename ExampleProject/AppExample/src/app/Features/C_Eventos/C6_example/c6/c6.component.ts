@@ -60,8 +60,15 @@ export class C6Component {
 
   public MostrarResultado1():void{
 
-    this.resultado1.set(this.persona());
-    this.resultado2.set( JSON.stringify(this.persona()));
+    //convierte el objeto JSON en texto
+    const objeto_a_texto:string = JSON.stringify(this.persona());
+    //mostrar texto
+    this.resultado2.set( objeto_a_texto );
+
+    //convierto el texto a objeto tipo persona
+    const texto_a_objeto:IPersona[] = JSON.parse(objeto_a_texto);
+    //mostrar objeto
+    this.resultado1.set(texto_a_objeto);
 
   }
 
