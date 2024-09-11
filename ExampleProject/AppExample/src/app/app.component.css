@@ -22,7 +22,6 @@ main nav h2{
 main nav a{
     float: left;
     padding: 5px 10px;
-    background-color: #006cbe;
     font-size: 13pt;
     text-decoration: none;
     color: #ffffff;
@@ -33,11 +32,23 @@ main nav a{
     margin:5px 0px;
 }
 main nav a:hover{
-    background-color: #4d9c72;
+    background-color: #ffffff;
+    color:#000000;
 }
 main article{
     overflow: hidden;
     overflow-x: auto;
     overflow-y: auto;
     padding: 10px 10px 0px 40px;
+}
+
+.dsc-a-level-1{
+    background-color: #9b9d15;
+}
+
+.dsc-a-level-2{
+    background-color: #006cbe;
+}
+.dsc-a-level-3{
+    background-color: #c63434;
 }

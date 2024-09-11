@@ -1,1 +1,59 @@
-<p>e6 works!</p>
+<h1>E6-FORMULARIOS</h1>
+
+<section>
+    <h2>formularios control evento valueChange</h2>
+    <p>al cambiar el valor del control activamos el evento "valueChange" y podemos realizar un proceso
+    </p>
+    <blockquote>
+
+        <form [formGroup]="formMusico" (submit)="EnviarFormMusico()">
+            <div>
+                <label>Musico : </label>
+                <input type="text" formControlName="nombre" autocomplete="false" />
+                <div *ngIf="ctrlNombreMusico.errors && (ctrlNombreMusico.dirty || ctrlNombreMusico.touched)">
+                    <em *ngIf="ctrlNombreMusico.hasError('required')" >Nombre es requerido</em>
+                </div>
+            </div>
+
+            <div>
+                <label>Instrumento Categoría: </label>
+                <select formControlName="categoria">
+                    <option value="">Seleccionar categoría</option>
+                    <ng-container *ngFor="let item of categoriaInstrumentoData">
+                        <option value="{{item.categoriaInstrumentoId}}">{{item.nombre}}</option>
+                    </ng-container>
+                </select>
+                <div *ngIf="ctrlCategoriaInstrumentoId.errors && (ctrlCategoriaInstrumentoId.dirty || ctrlCategoriaInstrumentoId.touched)">
+                    <em *ngIf="ctrlCategoriaInstrumentoId.hasError('required')" >categoria es requerido</em>
+                </div>
+            </div>
+
+            <div>
+                <label>Instrumento: </label>
+                <select formControlName="instrumento">
+                    <option value="">Seleccionar instrumento</option>
+                    <ng-container *ngFor="let item of instrumentoFiltroData()">
+                        <option value="{{item.instrumentoId}}">{{item.nombre}}</option>
+                    </ng-container>
+                </select>
+                <div *ngIf="ctrlInstrumentoId.errors && (ctrlInstrumentoId.dirty || ctrlInstrumentoId.touched)">
+                    <em *ngIf="ctrlInstrumentoId.hasError('required')" >instrumento es requerido</em>
+                </div>
+            </div>
+            
+            <div>
+                <button type="submit" [disabled]="!formMusico.valid"  >Aceptar</button>
+            </div>
+
+            
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+

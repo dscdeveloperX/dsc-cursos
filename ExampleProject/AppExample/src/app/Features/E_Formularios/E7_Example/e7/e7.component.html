@@ -1,1 +1,80 @@
-<p>e7 works!</p>
+<h1>E7-FORMULARIOS</h1>
+
+<section>
+    <h2>Formularios dinámicos (avanzado)</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formPadre" (submit)="Enviar()">
+
+
+            <div>
+                <label>Nombre : </label>
+                <input type="text" formControlName="padreNombre" autocomplete="false" />
+                <div *ngIf="ctrlPadreNombre.errors && (ctrlPadreNombre.dirty || ctrlPadreNombre.touched)">
+                    <em *ngIf="ctrlPadreNombre.hasError('required')" >Nombre padre es requerido</em>
+                </div>
+            </div>
+
+
+            <div>
+                <label>Sueldo: </label>
+                <input type="number" formControlName="padreSueldo" />
+                <div *ngIf="ctrlPadreSueldo.errors && (ctrlPadreSueldo.dirty || ctrlPadreSueldo.touched)">
+                    <em *ngIf="ctrlPadreSueldo.hasError('required')" >sueldo es requerido</em>
+                    <em *ngIf="ctrlPadreSueldo.hasError('min')" >sueldo mínima es 1</em>
+                </div>
+            </div>
+            
+
+
+            <h3>Hijos : </h3>
+            <div>
+                <button type="button" (click)="AgregarFormularioHijo()" class="dsc-btn-add">Agregar hijo</button>
+            </div>
+
+
+            <div formArrayName="padreHijos">
+                <ng-container *ngFor="let item of FormArrayPadreHijos.controls; let i = index">
+                    <div [formGroupName]="i">
+                        <div>
+                            <label>Nombre : </label>
+                            <input type="text" formControlName="hijoNombre" autocomplete="false" />
+                            <div *ngIf="FormArrayPadreHijos.at(i).get('hijoNombre')?.errors && (FormArrayPadreHijos.at(i).get('hijoNombre')?.dirty || FormArrayPadreHijos.at(i).get('hijoNombre')?.touched)">
+                                <em *ngIf="FormArrayPadreHijos.at(i).get('hijoNombre')?.hasError('required')" >Nombre hijo es requerido</em>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Edad: </label>
+                            <input type="number" formControlName="hijoEdad" />
+                            <div *ngIf="FormArrayPadreHijos.at(i).get('hijoEdad')?.errors && (FormArrayPadreHijos.at(i).get('hijoEdad')?.dirty || FormArrayPadreHijos.at(i).get('hijoEdad')?.touched)">
+                                <em *ngIf="FormArrayPadreHijos.at(i).get('hijoEdad')?.hasError('required')" >edad es requerido</em>
+                                <em *ngIf="FormArrayPadreHijos.at(i).get('hijoEdad')?.hasError('min')" >edad mínima es 1</em>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" (click)="EliminarFormularioHijo(i)" class="dsc-btn-delete" >Eliminar</button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+
+            
+            <div>
+                <button type="submit" [disabled]="!formPadre.valid">Enviar formulario</button>
+                <button type="button" (click)="ResetearFormularios()">Resetear formulario</button>
+            </div>
+
+            
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+

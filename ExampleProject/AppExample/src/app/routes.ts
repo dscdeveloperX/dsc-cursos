@@ -36,7 +36,26 @@ import { A8Component } from "./Features/A_TypeScript/A8_Example/a8/a8.component"
 import { A7Component } from "./Features/A_TypeScript/A7_Example/a7/a7.component";
 import { A6Component } from "./Features/A_TypeScript/A6_Example/a6/a6.component";
 import { A5Component } from "./Features/A_TypeScript/A5_Example/a5/a5.component";
+<<<<<<< HEAD
 import { Z1Component } from "./Features/Z_Pruebas/Z_Example/z1/z1.component";
+=======
+import { E0Component } from "./Features/E_Formularios/E0_Example/e0/e0.component";
+import { E12Component } from "./Features/E_Formularios/E12_Example/e12/e12.component";
+import { E13Component } from "./Features/E_Formularios/E13_Example/e13/e13.component";
+import { E14Component } from "./Features/E_Formularios/E14_Example/e14/e14.component";
+import { E15Component } from "./Features/E_Formularios/E15_Example/e15/e15.component";
+import { F1Component } from "./Features/F_Componentes/F1_Example/f1/f1.component";
+import { F2Component } from "./Features/F_Componentes/F2_Example/f2/f2.component";
+import { F3Component } from "./Features/F_Componentes/F3_Example/f3/f3.component";
+import { F4Component } from "./Features/F_Componentes/F4_Example/f4/f4.component";
+import { F5Component } from "./Features/F_Componentes/F5_Example/f5/f5.component";
+import { F6Component } from "./Features/F_Componentes/F6_Example/f6/f6.component";
+import { F7Component } from "./Features/F_Componentes/F7_Example/f7/f7.component";
+import { F8Component } from "./Features/F_Componentes/F8_Example/f8/f8.component";
+import { F9Component } from "./Features/F_Componentes/F9_Example/f9/f9.component";
+import { F10Component } from "./Features/F_Componentes/F10_Example/f10/f10.component";
+
+>>>>>>> c64d27a8a4374938b1f1db918955a000ddb5604f
 export const routes:Routes=[
     {
         path:'',
@@ -143,6 +162,10 @@ export const routes:Routes=[
         component:D5Component
     },
     {
+        path:'e0',
+        component:E0Component
+    },
+    {
         path:'e1',
         component:E1Component
     },
@@ -187,12 +210,71 @@ export const routes:Routes=[
         component:E11Component
     },
     {
+<<<<<<< HEAD
         path:'e1',
         component:E1Component
     },
     {
         path:'z1',
         component:Z1Component
+=======
+        path:'e12',
+        component:E12Component
+    }
+    ,
+    {
+        path:'e13',
+        component:E13Component
+    }
+    ,
+    {
+        path:'e14',
+        component:E14Component
+    },
+    {
+        path:'e15',
+        component:E15Component
+    },
+    {
+        path:'f1',
+        component:F1Component
+    },
+    {
+        path:'f2',
+        component:F2Component
+    },
+    {
+        path:'f3',
+        component:F3Component
+    },
+    {
+        path:'f4',
+        component:F4Component
+    },
+    {
+        path:'f5',
+        component:F5Component
+    },
+    {
+        path:'f6',
+        component:F6Component
+    },
+    {
+        path:'f7',
+        component:F7Component
+    },
+    {
+        path:'f8',
+        component:F8Component
+    },
+    {
+        path:'f9',
+        component:F9Component
+    },
+    {
+        path:'f10',
+        component:F10Component
+>>>>>>> c64d27a8a4374938b1f1db918955a000ddb5604f
     }
 
 

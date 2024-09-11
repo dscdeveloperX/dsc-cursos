@@ -1,1 +1,50 @@
-<p>e2 works!</p>
+<h1>E2-FORMULARIOS</h1>
+
+<section>
+    <h2>formularios y Checkbox</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formAficionado" (submit)="EnviarFormAficionado()">
+            <div>
+                <label for="NombreAficionado">Nombre de aficionado: </label>
+                <input type="text" formControlName="NombreAficionado" />
+                <div *ngIf="ctrlNombreAficionado.errors && (ctrlNombreAficionado.dirty || ctrlNombreAficionado.touched)">
+                    <em *ngIf="ctrlNombreAficionado.hasError('required')" >Nombre de aficionado es requerido</em>
+                </div>
+            </div>
+            <h3>Deportes de su afición: </h3>
+            <div>
+                <label> 
+                <input type="checkbox" formControlName="Patinaje" />
+                Patinaje
+                </label>
+            </div>
+            <div>
+                <label> 
+                <input type="checkbox" formControlName="Boxeo" />
+                Boxeo
+                </label>
+            </div>
+            <div>
+                <label> 
+                <input type="checkbox" formControlName="Tenis" />
+                Tenis
+                </label>
+            </div>
+
+            <div>
+                <button type="submit" [disabled]="!formAficionado.valid"  >Iniciar Sesión</button>
+            </div>
+
+            
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+

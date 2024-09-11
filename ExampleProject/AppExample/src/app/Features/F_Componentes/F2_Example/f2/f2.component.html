@@ -1,0 +1,26 @@
+<h1>F1-COMPONENTES</h1>
+
+<section>
+    <h2>&#64;Input</h2>
+    <p>&#64;Input es un decorador que se usa para permitir que un componente hijo reciba datos desde un componente padre</p>
+    <blockquote>
+        
+        <div>
+            <button (click)="CargarMisMascotas()">Cargar la lista de mis mascotas</button>
+        </div>
+        
+        <ng-container *ngFor="let item of misMascotaData()">
+
+            <app-f2-hijo [Foto]="item.foto" [Nombre]="item.nombre" [Descripcion]="item.descripcion" ></app-f2-hijo>
+        
+        </ng-container>
+        
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+

@@ -1,0 +1,18 @@
+<figure>
+  
+    <img src="../../../../../assets/images/{{ Foto }}" width="100px" height="100px" />
+
+  <figcaption>{{ Nombre }}</figcaption>
+  
+  <p>{{ Descripcion }}</p>
+
+  
+  <h5>Lista de poderes</h5>
+  <ul>
+    <ng-container *ngFor="let item of Poderes">
+        <li>{{item}}</li>
+    </ng-container>
+  </ul>
+
+
+</figure>

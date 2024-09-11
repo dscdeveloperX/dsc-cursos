@@ -1,1 +1,42 @@
-<p>e3 works!</p>
+<h1>E3-FORMULARIOS</h1>
+
+<section>
+    <h2>formularios y Radio</h2>
+    <p></p>
+    <blockquote>
+
+        <form [formGroup]="formAnimal" (submit)="EnviarFormAnimal()">
+            <div>
+                <label>Nombre : </label>
+                <input type="text" formControlName="Nombre" />
+                <div *ngIf="ctrlNombre.errors && (ctrlNombre.dirty || ctrlNombre.touched)">
+                    <em *ngIf="ctrlNombre.hasError('required')" >Nombre es requerido</em>
+                </div>
+            </div>
+            <h3>Color del animal: </h3>
+            
+            <ng-container *ngFor="let item of ['Azul','Rojo','Verde','Blanco']">
+            <div>
+                <label> 
+                <input type="radio" formControlName="Color" [value]="item" />
+                {{item}}
+                </label>
+            </div>
+            </ng-container>
+
+            <div>
+                <button type="submit" [disabled]="!formAnimal.valid"  >Iniciar Sesión</button>
+            </div>
+
+            
+        </form>
+     
+
+    </blockquote>
+</section>
+
+<!--..................................................-->
+
+
+
+
