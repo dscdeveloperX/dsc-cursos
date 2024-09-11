@@ -1,7 +1,21 @@
-<h1>ejemplo de uso de campos, constructores y metodos</h1>
-<section>
-    <h2>mostrar en consola</h2>
-    <blockquote>
-        <button (click)="RecorridoFor()">revisar en consola</button>
-    </blockquote>
-</section>
+<form [formGroup]="FormExample1" (submit)="EnviarInfo()">
+<div>
+    <input type="text" formControlName="nombre">
+</div>
+<div>
+    <input type="text" formControlName="especie">
+</div>
+<div>
+    <input type="text" formControlName="estado">
+</div>
+<div>
+    <button type="submit">Enviar Reporte</button>
+</div>
+
+
+
+
+
+
+
+</form>

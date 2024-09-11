@@ -36,9 +36,7 @@ import { A8Component } from "./Features/A_TypeScript/A8_Example/a8/a8.component"
 import { A7Component } from "./Features/A_TypeScript/A7_Example/a7/a7.component";
 import { A6Component } from "./Features/A_TypeScript/A6_Example/a6/a6.component";
 import { A5Component } from "./Features/A_TypeScript/A5_Example/a5/a5.component";
-<<<<<<< HEAD
 import { Z1Component } from "./Features/Z_Pruebas/Z_Example/z1/z1.component";
-=======
 import { E0Component } from "./Features/E_Formularios/E0_Example/e0/e0.component";
 import { E12Component } from "./Features/E_Formularios/E12_Example/e12/e12.component";
 import { E13Component } from "./Features/E_Formularios/E13_Example/e13/e13.component";
@@ -55,7 +53,6 @@ import { F8Component } from "./Features/F_Componentes/F8_Example/f8/f8.component
 import { F9Component } from "./Features/F_Componentes/F9_Example/f9/f9.component";
 import { F10Component } from "./Features/F_Componentes/F10_Example/f10/f10.component";
 
->>>>>>> c64d27a8a4374938b1f1db918955a000ddb5604f
 export const routes:Routes=[
     {
         path:'',
@@ -210,14 +207,17 @@ export const routes:Routes=[
         component:E11Component
     },
     {
-<<<<<<< HEAD
+
         path:'e1',
         component:E1Component
     },
     {
         path:'z1',
         component:Z1Component
-=======
+    }
+    ,
+    {
+
         path:'e12',
         component:E12Component
     }
@@ -274,7 +274,7 @@ export const routes:Routes=[
     {
         path:'f10',
         component:F10Component
->>>>>>> c64d27a8a4374938b1f1db918955a000ddb5604f
+
     }
 
 
