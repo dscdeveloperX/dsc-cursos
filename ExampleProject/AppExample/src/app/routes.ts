@@ -36,7 +36,7 @@ import { A8Component } from "./Features/A_TypeScript/A8_Example/a8/a8.component"
 import { A7Component } from "./Features/A_TypeScript/A7_Example/a7/a7.component";
 import { A6Component } from "./Features/A_TypeScript/A6_Example/a6/a6.component";
 import { A5Component } from "./Features/A_TypeScript/A5_Example/a5/a5.component";
-
+import { Z1Component } from "./Features/Z_Pruebas/Z_Example/z1/z1.component";
 export const routes:Routes=[
     {
         path:'',
@@ -189,6 +189,11 @@ export const routes:Routes=[
     {
         path:'e1',
         component:E1Component
+    },
+    {
+        path:'z1',
+        component:Z1Component
     }
+
 
 ];

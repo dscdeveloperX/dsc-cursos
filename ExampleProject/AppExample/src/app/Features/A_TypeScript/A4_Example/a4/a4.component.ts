@@ -74,7 +74,7 @@ export class A4Component {
     //map: Crea un nuevo arreglo con los resultados de aplicar una función proporcionada a cada elemento del arreglo original.
     console.info("------ Map ------");
     let numeros = [1, 2, 3, 4];
-    let resultado = numeros.map(item => item * 2);
+    let resultado:number[] = numeros.map(item => item * 2);
     console.log(resultado); // [2, 4, 6, 8]
 
   }
