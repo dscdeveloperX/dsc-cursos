@@ -1,0 +1,41 @@
+<ul>
+    <ng-container *ngFor="let item of ['f1','f2','f3']">
+        <li>{{item}}</li>
+    </ng-container>
+</ul>
+<ul>
+    <ng-container *ngFor="let item of letras" >
+        <li>{{item}}</li>
+    </ng-container>
+</ul>
+<ol>
+    <ng-container *ngFor="let item of juegos()" >
+        <li>{{item}}</li>
+    </ng-container>
+   
+</ol>
+<ul>
+    <ng-container *ngFor="let item of FemaleNames()">
+        <li>{{item}}</li>
+    </ng-container>
+</ul>
+<table>
+<thead>
+<tr>
+    <td>Nombre</td>
+    <td>Fecha</td>
+    <td>Edad</td>
+</tr>
+</thead>
+<tbody>
+<ng-container *ngFor="let item of Data">
+    <tr>
+        <td>{{item.Nombre}}</td>
+        <td>{{item.Fecha}}</td>
+        <td>{{item.Edad}}</td>
+    </tr>
+</ng-container>
+</tbody>
+
+
+</table>

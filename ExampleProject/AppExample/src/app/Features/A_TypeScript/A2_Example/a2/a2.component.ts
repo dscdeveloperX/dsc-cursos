@@ -37,6 +37,7 @@ export class A2Component {
     let hijos: number | null;
     hijos = null;
     hijos = 3;
+    
 
   }
 

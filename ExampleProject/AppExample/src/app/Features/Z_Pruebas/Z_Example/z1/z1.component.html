@@ -1,1 +1,21 @@
-<p>z1 works!</p>
+<form [formGroup]="FormExample1" (submit)="EnviarInfo()">
+<div>
+    <input type="text" formControlName="nombre">
+</div>
+<div>
+    <input type="text" formControlName="especie">
+</div>
+<div>
+    <input type="text" formControlName="estado">
+</div>
+<div>
+    <button type="submit">Enviar Reporte</button>
+</div>
+
+
+
+
+
+
+
+</form>
