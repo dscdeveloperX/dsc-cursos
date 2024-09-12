@@ -12,11 +12,17 @@ import { CommonModule } from '@angular/common';
 export class F3HijoComponent {
 
   
-  @Input() Foto!:string;
-  @Input() Nombre!:string;
-  @Input() Descripcion!:string;
+  @Input() 
+  public Foto!:string;
 
-  @Input() Poderes!:string[];
+  @Input() 
+  public Nombre!:string;
+
+  @Input() 
+  public Descripcion!:string;
+
+  @Input() 
+  public Poderes!:string[];
 
 
 

@@ -1,1 +1,49 @@
-<p>f6 works!</p>
+<h1>F6-COMPONENTES</h1>
+
+<section>
+  <h2>ng-content</h2>
+  <p>
+    Permite proyectar contenido en el componente hijo a través de un selector
+  </p>
+  <blockquote>
+
+
+    <!-- componente hijo A ------------------------------------------>
+    <app-f6-hijo-a>
+      Coloco la descripcion como contenido entre la etiqueta
+    </app-f6-hijo-a>
+
+
+
+    <!-- componente hijo B ------------------------------------------>
+    <app-f6-hijo-b>
+
+      <header>Esta es la cabecera (select etiqueda header)</header>
+
+      <aside>Este es el cuerpo (select etiqueda aside)</aside>
+
+      <footer>Este es el pie de pagina (select etiqueda footer)</footer>
+
+    </app-f6-hijo-b>
+
+
+
+
+    <!-- componente hijo C ------------------------------------------>
+    <app-f6-hijo-c>
+
+      <div class="cabecera">Esta es la cabecera (select class cabecera)</div>
+
+      <div class="cuerpo">Este es el cuerpo (select class cuerpo)</div>
+
+      <div class="pie">Este es el pie de pagina (select class pie)</div>
+
+    </app-f6-hijo-c>
+
+
+
+
+  </blockquote>
+</section>
+
+<!--..................................................-->

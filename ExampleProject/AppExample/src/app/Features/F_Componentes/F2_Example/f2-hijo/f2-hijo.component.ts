@@ -11,9 +11,14 @@ import { CommonModule } from '@angular/common';
 export class F2HijoComponent {
 
 
-  @Input() Foto!:string;
-  @Input() Nombre!:string;
-  @Input() Descripcion!:string;
+  @Input() 
+  public Foto!:string;
+  
+  @Input() 
+  public Nombre!:string;
+
+  @Input() 
+  public Descripcion!:string;
 
   
 
