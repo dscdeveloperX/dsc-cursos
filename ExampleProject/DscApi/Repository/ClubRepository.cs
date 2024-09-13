@@ -19,9 +19,7 @@ namespace DscApi.Repository
             dscConnectionString = configuration.GetConnectionString("dscconnectionstring");
         }
 
-
-
-        public async Task<bool> ClubDelete(int id)
+        public async Task<bool> DeleteClub(int id)
         {
             bool response = false;
 
@@ -43,7 +41,7 @@ namespace DscApi.Repository
             return response;
         }
 
-        public async Task<bool> ClubInsert(ClubAddModRequest request)
+        public async Task<bool> InsertClub(ClubInsertRequest request)
         {
             bool response = false;
 
@@ -67,13 +65,13 @@ namespace DscApi.Repository
             return response;
         }
 
-        public async Task<List<Club>> ClubSelectAll()
+        public async Task<List<Club>> SelectAllClub()
         {
             List<Club> response = new List<Club>();
 
             using (SqlConnection cnn = new SqlConnection(dscConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_ClubAll", cnn))
+                using (SqlCommand cmd = new SqlCommand("sp_SelectAllClub", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     //
@@ -104,14 +102,14 @@ namespace DscApi.Repository
             return response;
         }
 
-        public async Task<List<Club>> ClubSelectById(int id)
+        public async Task<List<Club>> SelectByIdClub(int id)
         {
             
             List<Club> response = new List<Club>();
 
             using (SqlConnection cnn = new SqlConnection(dscConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_ClubById", cnn))
+                using (SqlCommand cmd = new SqlCommand("sp_SelectByIdClub", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@ClubId", SqlDbType.Int) { Value = id, Direction = ParameterDirection.Input });
@@ -143,7 +141,7 @@ namespace DscApi.Repository
             return response;
         }
 
-        public async Task<bool> ClubUpdate(ClubAddModRequest request)
+        public async Task<bool> UpdateClub(ClubUpdateRequest request)
         {
             bool response = false;
 

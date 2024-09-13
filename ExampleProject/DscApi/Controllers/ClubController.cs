@@ -9,40 +9,40 @@ using DscApi.Models.Request;
 
 namespace DscApi.Controllers
 {
-    [Route("api/v1/[Controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     [EnableCors("dsccors")]
-    public class ClubClubler : ControllerBase
+    public class ClubController : ControllerBase
     {
 
         private readonly IClub _clubRepository;
-        public ClubClubler(IClub clubRepository)
+        public ClubController(IClub clubRepository)
         {
             _clubRepository = clubRepository;
         }
 
 
 
-        [HttpGet("Select/{id:int}")]
-        public async Task<ActionResult<ClubResponse>> GetSelect(int id)
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<DataResponse<Club>>> GetById(int id)
         {
-            ClubResponse response = new ClubResponse();
+            DataResponse<Club> response = new DataResponse<Club>();
             List<Club> data = new List<Club>();
 
 
             try
             {
-                data = await _clubRepository.ClubSelectById(id);
+                data = await _clubRepository.SelectByIdClub(id);
                 response.ErrorCodigo = 0;
                 response.ErrorMensaje = "Transacion exitosa";
-                response.Clubes = data;
+                response.Data = data;
             }
             catch (Exception ex)
             {
 
                 response.ErrorCodigo = 1000;
                 response.ErrorMensaje = "Error: " + ex.Message;
-                response.Clubes = data;
+                response.Data = data;
             }
             return response;
         }
@@ -50,26 +50,26 @@ namespace DscApi.Controllers
 
 
 
-        [HttpGet("SelectAll")]
-        public async Task<ActionResult<ClubResponse>> GetSelectAll()
+        [HttpGet]
+        public async Task<ActionResult<DataResponse<Club>>> Get()
         {
-            ClubResponse response = new ClubResponse();
+            DataResponse<Club> response = new DataResponse<Club>();
             List<Club> data = new List<Club>();
 
 
             try
             {
-                data = await _clubRepository.ClubSelectAll();
+                data = await _clubRepository.SelectAllClub();
                 response.ErrorCodigo = 0;
                 response.ErrorMensaje = "Transacion exitosa";
-                response.Clubes = data;
+                response.Data = data;
             }
             catch (Exception ex)
             {
 
                 response.ErrorCodigo = 1000;
                 response.ErrorMensaje = "Error: " + ex.Message;
-                response.Clubes = data;
+                response.Data = data;
             }
             return response;
         }
@@ -77,27 +77,27 @@ namespace DscApi.Controllers
 
 
         [HttpPost("Post")]
-        public async Task<ActionResult<ClubResponse>> Post([FromBody] ClubAddModRequest request)
+        public async Task<ActionResult<DataResponse<Club>>> Post([FromBody] ClubInsertRequest request)
         {
-            ClubResponse response = new ClubResponse();
+            DataResponse<Club> response = new DataResponse<Club>();
             List<Club> data = new List<Club>();
 
             try
             {
-                if (!await _clubRepository.ClubInsert(request))
+                if (!await _clubRepository.InsertClub(request))
                 {
                     throw new Exception("no se insertaron registros");
                 }
                 response.ErrorCodigo = 0;
                 response.ErrorMensaje = "Transacion exitosa";
-                response.Clubes = data;
+                response.Data = data;
             }
             catch (Exception ex)
             {
 
                 response.ErrorCodigo = 1010;
                 response.ErrorMensaje = "Error: " + ex.Message;
-                response.Clubes = data;
+                response.Data = data;
             }
             return response;
         }
@@ -105,41 +105,41 @@ namespace DscApi.Controllers
 
 
         [HttpPut("Put")]
-        public async Task<ActionResult<ClubResponse>> Put([FromBody] ClubAddModRequest request)
+        public async Task<ActionResult<DataResponse<Club>>> Put([FromBody] ClubUpdateRequest request)
         {
-            ClubResponse response = new ClubResponse();
+            DataResponse<Club> response = new DataResponse<Club>();
             List<Club> data = new List<Club>();
 
             try
             {
-                if (!await _clubRepository.ClubUpdate(request))
+                if (!await _clubRepository.UpdateClub(request))
                 {
                     throw new Exception("no se modifico el registro");
                 }
                 response.ErrorCodigo = 0;
                 response.ErrorMensaje = "Transacion exitosa";
-                response.Clubes = data;
+                response.Data = data;
             }
             catch (Exception ex)
             {
 
                 response.ErrorCodigo = 1002;
                 response.ErrorMensaje = "Error: " + ex.Message;
-                response.Clubes = data;
+                response.Data = data;
             }
             return response;
         }
 
 
-        [HttpDelete("Detele/{id:int}")]
-        public async Task<ActionResult<ClubResponse>> Delete(int id)
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<DataResponse<Club>>> Delete(int id)
         {
-            ClubResponse response = new ClubResponse();
+            DataResponse<Club> response = new DataResponse<Club>();
             List<Club> data = new List<Club>();
 
             try
             {
-                if (!await _clubRepository.ClubDelete(id))
+                if (!await _clubRepository.DeleteClub(id))
                 {
                     throw new Exception("no se elimino registro");
                 }
@@ -147,14 +147,14 @@ namespace DscApi.Controllers
 
                 response.ErrorCodigo = 0;
                 response.ErrorMensaje = "Transacion exitosa";
-                response.Clubes = data;
+                response.Data = data;
             }
             catch (Exception ex)
             {
 
                 response.ErrorCodigo = 1003;
                 response.ErrorMensaje = "Error: " + ex.Message;
-                response.Clubes = data;
+                response.Data = data;
             }
             return response;
         }

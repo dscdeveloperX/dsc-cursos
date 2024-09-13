@@ -119,3 +119,11 @@ figure ul{
 figure ul li{
 
 }
+
+
+thead{
+    background-color: #113972;
+}
+tbody td{
+    padding:2px 5px;
+}

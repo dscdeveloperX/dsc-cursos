@@ -6,11 +6,11 @@ namespace DscApi.Interface
 {
     public interface IClub
     {
-        public Task<List<Club>> ClubSelectAll();
-        public Task<List<Club>> ClubSelectById(int id);
-        public Task<bool> ClubInsert(ClubAddModRequest request);
-        public Task<bool> ClubUpdate(ClubAddModRequest request);
-        public Task<bool> ClubDelete(int id);
+        public Task<List<Club>> SelectAllClub();
+        public Task<List<Club>> SelectByIdClub(int id);
+        public Task<bool> InsertClub(ClubInsertRequest request);
+        public Task<bool> UpdateClub(ClubUpdateRequest request);
+        public Task<bool> DeleteClub(int id);
 
     }
 }

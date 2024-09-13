@@ -17,7 +17,7 @@ CONSTRAINT pk_Club_ClubId PRIMARY KEY (ClubId)
 @ClubColor nvarchar(50)
 */
 
-create or alter procedure sp_ClubById(
+create or alter procedure sp_SelectByIdClub(
 @ClubId int
 )
 as
@@ -36,7 +36,7 @@ exec sp_ClubById
 */
 
 
-create or alter procedure sp_ClubAll
+create or alter procedure sp_SelectAllClub
 as
 begin
 SELECT 
@@ -71,7 +71,7 @@ INSERT INTO Club
 
 end;
 
-
+/*
 exec sp_InsertClub
 'Emelec', --@ClubNombre nvarchar(200),
 'El Bombillo',--@ClubAlias nvarchar(200),
@@ -87,7 +87,7 @@ exec sp_InsertClub
 'La Vaca',--@ClubAlias nvarchar(200),
 '#ffd900'--@ClubColor nvarchar(50)
 
-
+*/
 
 
 

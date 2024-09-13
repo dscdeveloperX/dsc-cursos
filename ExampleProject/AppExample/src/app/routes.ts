@@ -52,6 +52,14 @@ import { F7Component } from "./Features/F_Componentes/F7_Example/f7/f7.component
 import { F8Component } from "./Features/F_Componentes/F8_Example/f8/f8.component";
 import { F9Component } from "./Features/F_Componentes/F9_Example/f9/f9.component";
 import { F10Component } from "./Features/F_Componentes/F10_Example/f10/f10.component";
+import { G1Component } from "./Features/G_Servicios/G1_Example/g1/g1.component";
+import { G2Component } from "./Features/G_Servicios/G2_Example/g2/g2.component";
+import { G3Component } from "./Features/G_Servicios/G3_Example/g3/g3.component";
+import { G4Component } from "./Features/G_Servicios/G4_Example/g4/g4.component";
+import { G5Component } from "./Features/G_Servicios/G5_Example/g5/g5.component";
+import { G6Component } from "./Features/G_Servicios/G6_Example/g6/g6.component";
+import { G7Component } from "./Features/G_Servicios/G7_Example/g7/g7.component";
+import { G8Component } from "./Features/G_Servicios/G8_Example/g8/g8.component";
 
 export const routes:Routes=[
     {
@@ -279,6 +287,38 @@ export const routes:Routes=[
         path:'f10',
         component:F10Component
 
+    },
+    {
+        path:'g1',
+        component:G1Component
+    },
+    {
+        path:'g2',
+        component:G2Component
+    },
+    {
+        path:'g3',
+        component:G3Component
+    },
+    {
+        path:'g4',
+        component:G4Component
+    },
+    {
+        path:'g5',
+        component:G5Component
+    },
+    {
+        path:'g6',
+        component:G6Component
+    },
+    {
+        path:'g7',
+        component:G7Component
+    },
+    {
+        path:'g8',
+        component:G8Component
     }
 
 

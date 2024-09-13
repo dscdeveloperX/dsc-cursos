@@ -8,11 +8,17 @@ export interface IClub{
 export interface IClubResponse{
     errorCodigo:number;
     errorMemsaje:string;
-    clubes:IClub[];
+    data:IClub[];
 }
 
-export interface IClubAddModRequest{
-    clubId?:number;
+export interface IClubInsertRequest{
+    clubNombre:string;
+    clubAlias:string;
+    clubColor:string;
+}
+
+export interface IClubUpdateRequest{
+    clubId:number;
     clubNombre:string;
     clubAlias:string;
     clubColor:string;
