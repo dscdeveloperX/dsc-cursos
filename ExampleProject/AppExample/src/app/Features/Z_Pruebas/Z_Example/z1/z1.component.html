@@ -1,21 +1,27 @@
-<form [formGroup]="FormExample1" (submit)="EnviarInfo()">
-<div>
-    <input type="text" formControlName="nombre">
-</div>
-<div>
-    <input type="text" formControlName="especie">
-</div>
-<div>
-    <input type="text" formControlName="estado">
-</div>
-<div>
-    <button type="submit">Enviar Reporte</button>
-</div>
+<blockquote>
+    <ul>
+        <li><button type="button" (click)="MostraControlValue()">Mostrar Resultado</button></li>
+        <li><button type="button" (click)="ModificarValor()">Valor Modificado</button></li>
+    </ul>
+    <form [formGroup]="formJuego" (submit)="EnviarData()">
+        <div>
+            <label>Nombre del juego</label>
+            <input type="text" formControlName="Nombre"/>
+            <div *ngIf="ctrlNombre.errors && (ctrlNombre.dirty || ctrlNombre.touched)">
+            <em *ngIf="ctrlNombre.hasError('required')">Nombre es requerido</em>    
+            </div>
+        </div>
+        <div>
+            <label>Puntuacion: </label>
+            <input type="number" formControlName="Puntuacion">
+            <div *ngIf="ctrlPUntuacion.errors && (ctrlPUntuacion.dirty || ctrlPUntuacion.touched)">
+                <em *ngIf="ctrlPUntuacion.hasError('required')">Requiere un puntaje</em>
+                <em *ngIf="ctrlPUntuacion.hasError('min')">Puntaje minimo 1</em>
+            </div>
+        </div>
 
-
-
-
-
-
-
-</form>
+        <div>
+            <button type="submit" [disabled]="!formJuego.valid">Enviar Reseña</button>
+        </div>
+    </form>
+</blockquote>
