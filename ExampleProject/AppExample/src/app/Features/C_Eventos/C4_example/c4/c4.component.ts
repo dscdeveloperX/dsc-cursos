@@ -12,10 +12,13 @@ export class C4Component {
 
   public respuesta = signal<string>('...');
 
-  public Saludo(tipoAnimal:string){
+  public Saludo(tipoAnimal:string):void{
       //usamos interpolacion de texto como en c# pero con comillas tic `
       this.respuesta.set(`hola soy un: ${tipoAnimal}`);
   }
+
+
+
 
 
 }

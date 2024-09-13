@@ -14,7 +14,7 @@ export class C6Component {
 
 
 
-  public persona = signal<IPersona[]>([]);
+  public persona:IPersona[] = [];
 
   public resultado1 = signal<IPersona[]>([]);
 
@@ -27,7 +27,7 @@ export class C6Component {
   public constructor(){
 
 
-    this.persona.set([
+    this.persona = [
         {
           cedula: '0000000001',
           nombre: 'Angel Alava',
@@ -52,16 +52,17 @@ export class C6Component {
           edad: 30,
           discapacitado: false
         }
-      ]);
+      ];
 
   }
 
 
 
   public MostrarResultado1():void{
+    
 
     //convierte el objeto JSON en texto
-    const objeto_a_texto:string = JSON.stringify(this.persona());
+    const objeto_a_texto:string = JSON.stringify(this.persona);
     //mostrar texto
     this.resultado2.set( objeto_a_texto );
 

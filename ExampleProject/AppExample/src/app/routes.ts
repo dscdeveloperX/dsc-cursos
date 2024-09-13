@@ -60,6 +60,10 @@ export const routes:Routes=[
         pathMatch:'full'
     },
     {
+        path:'inicio',
+        component:InicioComponent
+    },
+    {
         path:'a1',
         component:A1Component
     },

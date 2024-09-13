@@ -14,7 +14,7 @@ export class A7Component implements OnDestroy {
 //contador que incrementará de 1 en 1
 public contador = signal<number>(0);  
 //en esta variable guardaremos el objeto "setInterval" para asi poderlo eliminar
-private intervalo:any;
+private intervalo:any=null;
 
 
 
@@ -24,10 +24,17 @@ public IniciarIntervalo():void{
   //setInterval parametro 2: indica el tiempo en milisegundo en que se ejecuta la función 
 
   //le asignamos a la variable "intervalo" el objeto "setInterval"
-  this.intervalo = setInterval(
-        ()=>{ this.contador.set( this.contador() + 1 ); },
-        1000
+  if(this.intervalo == null){
+
+    this.intervalo = setInterval(
+
+      ()=>{ this.contador.set( this.contador() + 1 ); },
+      100
 );
+
+
+  }
+  
 }
 
 
@@ -37,6 +44,7 @@ public  FinalizarIntervalo():void{
   //podetemos borrar el intervalo a partir de la variable "intervalo" que es donde se guardo el objeto "setInterval"
   if(this.intervalo != null){
     clearInterval(this.intervalo);
+    this.intervalo = null;
   }
   else{
     alert('Porfavor iniciar intervalo');
