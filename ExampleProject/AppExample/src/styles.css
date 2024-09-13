@@ -7,7 +7,16 @@ body,html, a{
 
 
 h1{
-    color: #006cbe;
+    color: #040404;
+    padding: 15px;
+    width: fit-content;
+    border-radius: 15px 15px 0px 0px;
+    border: solid 1px #87e6f3;
+    border-width: 1px 1px 0px 1px;
+    margin-bottom: 40px;
+    background: rgb(37, 37, 37);
+    background: linear-gradient(0deg, rgba(37, 37, 37, 1) 0%, rgba(66, 155, 167, 1) 35%, rgba(135, 230, 243, 1) 100%);
+    text-shadow: 1px 1px 1px #adf5ff;
 }
 h2{
     color: #dfa7e0;
