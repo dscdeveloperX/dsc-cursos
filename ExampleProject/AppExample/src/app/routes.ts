@@ -37,6 +37,7 @@ import { A7Component } from "./Features/A_TypeScript/A7_Example/a7/a7.component"
 import { A6Component } from "./Features/A_TypeScript/A6_Example/a6/a6.component";
 import { A5Component } from "./Features/A_TypeScript/A5_Example/a5/a5.component";
 import { Z1Component } from "./Features/Z_Pruebas/Z_Example/z1/z1.component";
+import { Z2Component } from "./Features/Z_Pruebas/Z_Example/z2/z2/z2.component";
 import { E0Component } from "./Features/E_Formularios/E0_Example/e0/e0.component";
 import { E12Component } from "./Features/E_Formularios/E12_Example/e12/e12.component";
 import { E13Component } from "./Features/E_Formularios/E13_Example/e13/e13.component";
@@ -228,6 +229,10 @@ export const routes:Routes=[
         component:Z1Component
     }
     ,
+    {
+        path: 'z2',
+        component:Z2Component
+    },
     {
 
         path:'e12',

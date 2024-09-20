@@ -15,6 +15,7 @@
             </div>
 
             <div>
+                <!--en la etiqueta input el tipo "password" hace que lo que se introduce se vea incognito-->
                 <label for="clave">Clave: </label>
                 <input type="password" formControlName="Clave" />
                 <div *ngIf="ctrlClave.errors && (ctrlClave.dirty || ctrlClave.touched)">

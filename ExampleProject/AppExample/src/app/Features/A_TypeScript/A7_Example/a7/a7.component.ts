@@ -29,7 +29,7 @@ public IniciarIntervalo():void{
     this.intervalo = setInterval(
 
       ()=>{ this.contador.set( this.contador() + 1 ); },
-      100
+      1000
 );
 
 

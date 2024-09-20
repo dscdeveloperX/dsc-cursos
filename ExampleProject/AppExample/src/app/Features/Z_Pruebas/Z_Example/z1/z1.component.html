@@ -1,17 +1,25 @@
 <blockquote>
     <ul>
+        <!--lista de botones que funcionan con respectivos metodos-->
         <li><button type="button" (click)="MostraControlValue()">Mostrar Resultado</button></li>
         <li><button type="button" (click)="ModificarValor()">Valor Modificado</button></li>
     </ul>
+    <!--se crea el formulario y se le asigna nuestro formGroup-->
+    <!--el submit que se le asigna el envio de datos nos servira para referenciarlo en un boton de nuestro formulario-->
     <form [formGroup]="formJuego" (submit)="EnviarData()">
         <div>
+            <!--la etiqueta label es solo para texto que acompaña al formulario-->
             <label>Nombre del juego</label>
+            <!--en la etiqueta input ponemos el tipo de dato que aceptara el controlador y el nombre clave del controlador -->
             <input type="text" formControlName="Nombre"/>
+            <!--un ngif que detecta errores en el uso del controlador como .dirty o .touched -->
             <div *ngIf="ctrlNombre.errors && (ctrlNombre.dirty || ctrlNombre.touched)">
+                <!--con otro ngif indicamos un texto que debe salir si determinada validacion no se presenta-->
             <em *ngIf="ctrlNombre.hasError('required')">Nombre es requerido</em>    
             </div>
         </div>
         <div>
+            <!--lo mismo, solo que en este controlador habiamos puesto dos validaciones necesarias en el TS-->
             <label>Puntuacion: </label>
             <input type="number" formControlName="Puntuacion">
             <div *ngIf="ctrlPUntuacion.errors && (ctrlPUntuacion.dirty || ctrlPUntuacion.touched)">
@@ -21,7 +29,10 @@
         </div>
 
         <div>
+            <!--nuestro boton para llevarse los datos-->
+            <!--tambien por medio de [disabled] indicamos que si el formulario no (!) es valido se deshabilita el boton -->
             <button type="submit" [disabled]="!formJuego.valid">Enviar Reseña</button>
         </div>
     </form>
 </blockquote>
+<h1>15/9/2024 este formulario ahora tiene statuschanges y valueschange, ver en consola</h1>
