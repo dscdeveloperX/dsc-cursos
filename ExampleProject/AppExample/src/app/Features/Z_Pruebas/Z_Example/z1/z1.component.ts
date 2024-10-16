@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Igames } from 'src/app/Core/Models/igames';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import{
+  Igames,
+  IgamesFranquicia,
+  IgamesTipo,
+} from 'src/app/Core/Models/igames';
 @Component({
   selector: 'app-z1',
   standalone: true,
@@ -12,82 +15,158 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
  
 export class Z1Component implements OnInit {
-  //se implementa OnInit en la clase principal
-  //saldra un error hasta que pongamos el metodo de abajo con ese nombre
- ngOnInit(): void {
-  //status change y value change se puede hacer tambien con los controles individuales en vez de con todo el formulario
-  //esto lo hace mas especifico
-  this.ctrlNombre.statusChanges.subscribe(estado=>{console.info('---ctrlNombre ha cambiado de estado---');
-    console.log(estado);
-  })
-  this.ctrlNombre.valueChanges.subscribe(valor=>{console.info('---ctrlNombre ha cambiado de valor');
-    console.log(valor);
-  })
-  //status change y value change con el segundo controlador
-  this.ctrlPUntuacion.statusChanges.subscribe(estado=>{console.info('---ctrlPuntuacion ha cambiado de estado---');
-    console.log(estado);
-  })
-  this.ctrlPUntuacion.valueChanges.subscribe(valor=>{console.info('---ctrlPUntuacion ha cambiado de valor')
-    console.log(valor);
-  })
+ 
+ 
   
-
- }
-
-
-
-
-  //-----------
-  //dentro de la clase van los campos que formaran los controles y el grupo de formulario
-  //tienen un signo en el nombre que hace que no salga error mientras no usemos los campos
-  public formJuego!: FormGroup;
-  public ctrlNombre!: FormControl;
-  public ctrlPUntuacion!: FormControl;
-  constructor(){
-    //en el constructor va el metodo que contiene el proceso de creacion del grupo del formulario y sus controles
-    this.CrearFormulario();
+  
+  //formulario padre
+  public formFranquicia!:FormGroup;
+  //controles nuevos
+  public ctrlFranquiciaId!:FormControl;
+  public ctrlTipoGameId!:FormControl;
+  //creacion de formFranquicia
+  private CrearFormFranquicia():void{
+    this.ctrlFranquiciaId= new FormControl('',Validators.compose([Validators.required]));
+    this.ctrlTipoGameId= new FormControl('',Validators.compose([Validators.required]));
+     
+    this.formFranquicia= new FormGroup({
+      franquicia: this.ctrlFranquiciaId,
+      tipo: this.ctrlTipoGameId,
+      franquiciaJuegos: new FormArray([],Validators.required)
+    });
   }
-   
-  private CrearFormulario():void{
-    //nueva instancia de los FormControl en los campos que creamos
-    //primero se introduce el valor por default que mostrara el control de entrada
-    //despues las validaciones (explicacion)
-    this.ctrlNombre= new FormControl('',Validators.compose([Validators.required]));
-    this.ctrlPUntuacion= new FormControl('',Validators.compose([Validators.required,Validators.min(1)]));
-    //dentro del formGroup van nuestro controladores 
-    //se les asigna un nombre de referencia (explicacion)
-    this.formJuego= new FormGroup({
-      Nombre: this.ctrlNombre,
-      Puntuacion: this.ctrlPUntuacion,
+  //devuelve una copia de un formulario que servira de plantilla
+  public get NuevoFormJuegos(){
+    return new FormGroup({
+      juegoNombre: new FormControl('',Validators.compose([Validators.required])),
+      juegosPuntuacion: new FormControl(0,Validators.compose([Validators.required,Validators.min(0)]))
     })
   }
-  public EnviarData():void{
-    //metodo que sera usado en el submit del formulario
-    //por medio de un IF si nuestro formulario es valido entonces se muestran sus valores en consola gracias a .value
-    //se los mostrara en formato json
-    if(this.formJuego.valid){
-      console.log(this.formJuego.value);
+  //devuelve el array
+  public get FormArrayFranquiciaJuegos(): FormArray{
+    return this.formFranquicia.get('franquiciaJuegos') as FormArray;
+  }
+  //agregamos el array a un nuevo formulario
+  public AgregarFormJuego():void{
+    this.FormArrayFranquiciaJuegos.push(this.NuevoFormJuegos);
+  }
+  
+
+  //controles del filtro del form Franquicia
+  public gamesFiltroData = signal<IgamesTipo[]>([])
+  public gamesFiltroData2 = signal<Igames[]>([])
+  public gamesData!: Igames[];
+  public tipoGamesData!: IgamesTipo[];
+  public franquiciaData!: IgamesFranquicia[];
+
+  ngOnInit(): void {
+    this.ctrlFranquiciaId.valueChanges.subscribe((valor)=>{
+      const juegosFiltro: IgamesTipo[] = this.tipoGamesData.filter(
+        item => item.gamesFranquiciaId === valor
+      );
+
+      if(valor.length ==0){
+        this.gamesFiltroData.set([]);
+      } else{
+        this.gamesFiltroData.set(juegosFiltro);
+        
+      }
+      this.ctrlTipoGameId.setValue('')
+      
+
+    });
+    this.ctrlTipoGameId.valueChanges.subscribe((valor)=>{
+      const games: Igames[]= this.gamesData.filter(
+        item => item.gamesTipoId === valor
+      );
+       if(valor.length==0){
+        this.gamesFiltroData2.set([]);
+       }else{
+        this.gamesFiltroData2.set(games)
+       }
+      
+    })
+    //this.NuevoFormJuegos.get('juegoNombre')?.setValue('')
+    this.FormArrayFranquiciaJuegos.get('juegoNombre')?.setValue('')
     }
-  }
-
-  public MostraControlValue():void{
-    //metodo que muestra el valor de los controladores en la consola pero en formato texto
-    console.log('---Analisis del juego---');
-    console.log('Titulo: ' + this.ctrlNombre.value);
-    console.log('Puntaje: ' + this.ctrlPUntuacion.value);
-
-  }
-
-  public ModificarValor():void{
-    //muestra un valor predeterminado en los controles por medio de .setValue
-    console.log('---random---');
-    this.ctrlNombre.setValue('Megaman Zero 3');
-    this.ctrlPUntuacion.setValue(9.7);
-  }
   
+  
+  
+  //igamesTipo interface
+   private CargarTipoJuego(){
+    this.tipoGamesData=[
+      { gamesFranquiciaId: 'MM',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman Classic',
+      },
+     
+    ];
    }
+   //igamesFranquicia interface
+   private CargarFranquicia(){
+    this.franquiciaData=[
+      {
+        gamesFranquiciaId: 'MM',
+        nombre: 'Megaman'
+      }
+    ]
+   }
+   //el contructor
+   constructor(){
+    this.CrearFormFranquicia();
+    this.CargarFranquicia();
+    this.CargarTipoJuego();
+    this.CargarJuegos();
+   }
+   //igames interface
+  private CargarJuegos(){
+    this.gamesData=[
+      {
+        gamesId: 'MM1',
+        gamesTipoId:'MMC' ,
+        nombre: 'Megaman 1',
 
+      },
+      {
+        gamesId: 'MM2',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 2',
+      },
+      {
+        gamesId: 'MM3',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 3',
+      },
+      {
+        gamesId: 'MM4',
+        gamesTipoId:'MMC',
+        nombre: 'Megaman 4',
+      },
+      {
+        gamesId: 'MM5',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 5',
+      },
+      {
+        gamesId: 'MM6',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 6',
+      },
+     
+    ];
+  }
+  //enviar info del form
+ public Enviar():void{
+  console.log(this.formFranquicia.value);
+ }
 
-
+ public ResetearForm():void{
+  this.FormArrayFranquiciaJuegos.controls.splice(0,this.FormArrayFranquiciaJuegos.length);
+  this.formFranquicia.reset
+ }
   
+ public EliminarFormJuego(indice:number):void{
+  this.FormArrayFranquiciaJuegos.removeAt(indice)
+ }
 
+  }

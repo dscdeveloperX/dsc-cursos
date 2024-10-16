@@ -1,38 +1,84 @@
-<blockquote>
-    <ul>
-        <!--lista de botones que funcionan con respectivos metodos-->
-        <li><button type="button" (click)="MostraControlValue()">Mostrar Resultado</button></li>
-        <li><button type="button" (click)="ModificarValor()">Valor Modificado</button></li>
-    </ul>
-    <!--se crea el formulario y se le asigna nuestro formGroup-->
-    <!--el submit que se le asigna el envio de datos nos servira para referenciarlo en un boton de nuestro formulario-->
-    <form [formGroup]="formJuego" (submit)="EnviarData()">
-        <div>
-            <!--la etiqueta label es solo para texto que acompaña al formulario-->
-            <label>Nombre del juego</label>
-            <!--en la etiqueta input ponemos el tipo de dato que aceptara el controlador y el nombre clave del controlador -->
-            <input type="text" formControlName="Nombre"/>
-            <!--un ngif que detecta errores en el uso del controlador como .dirty o .touched -->
-            <div *ngIf="ctrlNombre.errors && (ctrlNombre.dirty || ctrlNombre.touched)">
-                <!--con otro ngif indicamos un texto que debe salir si determinada validacion no se presenta-->
-            <em *ngIf="ctrlNombre.hasError('required')">Nombre es requerido</em>    
+<h1>Formulario principal</h1>
+<section>
+    <blockquote>
+        <form [formGroup]="formFranquicia" (submit)="Enviar()">
+            <div>
+                <label >Franquicia:</label>
+                <select formControlName="franquicia">
+                    <option value="">Seleccionar Franquicia</option>
+                    <ng-container *ngFor="let item of franquiciaData">
+                        <option value="{{item.gamesFranquiciaId}}">{{item.nombre}}</option>
+                    </ng-container>
+                </select>
+                <div *ngIf="ctrlFranquiciaId.errors && (ctrlFranquiciaId.dirty || ctrlFranquiciaId.touched )">
+                    <em *ngIf="ctrlFranquiciaId.hasError('required')">categoria requerida</em>
+                </div>
             </div>
-        </div>
-        <div>
-            <!--lo mismo, solo que en este controlador habiamos puesto dos validaciones necesarias en el TS-->
-            <label>Puntuacion: </label>
-            <input type="number" formControlName="Puntuacion">
-            <div *ngIf="ctrlPUntuacion.errors && (ctrlPUntuacion.dirty || ctrlPUntuacion.touched)">
-                <em *ngIf="ctrlPUntuacion.hasError('required')">Requiere un puntaje</em>
-                <em *ngIf="ctrlPUntuacion.hasError('min')">Puntaje minimo 1</em>
+            <div>
+                <label >Saga: </label>
+                <select formControlName="tipo">
+                    <option value="">Seleccionar Saga</option>
+                    <ng-container *ngFor="let item of gamesFiltroData()">
+                        <option value="{{item.gamesTipoId}}">{{item.nombre}}</option>
+                        <div *ngIf="ctrlTipoGameId.hasError('required')">categoria requerida</div>
+                    </ng-container>
+                </select>
+               
+                
             </div>
-        </div>
+            <h3>Subsaga</h3>
+           
+            <div>
+                <button type="button" (click)="AgregarFormJuego()" class="dsc-btn-add">Agregar Puntuación</button>
+                
+            </div>
 
-        <div>
-            <!--nuestro boton para llevarse los datos-->
-            <!--tambien por medio de [disabled] indicamos que si el formulario no (!) es valido se deshabilita el boton -->
-            <button type="submit" [disabled]="!formJuego.valid">Enviar Reseña</button>
-        </div>
-    </form>
-</blockquote>
-<h1>15/9/2024 este formulario ahora tiene statuschanges y valueschange, ver en consola</h1>
+            <div formArrayName="franquiciaJuegos">
+                <ng-container *ngFor="let item of FormArrayFranquiciaJuegos.controls; let i = index">
+                <div [formGroupName]="i">
+                    <div>
+                        <label >Nombre del juego:</label>
+                        <select formControlName="juegoNombre">
+                            <option value="">Seleccionar Juego</option>
+                            <ng-container *ngFor="let item of gamesFiltroData2()">
+                                <option value="{{item.gamesId}}">{{item.nombre}}</option>
+                           
+                            </ng-container>
+                            <div *ngIf="FormArrayFranquiciaJuegos.at(i).get('juegoNombre')?.errors && (FormArrayFranquiciaJuegos.at(i).get('juegoNombre')?.dirty || FormArrayFranquiciaJuegos.at(i).get('juegoNombre')?.touched )">
+                                <em *ngIf="FormArrayFranquiciaJuegos.at(i).get('juegoNombre')?.hasError('required')">Campo requerido </em>
+                            </div>
+                        </select>
+                       
+                        
+                    </div>
+                    <label >Puntuacion: </label>
+                    <input type="number" formControlName="juegosPuntuacion"/>
+                    <div *ngIf="FormArrayFranquiciaJuegos.at(i).get('juegosPuntuacion')?.errors && (FormArrayFranquiciaJuegos.at(i).get('juegoNombre')?.dirty || FormArrayFranquiciaJuegos.at(i).get('juegoNombre')?.touched )">
+                        <em *ngIf="FormArrayFranquiciaJuegos.at(i).get('juegosPuntuacion')?.hasError('required')">Campo requerido </em>
+                        <em *ngIf="FormArrayFranquiciaJuegos.at(i).get('juegosPuntuacion')?.hasError('min')">minimo de 0 </em>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" (click)="EliminarFormJuego(i)" title="{{i}}" class="dsc-btn-delete">Eliminar Formulario</button>
+                </div>
+            </ng-container>
+
+
+
+            </div>
+
+            <div>
+                <button type="submit" [disabled]="!formFranquicia.valid">Enviar Formulario</button>
+                <button type="button" (click)="ResetearForm()">Resetear Formulario</button>
+            </div>
+        </form>
+    </blockquote>
+</section>
+
+
+
+
+
+
+
+
