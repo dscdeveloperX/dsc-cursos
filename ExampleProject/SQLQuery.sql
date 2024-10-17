@@ -17,7 +17,7 @@ CONSTRAINT pk_Club_ClubId PRIMARY KEY (ClubId)
 @ClubColor nvarchar(50)
 */
 
-create or alter procedure sp_SelectByIdClub(
+create  procedure sp_SelectByIdClub(
 @ClubId int
 )
 as
@@ -36,7 +36,7 @@ exec sp_ClubById
 */
 
 
-create or alter procedure sp_SelectAllClub
+create  procedure sp_SelectAllClub
 as
 begin
 SELECT 
@@ -52,7 +52,7 @@ exec sp_ClubAll
 */
 
 
-create or alter procedure sp_InsertClub(
+create  procedure sp_InsertClub(
 @ClubNombre nvarchar(200),
 @ClubAlias nvarchar(200),
 @ClubColor nvarchar(50)
@@ -91,7 +91,7 @@ exec sp_InsertClub
 
 
 
-create or alter procedure sp_UpdateClub(
+create  procedure sp_UpdateClub(
 @ClubId int,
 @ClubNombre nvarchar(200),
 @ClubAlias nvarchar(200),
@@ -121,7 +121,7 @@ exec sp_UpdateClub
 
 
 
-create or alter procedure sp_DeleteClub(
+create  procedure sp_DeleteClub(
 @ClubId int
 )
 as

@@ -1,0 +1,1 @@
+export const UrlApiBase:string = "https://gorest.co.in/public/v2/";

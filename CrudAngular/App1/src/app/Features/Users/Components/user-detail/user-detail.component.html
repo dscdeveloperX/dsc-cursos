@@ -1,0 +1,46 @@
+<h1 >User Details</h1>
+
+<hr /> 
+
+<div class="dsc-detail-content">
+
+<div>
+    <div class="dsc-detail-seccion">
+        <strong>Nombre</strong>
+        <div>
+            <span>{{usuarioData().name}}</span>
+        </div>
+    </div>
+
+    <div class="dsc-detail-seccion">
+        <strong>Email</strong>
+        <div>
+            <span>{{usuarioData().email}}</span>
+        </div>
+    </div>
+
+    <div class="dsc-detail-seccion">
+        <strong>Genero</strong>
+        <div>
+            <span>{{usuarioData().gender}}</span>
+        </div>
+    </div>
+
+
+    <div class="dsc-detail-seccion">
+        <strong>Estado</strong>
+        <div>
+            <span>{{usuarioData().status}}</span>
+        </div>
+    </div>
+
+</div>
+
+   <hr />
+
+    <div>
+        <button (click)="NavegarUserList()">Go to User List</button>
+
+    </div>
+
+</div>

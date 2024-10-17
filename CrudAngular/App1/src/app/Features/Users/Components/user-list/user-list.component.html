@@ -1,0 +1,33 @@
+<h1>List of Users</h1>
+
+<hr /> 
+
+<button (click)="NavegarUserAdd()">Add new user</button>
+
+<hr /> 
+
+<table class="dsc-table-list" border="1">
+    
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Estado</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let item of userData()" >
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.status}}</td>
+            <td>
+                <button (click)="NavegarUserEdit(item.id)" >Edit</button>
+                <button (click)="NavegarUserDetail(item.id)" >Details</button>
+                <button (click)="EliminarUsuario(item.id)" style="color:red;">Delete</button>
+            </td>
+        </tr>
+        </ng-container>
+    </tbody>
+</table>

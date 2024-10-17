@@ -1,0 +1,73 @@
+<h1 *ngIf="modoActualizar==true ; else tituloagregar">Modify User</h1>
+<ng-template #tituloagregar>
+    <h1>Add User</h1>
+</ng-template>
+
+
+<hr /> 
+
+
+<form [formGroup]="userGroup" >
+
+    <div class="dsc-form-seccion">
+        <label>Nombre</label>
+        <div>
+            <input type="text" formControlName="name" />
+        </div>
+        <div *ngIf="ctrlName.errors && (ctrlName.dirty || ctrlName.touched)">
+            <small *ngIf="ctrlName.hasError('required')">Nombre es requerido</small>
+        </div>
+    </div>
+
+
+    <div class="dsc-form-seccion">
+        <label>Email</label>
+        <div>
+            <input type="email" formControlName="email" />
+        </div>
+        <div *ngIf="ctrlEmail.errors && (ctrlEmail.dirty || ctrlEmail.touched)">
+            <small *ngIf="ctrlEmail.hasError('required')">Email es requerido</small>
+            <small *ngIf="ctrlEmail.hasError('email')">Email con formato incorrecto</small>
+        </div>
+    </div>
+
+
+    <div class="dsc-form-seccion">
+        <label>Genero</label>
+        <div>
+            <label>Femenino <input type="radio" value="gender" formControlName="gender" value="female" /></label>
+            <label>Masculino <input type="radio" value="gender" formControlName="gender" value="male" /></label>
+        </div>
+        <div *ngIf="ctrlGender.errors && (ctrlGender.dirty || ctrlGender.touched)">
+            <small *ngIf="ctrlGender.hasError('required')">Genero es requerido</small>
+        </div>
+    </div>
+
+
+    <div class="dsc-form-seccion">
+        <label>Estado</label>
+        <div>
+            <select formControlName="status">
+                <ng-container *ngFor="let item of ['active','inactive']">
+                    <option value="{{item}}">{{item}}</option>
+                </ng-container>
+            </select>
+        </div>
+        <div *ngIf="ctrlStatus.errors && (ctrlStatus.dirty || ctrlStatus.touched)">
+            <small *ngIf="ctrlStatus.hasError('required')">Estado es requerido</small>
+        </div>
+    </div>
+
+    
+
+   <hr />
+
+
+    <div>
+        <button (click)="GuardarUser()">Save</button>
+        <button (click)="NavegarUserList()">Cancel</button>
+
+    </div>
+
+</form>
+

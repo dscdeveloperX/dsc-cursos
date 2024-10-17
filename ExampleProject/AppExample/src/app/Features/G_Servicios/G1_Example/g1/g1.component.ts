@@ -47,6 +47,8 @@ export class G1Component implements OnInit {
 
 
 
+
+
   public Actualizar(id:number):void{
     alert('actualiar id:' + id );
   }
