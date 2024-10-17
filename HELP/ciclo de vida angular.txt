@@ -1,0 +1,9 @@
+ Ciclo de Vida
+ngOnChanges: Reacción a cambios en entradas.
+ngOnInit: Inicialización del componente.
+ngDoCheck: Detección de cambios personalizados.
+ngAfterContentInit: Inicialización del contenido proyectado.
+ngAfterContentChecked: Verificación del contenido proyectado.
+ngAfterViewInit: Inicialización de la vista del componente.
+ngAfterViewChecked: Verificación de la vista del componente.
+ngOnDestroy: Limpieza antes de la destrucción.
