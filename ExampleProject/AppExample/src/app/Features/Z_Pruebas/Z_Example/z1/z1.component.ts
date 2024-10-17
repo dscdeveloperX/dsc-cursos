@@ -99,6 +99,73 @@ export class Z1Component implements OnInit {
         gamesTipoId: 'MMC',
         nombre: 'Megaman Classic',
       },
+      { gamesFranquiciaId: 'MM',
+        gamesTipoId: 'MMX',
+        nombre:'Megaman X',
+
+      },
+      {
+        gamesFranquiciaId: 'MM',
+        gamesTipoId: 'MMZ',
+        nombre: 'Megaman Zero',
+      },
+      {
+        gamesFranquiciaId: 'MM',
+        gamesTipoId: 'MMZX',
+        nombre: 'Megaman ZX',
+      },
+      {
+        gamesFranquiciaId: 'MM',
+        gamesTipoId: 'MML',
+        nombre: 'Megaman Legends',
+      },
+      //Pokemon Generaciones
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN1',
+        nombre: 'Primera Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN2',
+        nombre: 'Segunnda Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN3',
+        nombre: 'Tercera Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN4',
+        nombre: 'Cuarta Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN5',
+        nombre: 'Quinta Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN6',
+        nombre: 'Sexta Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN7',
+        nombre: 'Septima Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN8',
+        nombre: 'Octava Generacion',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        gamesTipoId: 'GEN9',
+        nombre: 'Novena Generacion'
+      }
+
      
     ];
    }
@@ -107,7 +174,11 @@ export class Z1Component implements OnInit {
     this.franquiciaData=[
       {
         gamesFranquiciaId: 'MM',
-        nombre: 'Megaman'
+        nombre: 'Megaman',
+      },
+      {
+        gamesFranquiciaId: 'PKM',
+        nombre: 'Pokemon'
       }
     ]
    }
@@ -121,6 +192,7 @@ export class Z1Component implements OnInit {
    //igames interface
   private CargarJuegos(){
     this.gamesData=[
+      //Megaman Clasico
       {
         gamesId: 'MM1',
         gamesTipoId:'MMC' ,
@@ -152,7 +224,247 @@ export class Z1Component implements OnInit {
         gamesTipoId: 'MMC',
         nombre: 'Megaman 6',
       },
-     
+      {
+        gamesId: 'MM7',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 7',
+      },
+      {
+        gamesId: 'MM8',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 8',
+      },
+      {
+        gamesId: 'MM&B',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman & Bass',
+      },
+      {
+        gamesId: 'MM9',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 9',
+      },
+      {
+        gamesId: 'MM10',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 10',
+      },
+      {
+        gamesId: 'MM11',
+        gamesTipoId: 'MMC',
+        nombre: 'Megaman 11',
+      },
+        
+      
+        //Megaman X
+      
+      {
+        gamesId: 'MMX1',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X1',
+      },
+      {
+        gamesId: 'MMX2',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X2',
+      },
+      {
+        gamesId: 'MMX3',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X3',
+      },
+      {
+        gamesId: 'MMX4',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X4',
+      },
+      {
+        gamesId: 'MMX5',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X5',
+      },
+      {
+        gamesId: 'MMX6',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X6',
+      },
+      {
+        gamesId: 'MMX7',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X7',
+      },
+      {
+        gamesId: 'MMX8',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X8',
+      },
+      {
+        gamesId: 'MMXCM',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X Command Mission',
+      },
+      {
+        gamesId: 'MMXD',
+        gamesTipoId: 'MMX',
+        nombre: 'Megaman X Dive',
+      },
+
+      //Megaman zero
+      {
+        gamesId: 'MMZ1',
+        gamesTipoId: 'MMZ',
+        nombre: 'Megaman Zero 1',
+      },
+      {
+        gamesId: 'MMZ2',
+        gamesTipoId: 'MMZ',
+        nombre: 'Megaman Zero 2',
+      },
+      {
+        gamesId: 'MMZ3',
+        gamesTipoId: 'MMZ',
+        nombre: 'Megaman Zero 3',
+      },
+      {
+        gamesId: 'MMZ4',
+        gamesTipoId: 'MMZ',
+        nombre: 'Megaman Zero 4',
+      },
+
+      //Megaman ZX
+      {
+        gamesId: 'MMZX1',
+        gamesTipoId: 'MMZX',
+        nombre: 'Megaman ZX',
+      },
+      {
+        gamesId: 'MMZXA',
+        gamesTipoId: 'MMZX',
+        nombre: 'Megaman ZX Advent',
+      },
+      //Megaman Legends
+      {
+        gamesId: 'MML1',
+        gamesTipoId: 'MML',
+        nombre: 'Megaman Legends',
+      },
+      {
+        gamesId: 'MML2',
+        gamesTipoId: 'MML',
+        nombre: 'Megaman Legends 2',
+      },
+      {
+        gamesId: 'MMTB',
+        gamesTipoId: 'MML',
+        nombre: 'The Misadventures of Tron Bonne'
+      },
+      //Generacion 1
+      {
+        gamesId:'RED',
+        gamesTipoId: 'GEN1',
+        nombre:'Pokemon Rojo',
+      },
+      {
+        gamesId:'BLUE',
+        gamesTipoId: 'GEN1',
+        nombre:'Pokemon Blue',
+      },
+      {
+        gamesId:'GREEN',
+        gamesTipoId: 'GEN1',
+        nombre:'Pokemon Green',
+      },
+      {
+        gamesId:'YELLOW',
+        gamesTipoId: 'GEN1',
+        nombre:'Pokemon Yellow',
+      },
+      {
+        gamesId:'GOLD',
+        gamesTipoId: 'GEN2',
+        nombre:'Pokemon Gold',
+      },
+      {
+        gamesId:'SILVER',
+        gamesTipoId: 'GEN2',
+        nombre:'Pokemon Silver',
+      },
+      {
+        gamesId:'CRYSTAL',
+        gamesTipoId: 'GEN2',
+        nombre:'Pokemon Crystal',
+      },
+      {
+        gamesId:'FIRERED',
+        gamesTipoId: 'GEN3',
+        nombre:'Pokemon Fire Red',
+      },
+      {
+        gamesId:'LEAFGREEN',
+        gamesTipoId: 'GEN3',
+        nombre:'Pokemon Leaf Green',
+      },
+      {
+        gamesId:'RUBY',
+        gamesTipoId: 'GEN3',
+        nombre:'Pokemon Ruby',
+      },
+      {
+        gamesId:'SAPPHIRE',
+        gamesTipoId: 'GEN3',
+        nombre:'Pokemon Sapphire',
+      },
+      {
+        gamesId:'EMERALD',
+        gamesTipoId: 'GEN3',
+        nombre:'Pokemon Emerald',
+      },
+      {
+        gamesId:'HEARTGOLD',
+        gamesTipoId: 'GEN4',
+        nombre:'Pokemon Heart Gold',
+      },
+      {
+        gamesId:'SOULSILVER',
+        gamesTipoId: 'GEN4',
+        nombre:'Pokemon Soul Silver',
+      },
+      {
+        gamesId:'DIAMOND',
+        gamesTipoId: 'GEN4',
+        nombre:'Pokemon Diamond',
+      },
+      {
+        gamesId:'PEARL',
+        gamesTipoId: 'GEN4',
+        nombre:'Pokemon Pearl',
+      },
+      {
+        gamesId:'PLATINUM',
+        gamesTipoId: 'GEN4',
+        nombre:'Pokemon Platinum',
+      },
+      {
+        gamesId:'BLACK',
+        gamesTipoId: 'GEN5',
+        nombre:'Pokemon Black',
+      },
+      {
+        gamesId:'WHITE',
+        gamesTipoId: 'GEN5',
+        nombre:'Pokemon White',
+      },
+      {
+        gamesId:'BLACK2',
+        gamesTipoId: 'GEN5',
+        nombre:'Pokemon Black 2',
+      },
+      {
+        gamesId:'WHITE2',
+        gamesTipoId: 'GEN5',
+        nombre:'Pokemon White 2',
+      },
+      
     ];
   }
   //enviar info del form

@@ -28,10 +28,7 @@
             </div>
             <h3>Subsaga</h3>
            
-            <div>
-                <button type="button" (click)="AgregarFormJuego()" class="dsc-btn-add">Agregar Puntuación</button>
-                
-            </div>
+            
 
             <div formArrayName="franquiciaJuegos">
                 <ng-container *ngFor="let item of FormArrayFranquiciaJuegos.controls; let i = index">
@@ -70,6 +67,10 @@
             <div>
                 <button type="submit" [disabled]="!formFranquicia.valid">Enviar Formulario</button>
                 <button type="button" (click)="ResetearForm()">Resetear Formulario</button>
+                <div>
+                    <button type="button" (click)="AgregarFormJuego()" class="dsc-btn-add">Agregar Puntuación</button>
+                    
+                </div>
             </div>
         </form>
     </blockquote>
