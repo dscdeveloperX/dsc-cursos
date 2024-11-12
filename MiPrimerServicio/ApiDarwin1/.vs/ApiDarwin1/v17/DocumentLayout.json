@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\miprimerservicio\\apidarwin1\\controllers\\clubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:controllers\\clubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\miprimerservicio\\apidarwin1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 350,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cab27b98-a314-48d2-9746-efe8ba39ccb0}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClubController.cs",
+              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\Controllers\\ClubController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClubController.cs",
+              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\Controllers\\ClubController.cs",
+              "RelativeToolTip": "Controllers\\ClubController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T14:56:52.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-10T14:52:39.132Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

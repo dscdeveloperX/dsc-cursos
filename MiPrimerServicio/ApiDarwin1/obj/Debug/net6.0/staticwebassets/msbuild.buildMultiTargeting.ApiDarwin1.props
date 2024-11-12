@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ApiDarwin1.props" />
+</Project>
