@@ -57,7 +57,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-        [HttpGet("{id}")]
+        [HttpGet("otro/{id}")]
         public List<ClubResponse> ClubTodos(int id)
         {
 
@@ -127,6 +127,42 @@ namespace ApiDarwin1.Controllers
             return response;
 
         }
+
+
+        [HttpGet("{id}")]
+        public async Task<ClubResponse> ClubId(int id)
+        {
+            ClubResponse club = new ClubResponse();
+
+            using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_SelectByIdClub",cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ClubId", id));
+                     await cnn.OpenAsync();
+                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await dr.ReadAsync())
+                        {
+                            club.ClubId = Convert.ToInt32(dr["ClubId"]);
+                            club.ClubNombre = dr["ClubNombre"].ToString();
+                            club.ClubAlias = dr["ClubAlias"].ToString();
+                            club.ClubColor = dr["ClubColor"].ToString();
+
+
+
+
+                        }
+                        
+                    }
+
+                }
+
+            }
+            return club;
+        }
+
 
 
 

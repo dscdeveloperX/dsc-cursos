@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiDarwin1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa8bebc97b7ff92ffd84ede19e2a9e5f9f7090df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa89e0ff758880129cd1638350ae7d38dff21611")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiDarwin1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiDarwin1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
