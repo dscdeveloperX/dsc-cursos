@@ -1,4 +1,4 @@
-USE DARWIN_SANCHEZ_DB;
+USE darwincito_db;
 GO
 --clave: dsc123456
 

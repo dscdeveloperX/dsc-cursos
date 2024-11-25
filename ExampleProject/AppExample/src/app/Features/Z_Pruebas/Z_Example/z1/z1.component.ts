@@ -32,22 +32,26 @@ export class Z1Component implements OnInit {
     this.formFranquicia= new FormGroup({
       franquicia: this.ctrlFranquiciaId,
       tipo: this.ctrlTipoGameId,
+      //creamos un array
       franquiciaJuegos: new FormArray([],Validators.required)
     });
   }
   //devuelve una copia de un formulario que servira de plantilla
   public get NuevoFormJuegos(){
+    //nuevo formgrupo incializado 
     return new FormGroup({
       juegoNombre: new FormControl('',Validators.compose([Validators.required])),
       juegosPuntuacion: new FormControl(0,Validators.compose([Validators.required,Validators.min(0)]))
     })
   }
-  //devuelve el array
+  //devuelve el array 
   public get FormArrayFranquiciaJuegos(): FormArray{
+    //obtenemos de formFranquicia el array franquiciaJuegos
     return this.formFranquicia.get('franquiciaJuegos') as FormArray;
   }
-  //agregamos el array a un nuevo formulario
+  //agregamos el array al nuevo formulario
   public AgregarFormJuego():void{
+    //ya que formArrayFranquiciaJuegos tiene el formArray esta vez usamos push para enviarlo a NuevoFormJuegos
     this.FormArrayFranquiciaJuegos.push(this.NuevoFormJuegos);
   }
   
@@ -55,11 +59,16 @@ export class Z1Component implements OnInit {
   //controles del filtro del form Franquicia
   public gamesFiltroData = signal<IgamesTipo[]>([])
   public gamesFiltroData2 = signal<Igames[]>([])
+  //campos de cada tipo de interfaz que se va a usar
   public gamesData!: Igames[];
   public tipoGamesData!: IgamesTipo[];
   public franquiciaData!: IgamesFranquicia[];
 
   ngOnInit(): void {
+    //Si hay cambios en el valor de franquicia data 
+    //la variable valor tal que una constante de tipo interfaz IgamesTipo[] es igual a un filtro del campo tipoGamesData
+    //en el cual item tal que un item perteneciente a gamesFranquiciaId lo cual debe ser estrictamente igual a valor
+    
     this.ctrlFranquiciaId.valueChanges.subscribe((valor)=>{
       const juegosFiltro: IgamesTipo[] = this.tipoGamesData.filter(
         item => item.gamesFranquiciaId === valor
@@ -92,8 +101,9 @@ export class Z1Component implements OnInit {
   
   
   
-  //igamesTipo interface
+  //igamesTipo interfazse llena 
    private CargarTipoJuego(){
+    //gracias al campo
     this.tipoGamesData=[
       { gamesFranquiciaId: 'MM',
         gamesTipoId: 'MMC',
@@ -171,6 +181,7 @@ export class Z1Component implements OnInit {
    }
    //igamesFranquicia interface
    private CargarFranquicia(){
+    //se llena gracias al campo franquiciaData
     this.franquiciaData=[
       {
         gamesFranquiciaId: 'MM',
@@ -184,6 +195,7 @@ export class Z1Component implements OnInit {
    }
    //el contructor
    constructor(){
+    //inicializamos la creacion  del form y cuando se llena los metodos de interfaz
     this.CrearFormFranquicia();
     this.CargarFranquicia();
     this.CargarTipoJuego();
@@ -191,6 +203,7 @@ export class Z1Component implements OnInit {
    }
    //igames interface
   private CargarJuegos(){
+    //se llena gracias a gamesData
     this.gamesData=[
       //Megaman Clasico
       {

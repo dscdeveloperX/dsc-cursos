@@ -61,6 +61,7 @@ import { G5Component } from "./Features/G_Servicios/G5_Example/g5/g5.component";
 import { G6Component } from "./Features/G_Servicios/G6_Example/g6/g6.component";
 import { G7Component } from "./Features/G_Servicios/G7_Example/g7/g7.component";
 import { G8Component } from "./Features/G_Servicios/G8_Example/g8/g8.component";
+import { Z3Component } from "./Features/Z_Pruebas/Z_Example/z3/z3.component";
 
 export const routes:Routes=[
     {
@@ -232,6 +233,10 @@ export const routes:Routes=[
     {
         path: 'z2',
         component:Z2Component
+    },
+    {
+        path: 'z3',
+        component:Z3Component
     },
     {
 

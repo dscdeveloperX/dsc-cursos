@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace ApiDarwin1.Controllers
 {
@@ -17,7 +16,8 @@ namespace ApiDarwin1.Controllers
         //variable donde guardaremos la cadena de conexion
         private readonly string miCadenaConeccion;
 
-        public ClubController(IConfiguration configuration) {
+        public ClubController(IConfiguration configuration)
+        {
             //injectamos la configuracion del archivo aap.setting.json para obtener la cadena de conexion "miCadenaConeccion"
             miCadenaConeccion = configuration.GetConnectionString("conectionDarwin");
         }
@@ -32,8 +32,8 @@ namespace ApiDarwin1.Controllers
         public List<ClubResponse> ClubTodos()
         {
 
-            List<ClubResponse> clubes = new List<ClubResponse> ();
-            
+            List<ClubResponse> clubes = new List<ClubResponse>();
+
             ClubResponse club1 = new ClubResponse();
             club1.ClubId = 1;
             club1.ClubNombre = "Real Madrid";
@@ -53,11 +53,41 @@ namespace ApiDarwin1.Controllers
             return clubes;
         }
 
+        [HttpGet("f1")]
+        public List<F1Response> F1Teams()
+        {
+            List<F1Response> teams = new List<F1Response>();
+            F1Response f1Team1 = new F1Response();
+            f1Team1.TeamPosition = 1;
+            f1Team1.TeamName = "Mclaren";
+            f1Team1.Driver1 = "Lando Norris";
+            f1Team1.Driver2 = "Oscar Piastri";
+            f1Team1.CarName = "Mcl24";
+
+
+            F1Response f1Team2 = new F1Response();
+            f1Team2.TeamPosition = 2;
+            f1Team2.TeamName = "Ferrari";
+            f1Team2.Driver1 = "Charles Leclerc";
+            f1Team2.Driver2 = "Carlos Sainz";
+            f1Team2.CarName = "sf100";
+
+            teams.Add(f1Team1);
+            teams.Add(f1Team2);
+
+            return teams;
+
+        }
+
 
 
 
 
         [HttpGet("otro/{id}")]
+
+
+        [HttpGet("clubId{id}")]
+
         public List<ClubResponse> ClubTodos(int id)
         {
 
@@ -79,55 +109,157 @@ namespace ApiDarwin1.Controllers
             clubes.Add(club2);
 
 
-            return clubes.Where(x=>x.ClubId == id).ToList();
+            return clubes.Where(x => x.ClubId == id).ToList();
         }
 
-
-
-
-
-
-
-        [HttpGet("all")]
-        public async Task<List<ClubResponse>> ClubAll()
+        [HttpGet("f1position{position}")]
+        public List<F1Response> F1Todos(int position)
         {
+            List<F1Response> teams = new List<F1Response>();
 
-            List<ClubResponse> response = new List<ClubResponse>();
+            F1Response f1Team1 = new F1Response();
+            f1Team1.TeamPosition = 1;
+            f1Team1.TeamName = "Mclaren";
+            f1Team1.Driver1 = "Lando Norris";
+            f1Team1.Driver2 = "Oscar Piastri";
+            f1Team1.CarName = "Mcl24";
 
+
+            F1Response f1Team2 = new F1Response();
+            f1Team2.TeamPosition = 2;
+            f1Team2.TeamName = "Ferrari";
+            f1Team2.Driver1 = "Charles Leclerc";
+            f1Team2.Driver2 = "Carlos Sainz";
+            f1Team2.CarName = "sf100";
+
+            teams.Add(f1Team1);
+            teams.Add(f1Team2);
+
+            return teams.Where(x => x.TeamPosition == position).ToList();
+        }
+
+        [HttpGet("all/f1")]
+        //async y task nos indican una tarea que se ejecutara sin bloquear otras, muy util para conectarse a bases
+        public async Task<List<F1Response>> F1Todos()
+        {
+            List<F1Response> response = new List<F1Response>();
             using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_SelectAllClub", cnn))
+                using (SqlCommand cmd = new SqlCommand("sp_AllTeams", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    //
+
                     await cnn.OpenAsync();
                     using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
                     {
+                        while (await dr.ReadAsync()) 
 
-                        while (await dr.ReadAsync())
                         {
-
-                            ClubResponse club = new ClubResponse()
+                            F1Response f1 = new F1Response()
                             {
-                                ClubId = Convert.ToInt32(dr["ClubId"]),
-                                ClubNombre = dr["ClubNombre"].ToString(),
-                                ClubAlias = dr["ClubAlias"].ToString(),
-                                ClubColor = dr["ClubColor"].ToString()
+                                TeamPosition = Convert.ToInt32(dr["Posicion"]),
+                                TeamName = dr["NombreEquipo"].ToString(),
+                                Driver1 = dr["Conductor1"].ToString(),
+                                Driver2 = dr["Conductor2"].ToString(),
+                                CarName = dr["NombreAuto"].ToString()
                             };
-
-                            response.Add(club);
-
+                            response.Add(f1);
+                            };
                         }
+                    }
+                }
+            return response;
+            }
+
+        }
+
+
+    [HttpPost("all/efeuno")]
+    public async Task<List<F1Response>> EfeunoTodos( )
+    {
+        List<F1Response> response = new List<F1Response>();
+        using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+        {
+            using(SqlCommand cmd = new SqlCommand("sp_AllEquipos", cnn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                await cnn.OpenAsync();
+                using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+                { while (await dr.ReadAsync())
+                    {
+                        F1Response f1 = new F1Response()
+                        {
+                            TeamPosition = Convert.ToInt32(dr["Posicion"]),
+                            TeamName = dr["NombreEquipo"].ToString(),
+                            Driver1 = dr["Conductor1"].ToString(),
+                            Driver2 = dr["Conductor2"].ToString(),
+                            CarName = dr["NombreAuto"].ToString()
+
+                        };
+                        response.Add(f1);
+                    };
+                    
+                    
+                          
+                        
+                }
+            
+            return response;}
+        }
+        
+            
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /*[HttpGet("all")]
+    public async Task<List<ClubResponse>> ClubAll()
+    {
+
+        List<ClubResponse> response = new List<ClubResponse>();
+
+        using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+        {
+            using (SqlCommand cmd = new SqlCommand("sp_SelectAllClub", cnn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //
+                await cnn.OpenAsync();
+                using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+                {
+
+                    while (await dr.ReadAsync())
+                    {
+
+                        ClubResponse club = new ClubResponse()
+                        {
+                            ClubId = Convert.ToInt32(dr["ClubId"]),
+                            ClubNombre = dr["ClubNombre"].ToString(),
+                            ClubAlias = dr["ClubAlias"].ToString(),
+                            ClubColor = dr["ClubColor"].ToString()
+                        };
+
+                        response.Add(club);
 
                     }
 
                 }
+
             }
-
-            return response;
-
         }
 
+        return response;
+
+    }*/
 
         [HttpGet("{id}")]
         public async Task<ClubResponse> ClubId(int id)
@@ -167,21 +299,24 @@ namespace ApiDarwin1.Controllers
 
 
 
-        /*
-        [HttpGet("todos")]
-        public string Saludos ()
-        {
-            return "hola a todos";
-        }
-
-        [HttpGet("mi-nombre/{id}")]
-
-        public string Saludo (string id)
-        {
-            return $"hola {id}";
-        }
-        */
 
 
+
+    /*
+    [HttpGet("todos")]
+    public string Saludos ()
+    {
+        return "hola a todos";
     }
+
+    [HttpGet("mi-nombre/{id}")]
+
+    public string Saludo (string id)
+    {
+        return $"hola {id}";
+    }
+    */
+
+
+
 }

@@ -1,0 +1,40 @@
+<h1> Z3-COMPONENTES</h1>
+<section>
+    <h2>formulario con checkbox avanzado</h2>
+    <blockquote>
+        <form [formGroup]="formBooks" (submit)="EnviarFormLibros()">
+            <div>
+                <label >Titulo:</label>
+                <input type="text" formControlName="Titulo" autocomplete="false"/>
+                <div *ngIf="ctrlTitulo.errors && (ctrlTitulo.dirty || ctrlTitulo.touched)">
+                <em *ngIf="ctrlTitulo.hasError('required')">Titulo requerido</em>    
+                </div>
+            </div>
+
+            <div>
+                <label >Año de publicacion</label>
+                <input type="text" formControlName="Publicacion"/>
+                <div *ngIf="ctrlPublicacion.errors && (ctrlPublicacion.dirty || ctrlPublicacion.touched)">
+                    <em *ngIf="ctrlPublicacion.hasError('required')">Campo requerido</em>
+
+                </div>
+            </div>
+
+            <h3>Genero Literario</h3>
+
+            <ng-container *ngFor="let item of categoriaLibrosData">
+                <div>
+                    <label>
+                        <input type="checkbox" [formControlName]="item.categoriaId" />
+                        {{item.categoriaNombre}}
+                    </label>
+                </div>
+            </ng-container>
+
+            <div>
+                <button type="submit" [disabled]="!formBooks.valid">Iniciar sesion</button>
+            </div>
+
+        </form>
+    </blockquote>
+</section>

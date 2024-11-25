@@ -7,4 +7,5 @@
         public string ClubAlias { get; set; } 
         public string ClubColor { get; set; } 
     }
+   
 }
