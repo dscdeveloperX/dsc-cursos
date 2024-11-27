@@ -81,9 +81,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-
-
-        [HttpGet("otro/{id}")]
+       
 
 
         [HttpGet("clubId{id}")]
@@ -152,7 +150,7 @@ namespace ApiDarwin1.Controllers
                     await cnn.OpenAsync();
                     using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
                     {
-                        while (await dr.ReadAsync()) 
+                        while (await dr.ReadAsync())
 
                         {
                             F1Response f1 = new F1Response()
@@ -164,61 +162,13 @@ namespace ApiDarwin1.Controllers
                                 CarName = dr["NombreAuto"].ToString()
                             };
                             response.Add(f1);
-                            };
-                        }
+                        };
                     }
                 }
-            return response;
             }
-
+            return response;
         }
-
-
-    [HttpPost("all/efeuno")]
-    public async Task<List<F1Response>> EfeunoTodos( )
-    {
-        List<F1Response> response = new List<F1Response>();
-        using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
-        {
-            using(SqlCommand cmd = new SqlCommand("sp_AllEquipos", cnn))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                await cnn.OpenAsync();
-                using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
-                { while (await dr.ReadAsync())
-                    {
-                        F1Response f1 = new F1Response()
-                        {
-                            TeamPosition = Convert.ToInt32(dr["Posicion"]),
-                            TeamName = dr["NombreEquipo"].ToString(),
-                            Driver1 = dr["Conductor1"].ToString(),
-                            Driver2 = dr["Conductor2"].ToString(),
-                            CarName = dr["NombreAuto"].ToString()
-
-                        };
-                        response.Add(f1);
-                    };
-                    
-                    
-                          
-                        
-                }
-            
-            return response;}
-        }
-        
-            
-        
-    }
-
-
-
-
-
-
-
-
-
+    
 
 
     /*[HttpGet("all")]
@@ -261,7 +211,7 @@ namespace ApiDarwin1.Controllers
 
     }*/
 
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public async Task<ClubResponse> ClubId(int id)
         {
             ClubResponse club = new ClubResponse();
@@ -299,7 +249,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-
+    */
 
 
     /*
