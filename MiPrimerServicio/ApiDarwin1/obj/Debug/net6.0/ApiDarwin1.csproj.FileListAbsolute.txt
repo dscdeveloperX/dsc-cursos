@@ -141,7 +141,6 @@ C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\
 C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\ApiDarwin1.csproj.CoreCompileInputs.cache
 C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\ApiDarwin1.MvcApplicationPartsAssemblyInfo.cs
 C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\ApiDarwin1.MvcApplicationPartsAssemblyInfo.cache
-C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\ApiDarwin1.sourcelink.json
 C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\staticwebassets.build.json
 C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\staticwebassets.development.json
 C:\Escritorio\programacion\DarwinGit\dsc-cursos\MiPrimerServicio\ApiDarwin1\obj\Debug\net6.0\staticwebassets\msbuild.ApiDarwin1.Microsoft.AspNetCore.StaticWebAssets.props

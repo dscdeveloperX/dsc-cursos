@@ -171,7 +171,7 @@ namespace ApiDarwin1.Controllers
     
 
 
-    /*[HttpGet("all")]
+    [HttpGet("all")]
     public async Task<List<ClubResponse>> ClubAll()
     {
 
@@ -209,9 +209,9 @@ namespace ApiDarwin1.Controllers
 
         return response;
 
-    }*/
+    }
 
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public async Task<ClubResponse> ClubId(int id)
         {
             ClubResponse club = new ClubResponse();
@@ -244,12 +244,53 @@ namespace ApiDarwin1.Controllers
             }
             return club;
         }
+        [HttpGet("f1Id/{id}")]
+        public async Task<F1Response> F1Id (int id)
+        {
+            F1Response response = new F1Response();
+            using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_AllEquipo",cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Posicion", id));
+                    await cnn.OpenAsync();
+                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await dr.ReadAsync()) 
+                        {
+                            response.TeamPosition = Convert.ToInt32(dr["Posicion"]);
+                            response.TeamName = dr["NombreEquipo"].ToString();
+                            response.Driver1 = dr["Conductor1"].ToString();
+                            response.Driver2 = dr["Conductor2"].ToString();
+                            response.CarName = dr["NombreAuto"].ToString();
+
+
+                        }
+                    }
+
+                }
+            }
+            return response;
+        }
+
+        [HttpPost("f1Add}")]
+        public async Task<List<F1Response>> F1Response()
+        {
+            List<F1Response> f1response = new List<F1Response>();
+            using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+            {
+                using (SqlCommand cmd = new SqlCommand("",)) ;
+
+            }
+
+
+        }
 
 
 
 
-
-    */
+    
 
 
     /*
@@ -270,3 +311,4 @@ namespace ApiDarwin1.Controllers
 
 
 }
+    }
