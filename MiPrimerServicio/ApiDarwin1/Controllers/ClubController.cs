@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
 namespace ApiDarwin1.Controllers
 {
 
-
+    [EnableCors("dsccors")]
     [Route("public/v2/[controller]")]
     [ApiController]
     public class ClubController : ControllerBase
@@ -19,7 +20,7 @@ namespace ApiDarwin1.Controllers
         public ClubController(IConfiguration configuration)
         {
             //injectamos la configuracion del archivo aap.setting.json para obtener la cadena de conexion "miCadenaConeccion"
-            miCadenaConeccion = configuration.GetConnectionString("conectionDarwin");
+            miCadenaConeccion = configuration.GetConnectionString("conectionPapito");
         }
 
 
@@ -81,7 +82,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-       
+
 
 
         [HttpGet("clubId{id}")]
@@ -168,48 +169,48 @@ namespace ApiDarwin1.Controllers
             }
             return response;
         }
-    
 
 
-    [HttpGet("all")]
-    public async Task<List<ClubResponse>> ClubAll()
-    {
 
-        List<ClubResponse> response = new List<ClubResponse>();
-
-        using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+        [HttpGet("all")]
+        public async Task<List<ClubResponse>> ClubAll()
         {
-            using (SqlCommand cmd = new SqlCommand("sp_SelectAllClub", cnn))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                //
-                await cnn.OpenAsync();
-                using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
-                {
 
-                    while (await dr.ReadAsync())
+            List<ClubResponse> response = new List<ClubResponse>();
+
+            using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_SelectAllClub", cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    //
+                    await cnn.OpenAsync();
+                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
                     {
 
-                        ClubResponse club = new ClubResponse()
+                        while (await dr.ReadAsync())
                         {
-                            ClubId = Convert.ToInt32(dr["ClubId"]),
-                            ClubNombre = dr["ClubNombre"].ToString(),
-                            ClubAlias = dr["ClubAlias"].ToString(),
-                            ClubColor = dr["ClubColor"].ToString()
-                        };
 
-                        response.Add(club);
+                            ClubResponse club = new ClubResponse()
+                            {
+                                ClubId = Convert.ToInt32(dr["ClubId"]),
+                                ClubNombre = dr["ClubNombre"].ToString(),
+                                ClubAlias = dr["ClubAlias"].ToString(),
+                                ClubColor = dr["ClubColor"].ToString()
+                            };
+
+                            response.Add(club);
+
+                        }
 
                     }
 
                 }
-
             }
+
+            return response;
+
         }
-
-        return response;
-
-    }
 
         [HttpGet("{id}")]
         public async Task<ClubResponse> ClubId(int id)
@@ -218,11 +219,11 @@ namespace ApiDarwin1.Controllers
 
             using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_SelectByIdClub",cnn))
+                using (SqlCommand cmd = new SqlCommand("sp_SelectByIdClub", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@ClubId", id));
-                     await cnn.OpenAsync();
+                    await cnn.OpenAsync();
                     using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
                     {
                         while (await dr.ReadAsync())
@@ -236,7 +237,7 @@ namespace ApiDarwin1.Controllers
 
 
                         }
-                        
+
                     }
 
                 }
@@ -244,20 +245,25 @@ namespace ApiDarwin1.Controllers
             }
             return club;
         }
+
+
+
+
+
         [HttpGet("f1Id/{id}")]
-        public async Task<F1Response> F1Id (int id)
+        public async Task<F1Response> F1Id(int id)
         {
             F1Response response = new F1Response();
             using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_AllEquipo",cnn))
+                using (SqlCommand cmd = new SqlCommand("sp_AllEquipo", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Posicion", id));
                     await cnn.OpenAsync();
                     using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
                     {
-                        while (await dr.ReadAsync()) 
+                        while (await dr.ReadAsync())
                         {
                             response.TeamPosition = Convert.ToInt32(dr["Posicion"]);
                             response.TeamName = dr["NombreEquipo"].ToString();
@@ -274,41 +280,104 @@ namespace ApiDarwin1.Controllers
             return response;
         }
 
-        [HttpPost("f1Add}")]
-        public async Task<List<F1Response>> F1Response()
+        /* [HttpPost("f1Add}")]
+         public async Task<List<F1Response>> F1Response()
+         {
+             List<F1Response> f1response = new List<F1Response>();
+             using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+             {
+                 using (SqlCommand cmd = new SqlCommand("",)) ;
+
+             }
+
+
+         }*/
+
+
+
+        [HttpPost]
+        public async Task<bool> Post(ClubRequest request)
         {
-            List<F1Response> f1response = new List<F1Response>();
-            using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("",)) ;
+                using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_InsertClub", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@ClubNombre", request.ClubNombre));
+                        cmd.Parameters.Add(new SqlParameter("@ClubAlias", request.ClubAlias));
+                        cmd.Parameters.Add(new SqlParameter("@ClubColor", request.ClubColor));
+
+                        await cnn.OpenAsync();
+
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+                    }
+                }
 
             }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
 
 
         }
 
 
+        [HttpPut("{id}")]
+        public async Task<bool> Put(ClubRequest request,int id)
+        {
+
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_UpdateClub", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@ClubId", id));
+                        cmd.Parameters.Add(new SqlParameter("@ClubNombre", request.ClubNombre));
+                        cmd.Parameters.Add(new SqlParameter("@ClubAlias", request.ClubAlias));
+                        cmd.Parameters.Add(new SqlParameter("@ClubColor", request.ClubColor));
+
+                        await cnn.OpenAsync();
+
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
 
 
-    
+
+        }
 
 
-    /*
-    [HttpGet("todos")]
-    public string Saludos ()
-    {
-        return "hola a todos";
+        /*
+        [HttpGet("todos")]
+        public string Saludos ()
+        {
+            return "hola a todos";
+        }
+
+        [HttpGet("mi-nombre/{id}")]
+
+        public string Saludo (string id)
+        {
+            return $"hola {id}";
+        }
+        */
+
+
+
     }
-
-    [HttpGet("mi-nombre/{id}")]
-
-    public string Saludo (string id)
-    {
-        return $"hola {id}";
-    }
-    */
-
-
-
-}
     }
