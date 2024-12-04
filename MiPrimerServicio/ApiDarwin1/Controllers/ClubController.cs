@@ -274,13 +274,30 @@ namespace ApiDarwin1.Controllers
             return response;
         }
 
-        [HttpPost("f1Add}")]
+       
+        
+        [HttpPost("f1Add")]
         public async Task<List<F1Response>> F1Response()
         {
             List<F1Response> f1response = new List<F1Response>();
             using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
             {
-                using (SqlCommand cmd = new SqlCommand("",)) ;
+                using (SqlCommand cmd = new SqlCommand("sp_CreateTeam",cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    await cnn.OpenAsync();
+                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await dr.ReadAsync())
+                        {
+                            
+                          
+                            
+                        }
+                    }
+
+
+                }
 
             }
 
