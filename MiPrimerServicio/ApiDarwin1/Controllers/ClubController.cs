@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Linq.Expressions;
 
 namespace ApiDarwin1.Controllers
 {
@@ -20,7 +21,7 @@ namespace ApiDarwin1.Controllers
         public ClubController(IConfiguration configuration)
         {
             //injectamos la configuracion del archivo aap.setting.json para obtener la cadena de conexion "miCadenaConeccion"
-            miCadenaConeccion = configuration.GetConnectionString("conectionPapito");
+            miCadenaConeccion = configuration.GetConnectionString("conectionDarwin");
         }
 
 
@@ -281,6 +282,11 @@ namespace ApiDarwin1.Controllers
             return response;
         }
 
+
+
+
+
+
         /* [HttpPost("f1Add}")]
          public async Task<List<F1Response>> F1Response()
          {
@@ -298,10 +304,12 @@ namespace ApiDarwin1.Controllers
 
         [HttpPost]
         public async Task<bool> Post(ClubRequest request)
+
         {
 
             try
             {
+
                 using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
                 {
                     using (SqlCommand cmd = new SqlCommand("sp_InsertClub", cnn))
@@ -316,21 +324,43 @@ namespace ApiDarwin1.Controllers
                         await cmd.ExecuteNonQueryAsync();
                         return true;
                     }
-                }
 
+                }
             }
             catch (Exception ex)
             {
                 return false;
             }
-
-
-
         }
 
 
+        [HttpPost("F1")]
+        public async Task<bool> Post(F1Response request)
+        {
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_AddTeam", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@NombreEquipo", request.TeamName));
+                        cmd.Parameters.Add(new SqlParameter("@Conductor1", request.Driver1));
+                        cmd.Parameters.Add(new SqlParameter("@Conductor2", request.Driver2));
+                        cmd.Parameters.Add(new SqlParameter("@NombreAuto", request.CarName));
+                        await cnn.OpenAsync();
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+                    }
+                }
+                        
+            } catch(Exception ex) {
+                return false;
+            }
+        }
+
         [HttpPut("{id}")]
-        public async Task<bool> Put(ClubRequest request,int id)
+        public async Task<bool> Put(ClubRequest request, int id)
         {
 
             try
@@ -363,6 +393,7 @@ namespace ApiDarwin1.Controllers
         }
 
 
+<<<<<<< HEAD
 
         [HttpDelete("{id}")]
         public async Task<bool> Delete( int id)
@@ -413,3 +444,19 @@ namespace ApiDarwin1.Controllers
 
     }
 }
+=======
+
+
+    }
+
+
+   
+}
+
+
+
+
+
+    
+    
+>>>>>>> ae7a13fcd1698c23bda26c3446d33c46faeda7f5
