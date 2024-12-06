@@ -28,7 +28,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-
+        /*
         [HttpGet]
         public List<ClubResponse> ClubTodos()
         {
@@ -53,6 +53,7 @@ namespace ApiDarwin1.Controllers
 
             return clubes;
         }
+        */
 
         [HttpGet("f1")]
         public List<F1Response> F1Teams()
@@ -85,7 +86,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-        [HttpGet("clubId{id}")]
+        [HttpGet("discapacitados/{id}")]
 
         public List<ClubResponse> ClubTodos(int id)
         {
@@ -172,7 +173,7 @@ namespace ApiDarwin1.Controllers
 
 
 
-        [HttpGet("all")]
+        [HttpGet]
         public async Task<List<ClubResponse>> ClubAll()
         {
 
@@ -362,6 +363,37 @@ namespace ApiDarwin1.Controllers
         }
 
 
+
+        [HttpDelete("{id}")]
+        public async Task<bool> Delete( int id)
+        {
+
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(miCadenaConeccion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_DeleteClub", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@ClubId", id));
+                     
+
+                        await cnn.OpenAsync();
+
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+
+        }
         /*
         [HttpGet("todos")]
         public string Saludos ()
@@ -380,4 +412,4 @@ namespace ApiDarwin1.Controllers
 
 
     }
-    }
+}
