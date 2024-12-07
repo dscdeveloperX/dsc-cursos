@@ -393,7 +393,6 @@ namespace ApiDarwin1.Controllers
         }
 
 
-<<<<<<< HEAD
 
         [HttpDelete("{id}")]
         public async Task<bool> Delete( int id)
@@ -444,14 +443,14 @@ namespace ApiDarwin1.Controllers
 
     }
 }
-=======
 
 
-    }
+
+    
 
 
    
-}
+
 
 
 
@@ -459,4 +458,4 @@ namespace ApiDarwin1.Controllers
 
     
     
->>>>>>> ae7a13fcd1698c23bda26c3446d33c46faeda7f5
+
