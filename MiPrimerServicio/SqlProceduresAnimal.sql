@@ -4,7 +4,7 @@ Begin
 Select * From Animal
 End;
 
-exec sp_SelectAllAnimal
+--exec sp_SelectAllAnimal
 
 
 create procedure sp_SelectByIdAnimal (@Id int)
@@ -14,7 +14,7 @@ Select * From Animal
 Where Id = @Id
 End;
 
-exec sp_SelectByIdAnimal 1
+--exec sp_SelectByIdAnimal 1
 
 create procedure sp_InsertAnimal (@Nombre varchar(100),@Color varchar(50),@Patas int)
 As 
@@ -22,7 +22,7 @@ Begin
 Insert into Animal (Nombre,Color,Patas) values (@Nombre,@Color,@Patas);
 End;
 
-exec sp_InsertAnimal 'Vaca','Blanco',4
+--exec sp_InsertAnimal 'Vaca','Blanco',4
 
 
 create procedure sp_UpdateAnimal (@Id int, @Nombre varchar(100), @Color varchar(50), @Patas int)
@@ -35,7 +35,7 @@ Patas = @Patas
 Where Id = @Id;
 End;
 
-exec sp_UpdateAnimal  4 ,'Toro', 'Negro',4
+--exec sp_UpdateAnimal  4 ,'Toro', 'Negro',4
 
 
 create procedure sp_DeleteAnimal (@Id int)
@@ -45,7 +45,7 @@ Delete From Animal
 Where Id = @Id;
 End;
 
-exec sp_DeleteAnimal 4
+--exec sp_DeleteAnimal 4
 
 
 

@@ -16,13 +16,13 @@ namespace ApiDarwin1.Controllers
         private readonly string MiCadenaConexion;
         public AnimalController(IConfiguration configuration)
         {
-            MiCadenaConexion = configuration.GetConnectionString("conectionDarwin");
+            MiCadenaConexion = configuration.GetConnectionString("conectionPapito");
         }
 
         [HttpGet]
-        public async Task<List<AnimalRequest>> Animal()
+        public async Task<List<AnimalResponse>> Animal()
         {
-            List<AnimalRequest> animales = new List<AnimalRequest>();
+            List<AnimalResponse> animales = new List<AnimalResponse>();
             using (SqlConnection cnn = new SqlConnection(MiCadenaConexion))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_SelectAllAnimal", cnn))
@@ -33,7 +33,7 @@ namespace ApiDarwin1.Controllers
                     {
                         while (await dr.ReadAsync())
                         {
-                            AnimalRequest animal = new AnimalRequest()
+                            AnimalResponse animal = new AnimalResponse()
                             {
                                 Id = Convert.ToInt32(dr["Id"]),
                                 Nombre = dr["Nombre"].ToString(),
@@ -52,9 +52,9 @@ namespace ApiDarwin1.Controllers
         }
 
         [HttpGet("/{id}")]
-        public async Task<AnimalRequest> Animal(int id)
+        public async Task<AnimalResponse> Animal(int id)
         {
-            AnimalRequest animal = new AnimalRequest();
+            AnimalResponse animal = new AnimalResponse();
             using (SqlConnection cnn = new SqlConnection(MiCadenaConexion))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_SelectByIdAnimal", cnn))

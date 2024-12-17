@@ -13,3 +13,4 @@ insert into Animal values ('Gato','Negro',4)
 insert into Animal values ('Gallina','Blanco',2)
 
 select * from Animal
+
