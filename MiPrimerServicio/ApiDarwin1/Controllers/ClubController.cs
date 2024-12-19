@@ -21,7 +21,7 @@ namespace ApiDarwin1.Controllers
         public ClubController(IConfiguration configuration)
         {
             //injectamos la configuracion del archivo aap.setting.json para obtener la cadena de conexion "miCadenaConeccion"
-            miCadenaConeccion = configuration.GetConnectionString("conectionDarwin");
+            miCadenaConeccion = configuration.GetConnectionString("conectionPapito");
         }
 
 

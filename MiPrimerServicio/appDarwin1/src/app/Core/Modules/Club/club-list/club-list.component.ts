@@ -16,11 +16,14 @@ export class ClubListComponent {
   constructor(private clubRestService: ClubRestService){}
 
   public ClubLista():void {
-    this.clubRestService.GetClub().subscribe({
+    
+    this.clubRestService.GetClub().subscribe(
+    {
       next: (data:IclubResponse[]) =>{
         this.ClubData.set(data);
       }
-    });
+    }
+  );
   }
 
 }

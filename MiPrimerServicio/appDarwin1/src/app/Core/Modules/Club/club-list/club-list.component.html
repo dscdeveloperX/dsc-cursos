@@ -2,7 +2,7 @@
 
 <button (click)="ClubLista()">llamar lista de clubes</button>
 
-<table>
+<table border="2">
 <thead>
     <tr>
         <td>Id</td>
@@ -14,10 +14,10 @@
 <tbody>
     <ng-container *ngFor="let item of ClubData()">
         <tr>
-            <td>{{item.id}}</td>
-            <td>{{item.nombre}}</td>
-            <td>{{item.alias}}</td>
-            <td>{{item.color}}</td>
+            <td>{{item.clubId}}</td>
+            <td>{{item.clubNombre}}</td>
+            <td>{{item.clubAlias}}</td>
+            <td>{{item.clubColor}}</td>
         </tr>
     </ng-container>
 </tbody>

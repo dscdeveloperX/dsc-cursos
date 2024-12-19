@@ -37,6 +37,29 @@ export class AnimalListComponent {
 
   }
 
+  public Animal():void{
+    this.animalRestService.GetAnimalById(2).subscribe(
+      {
+        next:(response:IAnimalResponse)=>{
+          this.AnimaData.set([response]);
+        }
+      }
+    )
+  }
+
+  
+  public AnimalFilter():void 
+  {
+    this.animalRestService.GetAnimalFilter(1,'Negro').subscribe(
+      {
+        next: (data:IAnimalResponse[])=>{
+          this.AnimaData.set(data);
+        }
+
+      }
+    );
+
+  }
 
 
 }

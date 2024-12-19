@@ -16,7 +16,7 @@ namespace ApiDarwin1.Controllers
         private readonly string MiCadenaConexion;
         public AnimalController(IConfiguration configuration)
         {
-            MiCadenaConexion = configuration.GetConnectionString("conectionDarwin");
+            MiCadenaConexion = configuration.GetConnectionString("conectionPapito");
         }
 
         [HttpGet]
@@ -51,7 +51,7 @@ namespace ApiDarwin1.Controllers
 
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<AnimalResponse> Animal(int id)
         {
             AnimalResponse animal = new AnimalResponse();
@@ -77,6 +77,38 @@ namespace ApiDarwin1.Controllers
             return animal;
 
         }
+
+
+        [HttpGet("Patas/{patas}/Color/{color}")]
+        public async Task<List <AnimalResponse>> AnimalFilter(int patas,string color)
+        {
+           List< AnimalResponse> animales = new List< AnimalResponse>();
+            using (SqlConnection cnn = new SqlConnection(MiCadenaConexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_AnimalFilter", cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Patas", patas));
+                    cmd.Parameters.Add(new SqlParameter("@Color", color));
+                    await cnn.OpenAsync();
+                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await dr.ReadAsync())
+                        {
+                            AnimalResponse animal = new AnimalResponse(); 
+                            animal.Id = Convert.ToInt32(dr["Id"]);
+                            animal.Nombre = dr["Nombre"].ToString();
+                            animal.Color = dr["Color"].ToString();
+                            animal.Patas = Convert.ToInt32(dr["Patas"]);
+                            animales.Add(animal);
+                        }
+                    }
+                }
+            }
+            return animales;
+
+        }
+
 
         [HttpPost]
         public async Task<bool> Post(AnimalRequest request)

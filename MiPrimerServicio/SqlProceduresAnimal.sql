@@ -47,5 +47,25 @@ End;
 
 --exec sp_DeleteAnimal 4
 
+select* from Animal
+
+insert into Animal values ('Gato','Blanco',4),
+('Gato','Azul',4),
+('Gallina','Negro',2),
+('Gallina','Azul',2)
 
 
+
+create procedure sp_AnimalFilter (
+@Patas int, 
+@Color varchar(50)
+)
+As
+Begin
+
+Select * From Animal
+where Patas > @Patas and Color <> @Color;
+
+End;
+
+exec sp_AnimalFilter 1, 'Negro'

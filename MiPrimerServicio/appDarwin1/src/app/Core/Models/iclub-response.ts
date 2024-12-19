@@ -1,6 +1,6 @@
 export interface IclubResponse {
-    id: number;
-    nombre: string;
-    alias: string;
-    color: string;
+    clubId: number;
+    clubNombre: string;
+    clubAlias: string;
+    clubColor: string;
 }

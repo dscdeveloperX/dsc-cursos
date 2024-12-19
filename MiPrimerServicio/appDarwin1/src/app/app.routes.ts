@@ -14,5 +14,9 @@ export const routes:Routes = [
     {
         path:"club",
         component:ClubListComponent
+    },
+    {
+        path:"animal",
+        component:AnimalListComponent
     }
 ];
