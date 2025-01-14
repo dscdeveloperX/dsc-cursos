@@ -1,14 +1,19 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IproductResponse } from '../Models/iproduct-response';
+import { IproductRequest } from '../Models/iproduct-request';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsRestService {
+private headers:HttpHeaders= new HttpHeaders(
+  {"Content-Type":"application/json"}
+);
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { 
+  }
 
 public GetProduct():Observable<IproductResponse[]> {
    return this.httpClient.get<IproductResponse[]>(`http://localhost:5250/public/v2/Productos`);
@@ -21,4 +26,9 @@ public GetProductById(id: number):Observable<IproductResponse>{
 public GetProductFilter(estado: boolean, stock: number, precio:number ){
   return this.httpClient.get<IproductResponse[]>(`http://localhost:5250/public/v2/Productos/Estado/${estado}/Stock/${stock}/Precio/${precio}`)
 }
+
+public PostProduct (request: IproductRequest ):Observable<boolean>{
+  return this.httpClient.post<boolean>(`http://localhost:5250/public/v2/Productos`, JSON.stringify(request) ,{headers:this.headers})
+}
+
 }

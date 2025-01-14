@@ -50,6 +50,20 @@ Where Estado = @Estado And Stock >= @Stock And Precio <= @Precio
 
 End;
 
+create procedure sp_ProductsInsert (@Nombre nvarchar (100),
+@Categoria nvarchar (50),
+@Precio decimal (18,2),
+@Stock int ,
+@Estado tinyint)
+As
+Begin
+
+insert into Producto (Nombre,Categoria,Precio,Stock,Estado) values (@Nombre, @Categoria,@Precio,@Stock,@Estado)
+
+End;
+
+exec sp_ProductsInsert 'Foca Peluche' , 'Juguetes', 18.77,20,1
+
 
 
  

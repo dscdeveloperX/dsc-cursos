@@ -13,7 +13,7 @@ namespace ApiDarwin1.Controllers
         private readonly string miCadenaConexion;
         public ProductosController(IConfiguration configuration)
         {
-            miCadenaConexion = configuration.GetConnectionString("conectionDarwin");
+            miCadenaConexion = configuration.GetConnectionString("conectionPapito");
         }
 
         [HttpGet]
@@ -114,6 +114,37 @@ namespace ApiDarwin1.Controllers
             } 
             return productos;
         }
+
+        [HttpPost]
+        public async Task<bool> Post(ProductoRequest request)
+        {
+            try
+            {
+                using(SqlConnection cnn = new SqlConnection(miCadenaConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_ProductsInsert", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@Nombre", request.Nombre));
+                        cmd.Parameters.Add(new SqlParameter("@Categoria", request.Categoria));
+                        cmd.Parameters.Add(new SqlParameter("@Stock", request.Stock));
+                        cmd.Parameters.Add(new SqlParameter("@Estado", request.Estado));
+                        cmd.Parameters.Add(new SqlParameter("@Precio", request.Precio));
+
+                        await cnn.OpenAsync();
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+
+                    }
+                }
+            
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
 
 
     }

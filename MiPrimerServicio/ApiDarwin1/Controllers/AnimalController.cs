@@ -16,7 +16,7 @@ namespace ApiDarwin1.Controllers
         private readonly string MiCadenaConexion;
         public AnimalController(IConfiguration configuration)
         {
-            MiCadenaConexion = configuration.GetConnectionString("conectionDarwin");
+            MiCadenaConexion = configuration.GetConnectionString("conectionPapito");
         }
 
         [HttpGet]
