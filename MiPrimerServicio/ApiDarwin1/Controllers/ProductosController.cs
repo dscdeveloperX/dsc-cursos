@@ -81,7 +81,7 @@ namespace ApiDarwin1.Controllers
             return producto;
 
         }
-        [HttpGet("Estado/{estado}/Stock{stock}/Precio{precio}")]
+        [HttpGet("Estado/{estado}/Stock/{stock}/Precio/{precio}")]
         public async Task<List<ProductoResponse>> ProductosFilter(bool estado,int stock,decimal precio)
         {
             List<ProductoResponse> productos = new List<ProductoResponse>();

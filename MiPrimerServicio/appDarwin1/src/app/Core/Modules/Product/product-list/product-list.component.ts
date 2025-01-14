@@ -27,4 +27,26 @@ export class ProductListComponent {
     );
   }
 
+  public ProductId():void{
+    this.productRestService.GetProductById(3).subscribe(
+      {
+        next:(response: IproductResponse)=>{
+          this.ProductData.set([response]);
+
+        }
+      }
+    )
+  }
+
+  public ProductFilter():void{
+    this.productRestService.GetProductFilter(true,30,10.50).subscribe(
+      {
+        next:(response: IproductResponse[])=>{
+          this.ProductData.set(response);
+
+        }
+      }
+    );
+  }
+
 }

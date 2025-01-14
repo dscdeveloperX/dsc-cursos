@@ -19,7 +19,7 @@ export const routes:Routes = [
     },
 
     {
-        path:"product",
+        path:"productos",
         pathMatch:"full",
         component:ProductListComponent
     }

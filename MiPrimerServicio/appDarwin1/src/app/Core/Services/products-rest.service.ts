@@ -14,4 +14,11 @@ public GetProduct():Observable<IproductResponse[]> {
    return this.httpClient.get<IproductResponse[]>(`http://localhost:5250/public/v2/Productos`);
 }
 
+public GetProductById(id: number):Observable<IproductResponse>{
+  return this.httpClient.get<IproductResponse>(`http://localhost:5250/public/v2/Productos/${id}`);
+}
+
+public GetProductFilter(estado: boolean, stock: number, precio:number ){
+  return this.httpClient.get<IproductResponse[]>(`http://localhost:5250/public/v2/Productos/Estado/${estado}/Stock/${stock}/Precio/${precio}`)
+}
 }
