@@ -31,4 +31,14 @@ public PostProduct (request: IproductRequest ):Observable<boolean>{
   return this.httpClient.post<boolean>(`http://localhost:5250/public/v2/Productos`, JSON.stringify(request) ,{headers:this.headers})
 }
 
+public PutProduct (id: number,request: IproductRequest ):Observable<boolean>{
+  return this.httpClient.put<boolean>(`http://localhost:5250/public/v2/Productos/${id}`, JSON.stringify(request) ,{headers:this.headers})
+}
+
+public DeleteProduct (id: number ):Observable<boolean>{
+  return this.httpClient.delete<boolean>(`http://localhost:5250/public/v2/Productos/${id}`)
+}
+
+
+
 }

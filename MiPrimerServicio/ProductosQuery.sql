@@ -29,7 +29,7 @@ insert into Producto values ('Mayonesa', 'Viveres',2.99,15,0),
 create procedure sp_AllProducts
 As
 Begin
-Select * From Producto
+Select * From Producto with (nolock)
 End;
 
 create procedure sp_ProductsById (@Id int)
@@ -63,6 +63,49 @@ insert into Producto (Nombre,Categoria,Precio,Stock,Estado) values (@Nombre, @Ca
 End;
 
 exec sp_ProductsInsert 'Foca Peluche' , 'Juguetes', 18.77,20,1
+
+
+exec sp_help 'Producto'
+
+create procedure sp_ProductsUpdate (
+@Id int,
+@Nombre nvarchar (100),
+@Categoria nvarchar (50),
+@Precio decimal (18,2),
+@Stock int ,
+@Estado tinyint)
+As
+Begin
+
+
+
+update Producto
+set Nombre= @Nombre, 
+Categoria = @Categoria,
+Precio = @Precio,
+Stock =@Stock,
+Estado =@Estado
+where Id = @Id; 
+End;
+
+exec sp_ProductsUpdate 1 ,'Foca' , 'Juguetes', 18.77,20,1
+
+
+create procedure sp_ProductsDelete (
+@Id int
+)
+As
+Begin
+
+
+
+delete from Producto
+where Id = @Id; 
+End;
+
+exec sp_ProductsDelete 1 
+
+
 
 
 

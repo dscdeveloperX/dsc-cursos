@@ -147,6 +147,67 @@ namespace ApiDarwin1.Controllers
 
 
 
+        [HttpPut("{id:int}")]
+        public async Task<bool> Put(int id,ProductoRequest request)
+        {
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(miCadenaConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_ProductsUpdate", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@Id", id));
+                        cmd.Parameters.Add(new SqlParameter("@Nombre", request.Nombre));
+                        cmd.Parameters.Add(new SqlParameter("@Categoria", request.Categoria));
+                        cmd.Parameters.Add(new SqlParameter("@Stock", request.Stock));
+                        cmd.Parameters.Add(new SqlParameter("@Estado", request.Estado));
+                        cmd.Parameters.Add(new SqlParameter("@Precio", request.Precio));
+
+                        await cnn.OpenAsync();
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<bool> Delete(int id)
+        {
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(miCadenaConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_ProductsDelete", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@Id", id));
+                        
+
+                        await cnn.OpenAsync();
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
+
+
     }
 }
             
