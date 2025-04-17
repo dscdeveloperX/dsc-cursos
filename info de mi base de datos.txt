@@ -1,3 +1,4 @@
+PC DARWIN
 server name:HP-14-CF0006DX\ISQLDSC
 login: sa
 password: manosdeosa2005
