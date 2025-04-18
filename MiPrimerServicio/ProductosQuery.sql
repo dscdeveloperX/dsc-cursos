@@ -25,6 +25,89 @@ insert into Producto values ('Mayonesa', 'Viveres',2.99,15,0),
 ('Hamlet','Libros',33.77,22,0),
 ('Papel Aluminio','Hogar',1.50,44,1)
 
+use darwincito_db
+go
+
+
+select * From Producto where Stock != 16
+
+select * From Producto where Id in (2,5,8)
+
+select top 95 percent * from Producto
+
+
+create table ProductoAprobacion (
+Id int primary key identity,
+Nombre varchar (300),
+Precio decimal (18,2),
+Gestion tinyint default 0
+)
+
+
+
+insert into ProductoAprobacion (Nombre,Precio) 
+select Nombre,Precio from Producto
+
+select * from ProductoAprobacion
+
+update ProductoAprobacion
+set Gestion = 1 
+
+update ProductoAprobacion 
+set Gestion = 0
+Where Precio >= 10.99
+
+
+Select COUNT(*) as Contado
+From ProductoAprobacion
+Where Gestion = 0
+
+Select Precio,FLOOR(Precio) 
+From Producto
+
+select * from Producto
+
+
+Select Nombre, CHARINDEX('Igor',Nombre) As Search
+From Producto 
+
+Select Nombre, Len(Nombre) As Largo
+From Producto
+
+Select Avg(Precio)
+From Producto
+
+Select Precio, Round(Precio,1) As Resultado
+From Producto
+
+Select * from ProductoAprobacion 
+where Gestion is not null
+
+Select *,
+case Gestion 
+when 1 then 'Aprobado'
+else 'No aprobado'
+end
+From ProductoAprobacion
+
+select sum(Precio), Gestion
+From ProductoAprobacion
+group by Gestion
+
+select avg(Precio), Gestion
+From ProductoAprobacion
+group by Gestion
+
+select top 5 * 
+from Producto
+order by Precio desc,Stock desc
+
+
+
+
+
+
+
 
 create procedure sp_AllProducts
 As
@@ -52,7 +135,7 @@ End;
 
 create procedure sp_ProductsInsert (@Nombre nvarchar (100),
 @Categoria nvarchar (50),
-@Precio decimal (18,2),
+@Precio decimal (18,2) ,
 @Stock int ,
 @Estado tinyint)
 As
@@ -62,7 +145,7 @@ insert into Producto (Nombre,Categoria,Precio,Stock,Estado) values (@Nombre, @Ca
 
 End;
 
-exec sp_ProductsInsert 'Foca Peluche' , 'Juguetes', 18.77,20,1
+exec sp_ProductsInsert 'Foca Peluche' , 'Juguetes', 18.37,20,1
 
 
 exec sp_help 'Producto'
