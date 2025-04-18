@@ -45,7 +45,7 @@ CREATE TABLE Beneficiaries (
 CREATE TABLE ReportsTypes (
     Id NVARCHAR(10),
 	Name NVARCHAR(200) NOT NULL,
-    CONSTRAINT PK_ReportTypes_Id PRIMARY KEY (Id)
+    CONSTRAINT PK_ReportsTypes_Id PRIMARY KEY (Id)
 );
 
 
@@ -516,6 +516,7 @@ CREATE TABLE Cheques (
     Id INT IDENTITY(1,1),
     AccountId INT NOT NULL,
 	BeneficiaryId NVARCHAR(10) NOT NULL,
+	ReportTypeId NVARCHAR(10) NOT NULL,
 	CityId INT NOT NULL DEFAULT 74,--Guayaquil
     ChequeNumber NVARCHAR(50) NOT NULL,
     Amount DECIMAL(18,2) NOT NULL,
@@ -524,5 +525,12 @@ CREATE TABLE Cheques (
 	CONSTRAINT PK_Cheques_Id PRIMARY KEY (Id),
     CONSTRAINT FK_Cheques_AccountId FOREIGN KEY (AccountId) REFERENCES Accounts(Id),
     CONSTRAINT FK_Cheques_BeneficiaryId FOREIGN KEY (BeneficiaryId) REFERENCES Beneficiaries(Id),
+	CONSTRAINT FK_Cheques_ReportTypeId FOREIGN KEY (ReportTypeId) REFERENCES ReportsTypes(Id),
 	CONSTRAINT FK_Cheques_CityId FOREIGN KEY (CityId) REFERENCES City(Id)
 );
+
+
+
+/*    Id NVARCHAR(10),
+	Name NVARCHAR(200) NOT NULL,
+    CONSTRAINT PK_ReportTypes_Id PRIMARY KEY (Id)*/
