@@ -57,458 +57,458 @@ GO
 
 
 
-CREATE TABLE [dbo].City(
+CREATE TABLE [dbo].Cities(
 	Id int IDENTITY(1,1),
 	Name varchar(100) NULL,
-	CONSTRAINT PK_City_Id PRIMARY KEY (Id)
+	CONSTRAINT PK_Cities_Id PRIMARY KEY (Id)
 )
 
 
-SET IDENTITY_INSERT [dbo].[City] ON 
+SET IDENTITY_INSERT [dbo].[Cities] ON 
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (1,  N' 28 de Mayo (San José de Yacuambi)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (1,  N' 28 de Mayo (San José de Yacuambi)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (2,  N' Alamor')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (2,  N' Alamor')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (3, N' Alausí')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (3, N' Alausí')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (4,  N' Alfredo Baquerizo Moreno (Jujan)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (4,  N' Alfredo Baquerizo Moreno (Jujan)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (5,  N' Amaluza')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (5,  N' Amaluza')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (6,  N' Ambato')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (6,  N' Ambato')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (7,  N' Arajuno')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (7,  N' Arajuno')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (8,  N' Archidona')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (8,  N' Archidona')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (9, N' Arenillas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (9, N' Arenillas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (10, N' Atacames')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (10, N' Atacames')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (11,  N' Atuntaqui')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (11,  N' Atuntaqui')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (12, N' Azogues')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (12, N' Azogues')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (13,  N' Baba')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (13,  N' Baba')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (14,  N' Babahoyo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (14,  N' Babahoyo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (15,  N' Baeza')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (15,  N' Baeza')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (16,  N' Bahía de Caráquez')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (16,  N' Bahía de Caráquez')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (17,  N' Balao')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (17,  N' Balao')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (18, N' Balsas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (18, N' Balsas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (19,  N' Balzar')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (19,  N' Balzar')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (20, N' Baños de Agua Santa')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (20, N' Baños de Agua Santa')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (21,  N' Biblián')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (21,  N' Biblián')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (22,  N' Bolívar')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (22,  N' Bolívar')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (23,  N' Buena Fe')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (23,  N' Buena Fe')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (24,  N' Calceta')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (24,  N' Calceta')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (25,  N' Caluma')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (25,  N' Caluma')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (26,  N' Camilo Ponce Enríquez')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (26,  N' Camilo Ponce Enríquez')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (27,  N' Cañar')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (27,  N' Cañar')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (28, N' Cariamanga')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (28, N' Cariamanga')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (29,  N' Carlos Julio Arosemena Tola')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (29,  N' Carlos Julio Arosemena Tola')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (30,  N' Catacocha')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (30,  N' Catacocha')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (31,  N' Catamayo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (31,  N' Catamayo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (32,  N' Catarama')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (32,  N' Catarama')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (33,  N' Cayambe')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (33,  N' Cayambe')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (34,  N' Celica')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (34,  N' Celica')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (35,  N' Cevallos')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (35,  N' Cevallos')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (36,  N' Chaguarpamba')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (36,  N' Chaguarpamba')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (37, N' Chambo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (37, N' Chambo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (38, N' Chilla')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (38, N' Chilla')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (39, N' Chillanes')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (39, N' Chillanes')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (40,  N' Chone')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (40,  N' Chone')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (41, N' Chordeleg')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (41, N' Chordeleg')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (42, N' Chunchi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (42, N' Chunchi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (43,  N' Colimes')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (43,  N' Colimes')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (44,  N' Coronel Marcelino Maridueña')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (44,  N' Coronel Marcelino Maridueña')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (45,  N' Cotacachi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (45,  N' Cotacachi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (46, N' Cumandá')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (46, N' Cumandá')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (47,  N' Daule')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (47,  N' Daule')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (48, N' Déleg')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (48, N' Déleg')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (49,  N' Durán')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (49,  N' Durán')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (50, N' Echeandía')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (50, N' Echeandía')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (51, N' El Ángel')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (51, N' El Ángel')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (52,  N' El Carmen')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (52,  N' El Carmen')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (53,  N' El Chaco')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (53,  N' El Chaco')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (54, N' El Corazón')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (54, N' El Corazón')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (55,  N' El Dorado de Cascales')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (55,  N' El Dorado de Cascales')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (56, N' El Guabo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (56, N' El Guabo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (57, N' El Pan')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (57, N' El Pan')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (58,  N' El Pangui')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (58,  N' El Pangui')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (59, N' El Tambo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (59, N' El Tambo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (60,  N' El Triunfo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (60,  N' El Triunfo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (61, N' Esmeraldas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (61, N' Esmeraldas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (62,  N' Flavio Alfaro')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (62,  N' Flavio Alfaro')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (63,  N' General Antonio Elizalde (Bucay)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (63,  N' General Antonio Elizalde (Bucay)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (64,  N' General Leonidas Plaza Gutiérrez (Limón)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (64,  N' General Leonidas Plaza Gutiérrez (Limón)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (65,  N' General Villamil (Playas)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (65,  N' General Villamil (Playas)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (66, N' Girón')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (66, N' Girón')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (67,  N' Gonzanamá')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (67,  N' Gonzanamá')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (68, N' Guachapala')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (68, N' Guachapala')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (69, N' Gualaceo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (69, N' Gualaceo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (70,  N' Gualaquiza')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (70,  N' Gualaquiza')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (71, N' Guamote')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (71, N' Guamote')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (72, N' Guano')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (72, N' Guano')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (73, N' Guaranda')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (73, N' Guaranda')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (74,  N' Guayaquil')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (74,  N' Guayaquil')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (75,  N' Guayzimi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (75,  N' Guayzimi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (76, N' Huaca')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (76, N' Huaca')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (77,  N' Huamboya')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (77,  N' Huamboya')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (78, N' Huaquillas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (78, N' Huaquillas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (79,  N' Ibarra')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (79,  N' Ibarra')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (80, N' Isidro Ayora')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (80, N' Isidro Ayora')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (81, N' Jama')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (81, N' Jama')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (82, N' Jaramijó')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (82, N' Jaramijó')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (83, N' Jipijapa')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (83, N' Jipijapa')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (84, N' Junín')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (84, N' Junín')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (85, N' La Bonita')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (85, N' La Bonita')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (86, N' La Concordia')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (86, N' La Concordia')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (87,  N' La Joya de los Sachas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (87,  N' La Joya de los Sachas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (88,  N' La Libertad')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (88,  N' La Libertad')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (89, N' La Maná')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (89, N' La Maná')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (90, N' La Troncal')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (90, N' La Troncal')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (91, N' La Victoria')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (91, N' La Victoria')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (92, N' Las Naves')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (92, N' Las Naves')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (93, N' Latacunga')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (93, N' Latacunga')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (94,  N' Logroño')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (94,  N' Logroño')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (95, N' Loja')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (95, N' Loja')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (96, N' Lomas de Sargentillo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (96, N' Lomas de Sargentillo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (97, N' Loreto')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (97, N' Loreto')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (98, N' Lumbaqui')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (98, N' Lumbaqui')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (99, N' Macará')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (99, N' Macará')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (100, N' Macas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (100, N' Macas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (101, N' Machachi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (101, N' Machachi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (102,N' Machala')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (102,N' Machala')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (103, N' Manta')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (103, N' Manta')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (104,N' Marcabelí')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (104,N' Marcabelí')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (105,  N' Mera')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (105,  N' Mera')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (106,  N' Milagro')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (106,  N' Milagro')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (107, N' Mira')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (107, N' Mira')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (108,  N' Mocache')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (108,  N' Mocache')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (109,  N' Montalvo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (109,  N' Montalvo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (110,  N' Montecristi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (110,  N' Montecristi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (111, N' Muisne')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (111, N' Muisne')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (112, N' Nabón')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (112, N' Nabón')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (113,  N' Naranjal')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (113,  N' Naranjal')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (114,  N' Naranjito')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (114,  N' Naranjito')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (115,  N' Narcisa de Jesús (Nobol)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (115,  N' Narcisa de Jesús (Nobol)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (116,  N' Nueva Loja')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (116,  N' Nueva Loja')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (117,  N' Nuevo Rocafuerte')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (117,  N' Nuevo Rocafuerte')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (118,  N' Olmedo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (118,  N' Olmedo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (119,  N' Olmedo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (119,  N' Olmedo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (120,  N' Otavalo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (120,  N' Otavalo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (121,  N' Pablo Sexto')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (121,  N' Pablo Sexto')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (122, N' Paccha')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (122, N' Paccha')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (123,  N' Paján')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (123,  N' Paján')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (124,  N' Palanda')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (124,  N' Palanda')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (125,  N' Palenque')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (125,  N' Palenque')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (126,  N' Palestina')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (126,  N' Palestina')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (127, N' Pallatanga')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (127, N' Pallatanga')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (128,  N' Palora')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (128,  N' Palora')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (129,  N' Paquisha')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (129,  N' Paquisha')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (130, N' Pasaje')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (130, N' Pasaje')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (131,  N' Patate')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (131,  N' Patate')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (132, N' Paute')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (132, N' Paute')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (133,  N' Pedernales')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (133,  N' Pedernales')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (134,  N' Pedro Carbo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (134,  N' Pedro Carbo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (135,  N' Pedro Vicente Maldonado')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (135,  N' Pedro Vicente Maldonado')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (136,  N' Pelileo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (136,  N' Pelileo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (137, N' Penipe')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (137, N' Penipe')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (138,  N' Pichincha')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (138,  N' Pichincha')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (139,  N' Píllaro')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (139,  N' Píllaro')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (140,  N' Pimampiro')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (140,  N' Pimampiro')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (141,  N' Pindal')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (141,  N' Pindal')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (142, N' Piñas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (142, N' Piñas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (143, N' Portovelo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (143, N' Portovelo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (144,  N' Portoviejo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (144,  N' Portoviejo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (145, N' Pucará')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (145, N' Pucará')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (146,  N' Puebloviejo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (146,  N' Puebloviejo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (147, N' Puerto Ayora')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (147, N' Puerto Ayora')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (148, N' Puerto Baquerizo Moreno')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (148, N' Puerto Baquerizo Moreno')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (149,  N' Puerto El Carmen de Putumayo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (149,  N' Puerto El Carmen de Putumayo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (150,  N' Puerto Francisco de Orellana')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (150,  N' Puerto Francisco de Orellana')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (151,  N' Puerto López')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (151,  N' Puerto López')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (152,  N' Puerto Quito')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (152,  N' Puerto Quito')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (153, N' Puerto Villamil')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (153, N' Puerto Villamil')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (154, N' Pujilí')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (154, N' Pujilí')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (155,  N' Puyo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (155,  N' Puyo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (156,  N' Quero')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (156,  N' Quero')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (157,  N' Quevedo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (157,  N' Quevedo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (158,  N' Quilanga')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (158,  N' Quilanga')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (159,  N' Quinsaloma')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (159,  N' Quinsaloma')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (160,  N' Quito')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (160,  N' Quito')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (161, N' Riobamba')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (161, N' Riobamba')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (162, N' Rioverde')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (162, N' Rioverde')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (163,  N' Rocafuerte')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (163,  N' Rocafuerte')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (164, N' Rosa Zárate (Quinindé)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (164, N' Rosa Zárate (Quinindé)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (165,  N' Salinas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (165,  N' Salinas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (166,  N' Salitre')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (166,  N' Salitre')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (167,  N' Samborondón')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (167,  N' Samborondón')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (168, N' San Felipe de Oña')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (168, N' San Felipe de Oña')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (169, N' San Fernando')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (169, N' San Fernando')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (170, N' San Gabriel')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (170, N' San Gabriel')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (171, N' San José de Chimbo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (171, N' San José de Chimbo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (172,  N' San Juan Bosco')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (172,  N' San Juan Bosco')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (173, N' San Lorenzo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (173, N' San Lorenzo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (174, N' San Miguel')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (174, N' San Miguel')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (175, N' San Miguel (Salcedo)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (175, N' San Miguel (Salcedo)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (176,  N' San Miguel de Los Bancos')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (176,  N' San Miguel de Los Bancos')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (177,  N' San Vicente')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (177,  N' San Vicente')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (178,  N' Sangolquí')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (178,  N' Sangolquí')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (179,  N' Santa Ana de Vuelta Larga')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (179,  N' Santa Ana de Vuelta Larga')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (180,  N' Santa Clara')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (180,  N' Santa Clara')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (181,  N' Santa Elena')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (181,  N' Santa Elena')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (182, N' Santa Isabel')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (182, N' Santa Isabel')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (183,  N' Santa Lucía')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (183,  N' Santa Lucía')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (184, N' Santa Rosa')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (184, N' Santa Rosa')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (185,  N' Santiago')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (185,  N' Santiago')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (186,  N' Santiago de Méndez')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (186,  N' Santiago de Méndez')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (187,  N' Santo Domingo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (187,  N' Santo Domingo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (188, N' Saquisilí')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (188, N' Saquisilí')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (189,  N' Saraguro')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (189,  N' Saraguro')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (190, N' Sevilla de Oro')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (190, N' Sevilla de Oro')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (191,  N' Shushufindi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (191,  N' Shushufindi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (192, N' Sigchos')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (192, N' Sigchos')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (193, N' Sígsig')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (193, N' Sígsig')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (194,  N' Simón Bolívar')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (194,  N' Simón Bolívar')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (195,  N' Sozoranga')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (195,  N' Sozoranga')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (196,  N' Sucre')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (196,  N' Sucre')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (197,  N' Sucúa')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (197,  N' Sucúa')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (198, N' Suscal')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (198, N' Suscal')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (199,  N' Tabacundo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (199,  N' Tabacundo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (200,  N' Taisha')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (200,  N' Taisha')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (201,  N' Tarapoa')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (201,  N' Tarapoa')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (202,  N' Tena')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (202,  N' Tena')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (203,  N' Tiputini')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (203,  N' Tiputini')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (204,  N' Tisaleo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (204,  N' Tisaleo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (205,  N' Tosagua')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (205,  N' Tosagua')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (206, N' Tulcán')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (206, N' Tulcán')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (207,  N' Urcuquí')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (207,  N' Urcuquí')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (208, N' Valdez (Limones)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (208, N' Valdez (Limones)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (209,  N' Valencia')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (209,  N' Valencia')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (210,  N' Velasco Ibarra (El Empalme)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (210,  N' Velasco Ibarra (El Empalme)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (211,  N' Ventanas')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (211,  N' Ventanas')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (212, N' Villa La Unión (Cajabamba)')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (212, N' Villa La Unión (Cajabamba)')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (213,  N' Vinces')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (213,  N' Vinces')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (214,  N' Yaguachi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (214,  N' Yaguachi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (215,  N' Yantzaza')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (215,  N' Yantzaza')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (216,  N' Zamora')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (216,  N' Zamora')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (217,  N' Zapotillo')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (217,  N' Zapotillo')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (218, N' Zaruma')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (218, N' Zaruma')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (219,  N' Zumba')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (219,  N' Zumba')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (220,  N' Zumbi')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (220,  N' Zumbi')
 GO
-INSERT [dbo].[City] ([Id], [Name]) VALUES (221,  N'Mocha')
+INSERT [dbo].[Cities] ([Id], [Name]) VALUES (221,  N'Mocha')
 GO
-SET IDENTITY_INSERT [dbo].[City] OFF
+SET IDENTITY_INSERT [dbo].[Cities] OFF
 GO
 
 
@@ -526,11 +526,7 @@ CREATE TABLE Cheques (
     CONSTRAINT FK_Cheques_AccountId FOREIGN KEY (AccountId) REFERENCES Accounts(Id),
     CONSTRAINT FK_Cheques_BeneficiaryId FOREIGN KEY (BeneficiaryId) REFERENCES Beneficiaries(Id),
 	CONSTRAINT FK_Cheques_ReportTypeId FOREIGN KEY (ReportTypeId) REFERENCES ReportsTypes(Id),
-	CONSTRAINT FK_Cheques_CityId FOREIGN KEY (CityId) REFERENCES City(Id)
+	CONSTRAINT FK_Cheques_CityId FOREIGN KEY (CityId) REFERENCES Cities(Id)
 );
 
 
-
-/*    Id NVARCHAR(10),
-	Name NVARCHAR(200) NOT NULL,
-    CONSTRAINT PK_ReportTypes_Id PRIMARY KEY (Id)*/

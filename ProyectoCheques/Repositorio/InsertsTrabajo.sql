@@ -1,5 +1,6 @@
 insert into Banks values ('Banco del Pacífico'),('Banco Bolivariano'),('Banco Pichincha'),('Banco de Guayaquil'),
 ('Produbanco'),('Banco Internacional'),('Banco del Austro'),('Banco General Rumiñahui'),('Banco de Machala')
+select * from Banks
 
 INSERT INTO Companies (RUC, Name) VALUES
 ('1234567890123', 'Ecuatoriana de Comercio S.A.'),
@@ -27,17 +28,43 @@ INSERT INTO Accounts (CompanyId,BankId,AccountNumber) VALUES
 (9,3,'8899001122334455'),
 (10,8,'9900112233445566');
 
-select * from  Beneficiaries Accounts
+select * from  Accounts
 
 INSERT INTO Beneficiaries VALUES(0000000001,'Carlos Ramirez'),(0000000002,'Domenika Salazar'),(0000000003,'Emily Franco'),
 (0000000004,'Dario Lozano'),(0000000005,'Melissa Seminario'),
 (0000000006,'Maximo Peñas'),(0000000007,'Carolina Rosales'),(0000000008,'Rubi Castillo'),(0000000009,'Abel Bajaña'),(0000000010,'Daniel Burgos'),(0000000011,'Victori Bedoya')
 
+select * from Beneficiaries
 
-
-CREATE PROCEDURE SP_InsertCheque (@AccountId int,@BeneficiaryId nvarchar(10),@ReportTypeId nvarchar(10),@CityId int,@ChequeNumber nvarchar(50),@Amount decimal(18, 2),@Date date ,@PaymentDetail nvarchar(500))
+CREATE PROCEDURE sp_ChequeCreate (
+@AccountId int,
+@BeneficiaryId nvarchar(10),
+@ReportTypeId nvarchar(10),
+@CityId int,
+@ChequeNumber nvarchar(50),
+@Amount decimal(18, 2),
+@Date date ,
+@PaymentDetail nvarchar(500))
 AS 
 BEGIN
-INSERT INTO Cheques VALUES (@AccountId,@BeneficiaryId,@ReportTypeId,@CityId,@ChequeNumber,@Amount,@Date,@PaymentDetail)
+INSERT INTO Cheques(
+AccountId,
+BeneficiaryId,
+ReportTypeId,
+CityId,
+ChequeNumber,
+Amount,
+[Date],
+PaymentDetail
+)
+VALUES (
+@AccountId,
+@BeneficiaryId,
+@ReportTypeId,
+@CityId,
+@ChequeNumber,
+@Amount,
+@Date,
+@PaymentDetail)
 END;
 
