@@ -5,6 +5,7 @@ USE ChequeManagerDB;
 GO
 
 
+
 CREATE TABLE Banks (
     Id INT IDENTITY(1,1),
     Name NVARCHAR(100) NOT NULL,
@@ -40,9 +41,10 @@ CREATE TABLE Beneficiaries (
     Name NVARCHAR(200) NOT NULL,
     CONSTRAINT PK_Beneficiaries_Id PRIMARY KEY (Id)
 );
+ALTER TABLE Beneficiaries
+ADD CONSTRAINT UQ_Id UNIQUE (Id);
 
-
-CREATE TABLE ReportsTypes (
+CREATE  TABLE  ReportsTypes (
     Id NVARCHAR(10),
 	Name NVARCHAR(200) NOT NULL,
     CONSTRAINT PK_ReportsTypes_Id PRIMARY KEY (Id)
@@ -62,6 +64,8 @@ CREATE TABLE [dbo].Cities(
 	Name varchar(100) NULL,
 	CONSTRAINT PK_Cities_Id PRIMARY KEY (Id)
 )
+
+
 
 
 SET IDENTITY_INSERT [dbo].[Cities] ON 
@@ -512,7 +516,7 @@ SET IDENTITY_INSERT [dbo].[Cities] OFF
 GO
 
 
-CREATE TABLE Cheques (
+CREATE TABLE  Cheques (
     Id INT IDENTITY(1,1),
     AccountId INT NOT NULL,
 	BeneficiaryId NVARCHAR(10) NOT NULL,
