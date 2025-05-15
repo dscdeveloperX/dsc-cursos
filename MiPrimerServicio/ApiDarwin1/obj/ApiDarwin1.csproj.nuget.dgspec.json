@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj": {}
+    "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj": {}
   },
   "projects": {
-    "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj": {
+    "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj",
+        "projectUniqueName": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj",
         "projectName": "ApiDarwin1",
-        "projectPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj",
-        "packagesPath": "C:\\Users\\dscpc\\.nuget\\packages\\",
-        "outputPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\obj\\",
+        "projectPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\ApiDarwin1.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dscpc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -14,7 +14,7 @@ INSERT INTO Companies (RUC, Name) VALUES
 ('9012345678901', 'Servicios Financieros del Norte Cía. Ltda.'),
 ('0123456789012', 'Comercializadora del Sur S.A.');
 
-select * from Companies
+select * from Accounts
 
 INSERT INTO Accounts (CompanyId,BankId,AccountNumber) VALUES
 (1,1,'0011223344556677'),
@@ -28,7 +28,7 @@ INSERT INTO Accounts (CompanyId,BankId,AccountNumber) VALUES
 (9,3,'8899001122334455'),
 (10,8,'9900112233445566');
 
-select * from  Accounts
+select * from  cheques
 
 INSERT INTO Beneficiaries VALUES(1,'Carlos Ramirez'),(2,'Domenika Salazar'),(3,'Emily Franco'),
 (4,'Dario Lozano'),(5,'Melissa Seminario'),
@@ -36,6 +36,10 @@ INSERT INTO Beneficiaries VALUES(1,'Carlos Ramirez'),(2,'Domenika Salazar'),(3,'
 
 
 select * from Beneficiaries
+
+update Beneficiaries
+set Id = '0924097689'
+where Id = 9
 
 CREATE PROCEDURE sp_ChequeCreate (
 @AccountId int,
@@ -68,6 +72,10 @@ VALUES (
 @Date,
 @PaymentDetail)
 END;
+
+exec sp_ChequeCreate 1,'0959317413', 'GRP',1,  55, 500.55, '2025-05-25', 'nosexdxd'
+
+select * from Cheques
 
 CREATE PROCEDURE sp_CityGetAll 
 AS

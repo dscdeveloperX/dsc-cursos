@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\",
+  "WorkspaceRootPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\miprimerservicio\\apidarwin1\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\miprimerservicio\\apidarwin1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\miprimerservicio\\apidarwin1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\miprimerservicio\\apidarwin1\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\miprimerservicio\\apidarwin1\\productoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:productoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\miprimerservicio\\apidarwin1\\productorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:productorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\miprimerservicio\\apidarwin1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FBA383B3-A7B7-44CC-A36C-54D00FD66CA6}|ApiDarwin1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +39,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductosController.cs",
-              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "Controllers\\ProductosController.cs",
-              "ViewState": "AQIAALEAAAAAAAAAAAAgwMoAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T06:10:23.795Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-12T23:12:02.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductoResponse.cs",
-              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\ProductoResponse.cs",
-              "RelativeDocumentMoniker": "ProductoResponse.cs",
-              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\MiPrimerServicio\\ApiDarwin1\\ProductoResponse.cs",
-              "RelativeToolTip": "ProductoResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:26:46.501Z"
+              "WhenOpened": "2025-05-12T22:39:59.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-09T22:09:45.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoRequest.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\ProductoRequest.cs",
+              "RelativeDocumentMoniker": "ProductoRequest.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\ProductoRequest.cs",
+              "RelativeToolTip": "ProductoRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T23:25:06.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\MiPrimerServicio\\ApiDarwin1\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "Controllers\\ProductosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T06:10:23.795Z",
+              "EditorCaption": ""
             }
           ]
         }

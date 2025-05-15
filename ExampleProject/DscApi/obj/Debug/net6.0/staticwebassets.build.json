@@ -1,19 +1,11 @@
 {
   "Version": 1,
-  "Hash": "MrJ73o+58SD/MZ8IfKFGv31zvdYerBMiz3aKKGjQFnQ=",
+  "Hash": "pVRzDnxjEqjHthdtRAUGnkaE4mqcXTVWvTpt797dYf8=",
   "Source": "DscApi",
   "BasePath": "_content/DscApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "DscApi\\wwwroot",
-      "Source": "DscApi",
-      "ContentRoot": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ExampleProject\\DscApi\\wwwroot\\",
-      "BasePath": "_content/DscApi",
-      "Pattern": "**"
-    }
-  ],
+  "DiscoveryPatterns": [],
   "Assets": []
 }

@@ -2319,19 +2319,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dscpc\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ExampleProject\\DscApi\\DscApi.csproj",
+      "projectUniqueName": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\DscApi.csproj",
       "projectName": "DscApi",
-      "projectPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ExampleProject\\DscApi\\DscApi.csproj",
-      "packagesPath": "C:\\Users\\dscpc\\.nuget\\packages\\",
-      "outputPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ExampleProject\\DscApi\\obj\\",
+      "projectPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\DscApi.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dscpc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A4B2575-09CF-4A9E-BE0E-AD64ECCAC5C1}|ApiDarwinCheques.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\repositorio\\apidarwincheques\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A4B2575-09CF-4A9E-BE0E-AD64ECCAC5C1}|ApiDarwinCheques.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A4B2575-09CF-4A9E-BE0E-AD64ECCAC5C1}|ApiDarwinCheques.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\repositorio\\apidarwincheques\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A4B2575-09CF-4A9E-BE0E-AD64ECCAC5C1}|ApiDarwinCheques.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 377,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cab27b98-a314-48d2-9746-efe8ba39ccb0}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T20:28:11.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\Properties\\launchSettings.json*",
+              "RelativeToolTip": "Properties\\launchSettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T20:26:10.48Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

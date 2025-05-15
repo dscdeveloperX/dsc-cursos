@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\controllers\\chequecontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:controllers\\chequecontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\interfaces\\icheque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:interfaces\\icheque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\request\\chequecreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:request\\chequecreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\response\\citygetallresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:response\\citygetallresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 377,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cab27b98-a314-48d2-9746-efe8ba39ccb0}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICheque.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Interfaces\\ICheque.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICheque.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Interfaces\\ICheque.cs",
+              "RelativeToolTip": "Interfaces\\ICheque.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T22:35:43.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CityGetAllResponse.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Response\\CityGetAllResponse.cs",
+              "RelativeDocumentMoniker": "Response\\CityGetAllResponse.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Response\\CityGetAllResponse.cs",
+              "RelativeToolTip": "Response\\CityGetAllResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T20:45:58.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChequeCreateRequest.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Request\\ChequeCreateRequest.cs",
+              "RelativeDocumentMoniker": "Request\\ChequeCreateRequest.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Request\\ChequeCreateRequest.cs",
+              "RelativeToolTip": "Request\\ChequeCreateRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:21:46.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChequeControlador.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ChequeControlador.cs",
+              "RelativeDocumentMoniker": "Controllers\\ChequeControlador.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ChequeControlador.cs",
+              "RelativeToolTip": "Controllers\\ChequeControlador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:13:38.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwB4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T21:16:30.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T21:08:28.593Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

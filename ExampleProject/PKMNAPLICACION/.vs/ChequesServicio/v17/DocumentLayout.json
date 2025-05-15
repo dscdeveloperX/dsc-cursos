@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\pkmnaplicacion\\pkmnaplicacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|solutionrelative:pkmnaplicacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\pkmnaplicacion\\pkmnaplicacion\\interfaces\\chequecreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|solutionrelative:pkmnaplicacion\\interfaces\\chequecreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\pkmnaplicacion\\pkmnaplicacion\\controllers\\chequescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|solutionrelative:pkmnaplicacion\\controllers\\chequescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\pkmnaplicacion\\pkmnaplicacion\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|solutionrelative:pkmnaplicacion\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\pkmnaplicacion\\pkmnaplicacion\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39157AFE-E58B-41D0-A46F-453CAECE52A8}|PKMNAPLICACION\\ChequesServicio.csproj|solutionrelative:pkmnaplicacion\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 377,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Program.cs",
+              "RelativeDocumentMoniker": "PKMNAPLICACION\\Program.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Program.cs",
+              "RelativeToolTip": "PKMNAPLICACION\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T21:43:19.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cab27b98-a314-48d2-9746-efe8ba39ccb0}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "..\\..\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.Development.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.Development.json",
+              "RelativeToolTip": "..\\..\\ProyectoCheques\\Repositorio\\ApiDarwinCheques\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T20:32:30.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PKMNAPLICACION\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PKMNAPLICACION\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T20:25:48.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChequeCreateRequest.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Interfaces\\ChequeCreateRequest.cs",
+              "RelativeDocumentMoniker": "PKMNAPLICACION\\Interfaces\\ChequeCreateRequest.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Interfaces\\ChequeCreateRequest.cs",
+              "RelativeToolTip": "PKMNAPLICACION\\Interfaces\\ChequeCreateRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T23:20:29.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChequesController.cs",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Controllers\\ChequesController.cs",
+              "RelativeDocumentMoniker": "PKMNAPLICACION\\Controllers\\ChequesController.cs",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\Controllers\\ChequesController.cs",
+              "RelativeToolTip": "PKMNAPLICACION\\Controllers\\ChequesController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T17:52:23.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "PKMNAPLICACION\\appsettings.Development.json",
+              "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\PKMNAPLICACION\\PKMNAPLICACION\\appsettings.Development.json",
+              "RelativeToolTip": "PKMNAPLICACION\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-02T22:32:22.364Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
