@@ -1,9 +1,11 @@
-﻿using ChequesProyecto.Request;
+﻿using ChequesProyecto.Interfaces;
+using ChequesProyecto.Request;
 using ChequesProyecto.Response;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using ChequesProyecto.Repositories;
 using System.Data;
 
 namespace ChequesProyecto.Controllers
@@ -11,79 +13,53 @@ namespace ChequesProyecto.Controllers
     [EnableCors("alexcors")]
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class ChequeControlador : ControllerBase
     {
         private readonly string CadenaConexion;
 
-        public ChequeControlador(IConfiguration configuration)
+
+        private readonly ICityRepository _cityRepository;
+        private readonly IChequeRepository _chequeRepository;
+
+        private readonly IReportTypeRepository _reportTypeRepository;
+
+        public ChequeControlador(IConfiguration configuration, ICityRepository cityRepository, IChequeRepository chequeRepository, IReportTypeRepository reportTypeRepository)
         {
             CadenaConexion = configuration.GetConnectionString("apiconnectionstring");
+            _cityRepository = cityRepository;
+            _chequeRepository = chequeRepository;
+            _reportTypeRepository = reportTypeRepository;
+
         }
+
+
+
 
         [HttpPost]
 
-        public async Task<bool> Post(ChequeCreateRequest request)
+        public async Task<IActionResult> ChequeCreate(ChequeCreateRequest request)
         {
-            try
-            {
-                using (SqlConnection cnn = new SqlConnection(CadenaConexion))
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_ChequeCreate", cnn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("@AccountId", request.AccountId));
-                        cmd.Parameters.Add(new SqlParameter("@BeneficiaryId", request.BeneficiaryId));
-                        cmd.Parameters.Add(new SqlParameter("@ReportTypeId", request.ReportTypeId));
-                        cmd.Parameters.Add(new SqlParameter("@CityId", request.CityId));
-                        cmd.Parameters.Add(new SqlParameter("@ChequeNumber", request.Chequenumber));
-                        cmd.Parameters.Add(new SqlParameter("@Amount", request.Amount));
-                        cmd.Parameters.Add(new SqlParameter("@Date", request.Date));
-                        cmd.Parameters.Add(new SqlParameter("@PaymentDetail", request.PaymentDetail));
-
-                        await cnn.OpenAsync();
-                        await cmd.ExecuteNonQueryAsync();
-                        return true;
-
-                    }
+            return Ok(await _chequeRepository.ChequeCreate(request));
+        }
 
 
-                }
 
-            }
-            catch (Exception ex) { return false; }
 
+
+        [HttpGet("cities")]
+        public async Task<IActionResult> CityGetAll()
+        {
+            return Ok(await _cityRepository.CityGetAll());
 
         }
 
-        [HttpGet]
-        public async Task<List<CityGetAllResponse>> CityGet()
+        [HttpGet("reports")]
+        public async Task<IActionResult> ReportGetAll()
         {
-            List<CityGetAllResponse> cities = new List<CityGetAllResponse>();
-            using (SqlConnection cnn = new SqlConnection(CadenaConexion))
-            {
-                using (SqlCommand cmd = new SqlCommand("sp_CityGetAll", cnn)) 
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    await cnn.OpenAsync();
-                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await dr.ReadAsync())
-                        {
-                            CityGetAllResponse city = new CityGetAllResponse()
-                            {
-                                Id = Convert.ToInt32(dr["Id"]),
-                                Name = dr["Name"].ToString()
-                            };
-                            cities.Add(city);
-                        }
-                    }
-
-                }
-
-                return cities;
-            }
+            return Ok (await _reportTypeRepository.ReportGetAll());
         }
+
 
     }
 }

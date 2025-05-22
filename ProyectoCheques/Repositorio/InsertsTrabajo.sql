@@ -97,6 +97,8 @@ FROM ReportsTypes
 ORDER BY [Name] asc
 END;
 
+exec sp_ReportsTypesGetAll
+
 CREATE PROCEDURE sp_AccountGetAll
 AS
 BEGIN

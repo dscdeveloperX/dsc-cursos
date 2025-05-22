@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\controllers\\clubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:controllers\\clubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\repository\\clubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:interface\\iclub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\controllers\\clubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:controllers\\clubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B27DBE54-1C8F-4797-A606-3AC8D6573BD1}|DscApi.csproj|c:\\escritorio\\programacion\\darwingit\\dsc-cursos\\exampleproject\\dscapi\\models\\request\\clubupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 350,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Models\\Request\\ClubUpdateRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T22:33:55.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T22:33:55.408Z"
             },
             {
               "$type": "Document",
@@ -68,13 +67,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T18:28:15.003Z",
               "EditorCaption": ""
@@ -87,27 +86,26 @@
               "RelativeDocumentMoniker": "Interface\\IClub.cs",
               "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\Interface\\IClub.cs",
               "RelativeToolTip": "Interface\\IClub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T22:37:38.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ClubController.cs",
               "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\Controllers\\ClubController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClubController.cs",
               "ToolTip": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\Controllers\\ClubController.cs",
               "RelativeToolTip": "Controllers\\ClubController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAQwBUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T22:34:55.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T22:34:55.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Escritorio\\programacion\\DarwinGit\\dsc-cursos\\ExampleProject\\DscApi\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -115,8 +113,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-12T04:37:01.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T04:37:01.737Z"
             }
           ]
         }
