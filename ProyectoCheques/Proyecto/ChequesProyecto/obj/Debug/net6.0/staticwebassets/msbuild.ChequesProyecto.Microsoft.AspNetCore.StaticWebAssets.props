@@ -1,0 +1,22 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Report\general_449.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ChequesProyecto</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ChequesProyecto</BasePath>
+      <RelativePath>Uploads/Report/general_449.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7bko03h8po</Fingerprint>
+      <Integrity>03g8VoZ7KroRlH1q214vjdIooVhMX1ZE2f2jkZMKiVY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Report\general_449.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

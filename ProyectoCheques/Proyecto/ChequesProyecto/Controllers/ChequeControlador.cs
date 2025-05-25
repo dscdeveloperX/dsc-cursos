@@ -1,35 +1,32 @@
-﻿using ChequesProyecto.Interfaces;
-using ChequesProyecto.Response;
+﻿
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using ChequesProyecto.Repositories;
 using System.Data;
-using ChequesProyecto.Data.Request;
+using ChequesProyecto.Repositories.ReportType;
+using ChequesProyecto.Repositories.Cheque;
+using ChequesProyecto.Repositories.City;
+using ChequesProyecto.Entities.Cheque;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using ChequesProyecto.Services.Cheque;
 
 namespace ChequesProyecto.Controllers
 {
     [EnableCors("alexcors")]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
 
-    public class ChequeControlador : ControllerBase
+    public class ChequeController : ControllerBase
     {
-        private readonly string CadenaConexion;
 
-
-        private readonly ICityRepository _cityRepository;
-        private readonly IChequeRepository _chequeRepository;
-
-        private readonly IReportTypeRepository _reportTypeRepository;
-
-        public ChequeControlador(IConfiguration configuration, ICityRepository cityRepository, IChequeRepository chequeRepository, IReportTypeRepository reportTypeRepository)
+        private readonly IChequeService _chequeService;
+        
+        public ChequeController(IChequeService chequeService)
         {
-            CadenaConexion = configuration.GetConnectionString("apiconnectionstring");
-            _cityRepository = cityRepository;
-            _chequeRepository = chequeRepository;
-            _reportTypeRepository = reportTypeRepository;
+            _chequeService = chequeService;
 
         }
 
@@ -38,27 +35,47 @@ namespace ChequesProyecto.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> ChequeCreate(ChequeCreateRequest request)
+        public async Task<IActionResult> ChequeCreate(ChequeCreateRequest chequeCreateRequest)
         {
-            return Ok(await _chequeRepository.ChequeCreate(request));
+            try
+            {
+                return Ok(await _chequeService.CreateCheque(chequeCreateRequest));
+            }
+            catch (Exception ex) {
+                return StatusCode(500, new { error = ex.Message});
+            }
         }
 
 
 
 
 
-        [HttpGet("cities")]
-        public async Task<IActionResult> CityGetAll()
-        {
-            return Ok(await _cityRepository.CityGetAll());
+      
 
+       
+
+
+        [HttpPost("report-cheque")]
+        public async Task<IActionResult> ReportCheque(ChequeRequest chequeRequest)
+        {
+            //return Ok( await _reportRepository.GetChequeReport(chequeRequest));
+            byte[] pdfBytes = await _chequeService.PdfGenerateRolPago("general");
+
+            return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
         }
 
-        [HttpGet("reports")]
-        public async Task<IActionResult> ReportGetAll()
+
+
+        [HttpPost("report-receipt")]
+        public async Task<IActionResult> ReportReceipt(ChequeRequest chequeRequest)
         {
-            return Ok (await _reportTypeRepository.ReportGetAll());
+            //return Ok( await _reportRepository.GetChequeReport(chequeRequest));
+            byte[] pdfBytes = await _chequeService.PdfGenerateRolPago("general");
+
+            return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
         }
+
+
 
 
     }

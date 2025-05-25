@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\data\\entities\\beneficiario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:data\\entities\\beneficiario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\controllers\\chequecontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:controllers\\chequecontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,40 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Beneficiario.cs",
-              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Data\\Entities\\Beneficiario.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\Beneficiario.cs",
-              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Data\\Entities\\Beneficiario.cs",
-              "RelativeToolTip": "Data\\Entities\\Beneficiario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T01:32:27.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ChequeControlador.cs",
               "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ChequeControlador.cs",
               "RelativeDocumentMoniker": "Controllers\\ChequeControlador.cs",
               "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ChequeControlador.cs",
               "RelativeToolTip": "Controllers\\ChequeControlador.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:29:52.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReportController.cs",
-              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "Controllers\\ReportController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAF0AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:26:55.99Z",
+              "WhenOpened": "2025-05-25T14:59:00.787Z",
               "EditorCaption": ""
             }
           ]

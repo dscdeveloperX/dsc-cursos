@@ -13,8 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Dtos\" />
-    <Folder Include="Data\Models\" />
     <Folder Include="wwwroot\Uploads\Report\" />
   </ItemGroup>
 
