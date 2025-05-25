@@ -1,5 +1,5 @@
-﻿using ChequesProyecto.Interfaces;
-using ChequesProyecto.Response;
+﻿using ChequesProyecto.Data.Response;
+using ChequesProyecto.Interfaces;
 using Microsoft.Data.SqlClient;
 using System.Data;
 

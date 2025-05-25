@@ -1,5 +1,4 @@
 ﻿using ChequesProyecto.Interfaces;
-using ChequesProyecto.Request;
 using ChequesProyecto.Response;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
@@ -7,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using ChequesProyecto.Repositories;
 using System.Data;
+using ChequesProyecto.Data.Request;
 
 namespace ChequesProyecto.Controllers
 {

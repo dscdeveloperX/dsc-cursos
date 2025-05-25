@@ -1,4 +1,4 @@
-﻿namespace ChequesProyecto.Response
+﻿namespace ChequesProyecto.Data.Response
 {
     public class CityGetAllResponse
     {

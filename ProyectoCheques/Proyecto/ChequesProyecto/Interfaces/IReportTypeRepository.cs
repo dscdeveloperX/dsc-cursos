@@ -1,4 +1,4 @@
-﻿using ChequesProyecto.Response;
+﻿using ChequesProyecto.Data.Response;
 
 namespace ChequesProyecto.Interfaces
 {

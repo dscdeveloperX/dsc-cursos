@@ -1,4 +1,4 @@
-﻿namespace ChequesProyecto.Request
+﻿namespace ChequesProyecto.Data.Request
 {
     public class ChequeCreateRequest
     {

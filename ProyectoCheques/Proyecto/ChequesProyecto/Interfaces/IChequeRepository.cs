@@ -1,6 +1,4 @@
-﻿using ChequesProyecto.Request;
-
-
+﻿using ChequesProyecto.Data.Request;
 
 namespace ChequesProyecto.Interfaces
 
