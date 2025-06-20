@@ -51,14 +51,25 @@ namespace TutorialCSharp.Controllers
             return Ok();
         }
 
-        [HttpPost("conversion-dolar-euro")]
-        public IActionResult Conversion()
+        [HttpPost("conversion-moneda")]
+        public IActionResult ConversionMoneda([FromBody] ConversionRequest request)
         {
 
+            ClaseConversión conversion = new ClaseConversión();
+
+            
+           
+
+           ConversionResponse response = conversion.ConversionMoneda(request);
+          
 
 
 
-            return Ok();
+
+
+
+            return Ok(response);
+            
 
         }
 

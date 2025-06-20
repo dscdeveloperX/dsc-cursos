@@ -2,6 +2,9 @@
 {
     public class ConversionResponse
     {
-        public bool Resultado {  get; set; }
+       
+        public double ValorEuro {  get; set; }
+        public double ValorSoles {  get; set; }
+        public double ValorPesos { get; set; }
     }
 }
