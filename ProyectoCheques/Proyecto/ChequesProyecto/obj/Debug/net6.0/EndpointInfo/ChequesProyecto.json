@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/v1/Account/account": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/v1/Cheque": {
       "post": {
         "tags": [

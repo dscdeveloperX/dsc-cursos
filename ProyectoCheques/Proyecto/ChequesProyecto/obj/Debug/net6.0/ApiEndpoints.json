@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "ChequesProyecto.Controllers.AccountController",
+    "Method": "GetAccountAll",
+    "RelativePath": "api/v1/Account/account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ChequesProyecto.Controllers.ChequeController",
     "Method": "ChequeCreate",
     "RelativePath": "api/v1/Cheque",

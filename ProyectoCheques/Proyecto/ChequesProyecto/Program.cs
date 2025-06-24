@@ -1,6 +1,8 @@
+using ChequesProyecto.Repositories.Account;
 using ChequesProyecto.Repositories.Cheque;
 using ChequesProyecto.Repositories.City;
 using ChequesProyecto.Repositories.ReportType;
+using ChequesProyecto.Services.Account;
 using ChequesProyecto.Services.Cheque;
 using ChequesProyecto.Services.City;
 using ChequesProyecto.Services.ReportType;
@@ -10,12 +12,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 //REPOSITORIOS
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<ICityRepository, CityRepository>();
 builder.Services.AddScoped<IChequeRepository, ChequeRepository>();
 builder.Services.AddScoped<IReportTypeRepository, ReportTypeRepository>();
+builder.Services.AddScoped<IReportTypeRepository, ReportTypeRepository>();
+
 
 
 //SERVICIOS
+builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<IChequeService, ChequeService>();
 builder.Services.AddScoped<IReportTypeService, ReportTypeService>();
