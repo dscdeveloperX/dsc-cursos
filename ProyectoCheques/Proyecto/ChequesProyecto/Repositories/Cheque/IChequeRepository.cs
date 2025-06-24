@@ -7,7 +7,7 @@ namespace ChequesProyecto.Repositories.Cheque
     {
         public Task<bool> CreateCheque(ChequeCreateRequest chequeCreateRequest);
 
-        Task<List<ChequeResponse>> GetChequeReport(ChequeRequest chequeRequest);
+        Task<List<ChequeReportResponse>> GetChequeReport(ChequeReportRequest chequeReportRequest);
 
 
     }

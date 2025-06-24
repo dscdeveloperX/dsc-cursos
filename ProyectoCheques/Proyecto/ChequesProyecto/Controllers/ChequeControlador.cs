@@ -55,24 +55,25 @@ namespace ChequesProyecto.Controllers
        
 
 
-        [HttpPost("report-cheque")]
-        public async Task<IActionResult> ReportCheque(ChequeRequest chequeRequest)
+        [HttpPost("cheque-report")]
+        public async Task<IActionResult> ChequeReport(ChequeReportRequest chequeReportRequest)
         {
+            List<ChequeReportResponse> chequeData = await _chequeService.GetChequeReport(chequeReportRequest);
             //return Ok( await _reportRepository.GetChequeReport(chequeRequest));
-            byte[] pdfBytes = await _chequeService.PdfGenerateRolPago("general");
+            byte[] pdfBytes = await _chequeService.GenerateChequeReport(chequeData,"general");
 
             return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
         }
 
 
 
-        [HttpPost("report-receipt")]
-        public async Task<IActionResult> ReportReceipt(ChequeRequest chequeRequest)
+        [HttpPost("receipt-report")]
+        public async Task<IActionResult> ReceiptReport(ChequeReportRequest chequeReportRequest)
         {
             //return Ok( await _reportRepository.GetChequeReport(chequeRequest));
-            byte[] pdfBytes = await _chequeService.PdfGenerateRolPago("general");
-
-            return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
+            //byte[] pdfBytes = await _chequeService.PdfGenerateRolPago(chequeReportRequest,"general");
+            return Ok();
+            //return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
         }
 
 

@@ -1,6 +1,6 @@
 ﻿namespace ChequesProyecto.Entities.Cheque
 {
-    public class ChequeRequest
+    public class ChequeReportRequest
     {
         public string ReportTypeId { get; set; }
         public int StartChequeNumber { get; set; }

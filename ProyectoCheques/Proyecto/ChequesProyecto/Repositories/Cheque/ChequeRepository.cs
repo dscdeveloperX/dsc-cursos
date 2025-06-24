@@ -25,6 +25,7 @@ namespace ChequesProyecto.Repositories.Cheque
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add(new SqlParameter("@AccountId", chequeCreateRequest.AccountId));
                         cmd.Parameters.Add(new SqlParameter("@BeneficiaryId", chequeCreateRequest.BeneficiaryId));
+                        cmd.Parameters.Add(new SqlParameter("@BeneficiaryName", chequeCreateRequest.BeneficiaryName));
                         cmd.Parameters.Add(new SqlParameter("@ReportTypeId", chequeCreateRequest.ReportTypeId));
                         cmd.Parameters.Add(new SqlParameter("@CityId", chequeCreateRequest.CityId));
                         cmd.Parameters.Add(new SqlParameter("@ChequeNumber", chequeCreateRequest.Chequenumber));
@@ -48,17 +49,17 @@ namespace ChequesProyecto.Repositories.Cheque
         }
 
 
-        public async Task<List<ChequeResponse>> GetChequeReport(ChequeRequest chequeRequest)
+        public async Task<List<ChequeReportResponse>> GetChequeReport(ChequeReportRequest chequeReportRequest)
         {
-            List<ChequeResponse> chequeResponses = new List<ChequeResponse>();
+            List<ChequeReportResponse> chequeReportResponses = new List<ChequeReportResponse>();
             using (SqlConnection cnn = new SqlConnection(CadenaConexion))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_ChequeGetReport", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ReportTypeId", chequeRequest.ReportTypeId);
-                    cmd.Parameters.AddWithValue("@StartChequeNumber", chequeRequest.StartChequeNumber);
-                    cmd.Parameters.AddWithValue("@EndChequeNumber", chequeRequest.EndChequeNumber);
+                    cmd.Parameters.AddWithValue("@ReportTypeId", chequeReportRequest.ReportTypeId);
+                    cmd.Parameters.AddWithValue("@StartChequeNumber", chequeReportRequest.StartChequeNumber);
+                    cmd.Parameters.AddWithValue("@EndChequeNumber", chequeReportRequest.EndChequeNumber);
 
                     await cnn.OpenAsync();
 
@@ -67,7 +68,7 @@ namespace ChequesProyecto.Repositories.Cheque
                     {
                         while (await dr.ReadAsync())
                         {
-                            ChequeResponse chequeResponse = new ChequeResponse()
+                            ChequeReportResponse chequeReportResponse = new ChequeReportResponse()
                             {
                                 CompanyName = dr["CompanyName"].ToString(),
                                 BankName = dr["BankName"].ToString(),
@@ -81,11 +82,11 @@ namespace ChequesProyecto.Repositories.Cheque
                                 Date = Convert.ToDateTime(dr["Date"]),
                                 PaymentDetail = dr["PaymentDetail"].ToString()
                             };
-                            chequeResponses.Add(chequeResponse);
+                            chequeReportResponses.Add(chequeReportResponse);
                         }
                     }
                 }
-                return chequeResponses;
+                return chequeReportResponses;
             }
 
         }

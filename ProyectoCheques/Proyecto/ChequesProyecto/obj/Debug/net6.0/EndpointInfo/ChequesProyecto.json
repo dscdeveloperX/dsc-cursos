@@ -36,7 +36,7 @@
         }
       }
     },
-    "/api/v1/Cheque/report-cheque": {
+    "/api/v1/Cheque/cheque-report": {
       "post": {
         "tags": [
           "Cheque"
@@ -45,17 +45,48 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ChequeRequest"
+                "$ref": "#/components/schemas/ChequeReportRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ChequeRequest"
+                "$ref": "#/components/schemas/ChequeReportRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ChequeRequest"
+                "$ref": "#/components/schemas/ChequeReportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Cheque/receipt-report": {
+      "post": {
+        "tags": [
+          "Cheque"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChequeReportRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChequeReportRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChequeReportRequest"
               }
             }
           }
@@ -105,6 +136,10 @@
             "type": "string",
             "nullable": true
           },
+          "beneficiaryName": {
+            "type": "string",
+            "nullable": true
+          },
           "reportTypeId": {
             "type": "string",
             "nullable": true
@@ -132,7 +167,7 @@
         },
         "additionalProperties": false
       },
-      "ChequeRequest": {
+      "ChequeReportRequest": {
         "type": "object",
         "properties": {
           "reportTypeId": {

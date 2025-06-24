@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\services\\cheque\\chequeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:services\\cheque\\chequeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\repositories\\cheque\\chequerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:repositories\\cheque\\chequerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\controllers\\chequecontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:controllers\\chequecontrolador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|x:\\dsc\\darwinet\\darwincitoprueba\\proyectocheques\\proyecto\\chequesproyecto\\services\\cheque\\ichequeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:services\\cheque\\ichequeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 377,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,16 +34,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IChequeService.cs",
+              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\Cheque\\IChequeService.cs",
+              "RelativeDocumentMoniker": "Services\\Cheque\\IChequeService.cs",
+              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\Cheque\\IChequeService.cs",
+              "RelativeToolTip": "Services\\Cheque\\IChequeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:24:02.212Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ChequeService.cs",
+              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\Cheque\\ChequeService.cs",
+              "RelativeDocumentMoniker": "Services\\Cheque\\ChequeService.cs",
+              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\Cheque\\ChequeService.cs",
+              "RelativeToolTip": "Services\\Cheque\\ChequeService.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAQwKcAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:23:51.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChequeRepository.cs",
+              "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Repositories\\Cheque\\ChequeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Cheque\\ChequeRepository.cs",
+              "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Repositories\\Cheque\\ChequeRepository.cs",
+              "RelativeToolTip": "Repositories\\Cheque\\ChequeRepository.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:14:18.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ChequeControlador.cs",
               "DocumentMoniker": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ChequeControlador.cs",
               "RelativeDocumentMoniker": "Controllers\\ChequeControlador.cs",
               "ToolTip": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\ChequeControlador.cs",
               "RelativeToolTip": "Controllers\\ChequeControlador.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEgAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:59:00.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T20:12:15.93Z"
             }
           ]
         }

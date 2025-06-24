@@ -17,15 +17,31 @@
   },
   {
     "ContainingType": "ChequesProyecto.Controllers.ChequeController",
-    "Method": "ReporteCheque",
-    "RelativePath": "api/v1/Cheque/report-cheque",
+    "Method": "ChequeReport",
+    "RelativePath": "api/v1/Cheque/cheque-report",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "chequeRequest",
-        "Type": "ChequesProyecto.Entities.Cheque.ChequeRequest",
+        "Name": "chequeReportRequest",
+        "Type": "ChequesProyecto.Entities.Cheque.ChequeReportRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ChequeController",
+    "Method": "ReceiptReport",
+    "RelativePath": "api/v1/Cheque/receipt-report",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chequeReportRequest",
+        "Type": "ChequesProyecto.Entities.Cheque.ChequeReportRequest",
         "IsRequired": true
       }
     ],

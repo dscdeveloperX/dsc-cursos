@@ -6,8 +6,8 @@ namespace ChequesProyecto.Services.Cheque
     {
         public Task<bool> CreateCheque(ChequeCreateRequest chequeCreateRequest);
 
-        Task<List<ChequeResponse>> GetChequeReport(ChequeRequest chequeRequest);
+        Task<List<ChequeReportResponse>> GetChequeReport(ChequeReportRequest chequeReportRequest);
 
-        Task<byte[]> PdfGenerateRolPago(string documentType);
+        Task<byte[]> GenerateChequeReport(List<ChequeReportResponse> chequeData, string documentType);
     }
 }
