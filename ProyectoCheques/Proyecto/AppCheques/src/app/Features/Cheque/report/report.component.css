@@ -1,0 +1,48 @@
+
+
+
+/*ESTILO DE LA TABLA CUENTA*/
+
+.tabla-cuenta{
+width: 100%;
+}
+
+ .tabla-cuenta td {
+    padding: 7px;
+    margin: 0px;
+    border: solid 1px black;
+ }
+
+.tabla-cuenta  thead {
+    background-color: rgb(116, 148, 137);
+    color:blanchedalmond;
+}
+
+/*ESTILO DE LAS FECHAS*/
+
+#seleccionar-fecha {
+    
+    padding: 5px;
+    margin: 0px 0px 15px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px ; 
+}
+
+.titulo{
+    color: grey;
+}
+
+input[type="date"]{
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+/*boton generar*/
+
+#boton-generar-reporte{
+
+padding: 10px;
+}
+
+

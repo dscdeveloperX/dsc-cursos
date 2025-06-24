@@ -1,0 +1,44 @@
+
+
+.tabla-generate{
+    width: 100%;
+}
+.tabla-generate td {
+    padding: 8px;
+    margin: 0px;
+    border: solid 1.2px black
+}
+.tabla-generate thead{
+    background-color:  rgb(34, 231, 189);
+    font-size: 15pt;
+    
+    font-weight: 600;
+}
+
+#boton-reporte {
+padding: 10px;
+}
+
+#boton-reporte button{
+     background-color: rgb(46, 125, 243);
+    color: white;
+    padding: 5px 15px;
+    border: solid 2px rgb(41, 91, 167);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+/*---------------------*/
+.seccion {
+
+}
+
+.seccion *{
+    display: block;
+}
+
+ em{
+    color: red;
+    font-size: 0.8em;
+}
