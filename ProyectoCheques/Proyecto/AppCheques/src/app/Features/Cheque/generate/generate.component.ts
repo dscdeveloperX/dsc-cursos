@@ -12,6 +12,9 @@ import { ICityGetAllResponse } from 'src/app/Core/Models/City/icity-get-all-resp
 })
 export class GenerateComponent implements OnInit {
 
+
+  public cityData:ICityGetAllResponse[]= [];
+
   public constructor (private cityService:CityService){
   }
 
@@ -24,7 +27,8 @@ export class GenerateComponent implements OnInit {
       this.cityService.GetCityAll().subscribe(
         {
           next: (data:ICityGetAllResponse[])=>{
-              console.log(data);
+              //console.log(data);
+              this.cityData = data;
           }
         }
       );

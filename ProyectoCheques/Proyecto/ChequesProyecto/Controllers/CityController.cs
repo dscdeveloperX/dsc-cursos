@@ -21,6 +21,7 @@ namespace ChequesProyecto.Controllers
             try
             {
                 return Ok(await _cityService.GetCityAll());
+
             }
             catch (Exception ex) {
                 return StatusCode(500, new { error=ex.Message });

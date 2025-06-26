@@ -4,6 +4,7 @@
 <table class="tabla-generate">
   <thead>
     <tr>
+      <td>Seleccionar</td>
       <td>Empresa</td>
       <td>Banco</td>
       <td>No. Cuenta</td>
@@ -11,17 +12,20 @@
   </thead>
   <tbody>
     <tr>
+      <td><button>Seleccionar</button></td>
       <td>Volkswagen</td>
       <td>Pacifico</td>
       <td>095921</td>
       
     </tr>
     <tr>
+      <td><button>Seleccionar</button></td>
       <td>Mazda</td>
       <td>Bolivariano</td>
       <td>094376</td>
     </tr>
     <tr>
+      <td><button>Seleccionar</button></td>
       <td>Nissan</td>
       <td>Produbanco</td>
       <td>093856</td>
@@ -38,15 +42,18 @@
 <h2>Ciudad de emisión</h2>
 
 <select > 
-  <option value="20">Guayaquil</option>
-  <option value="21">Quito</option>
+  <ng-container *ngFor="let item of cityData" >
+<option value="{{item.id}}">{{item.name}}</option>
+  </ng-container>
+  
+  
 </select>
 
 <h2>Tipo de reporte</h2>
 
 <select >
-  <option value="1">Reporte Individual</option>
-  <option value="2">Reporte de grupo</option>
+  <option value="1">quemado Reporte Individual</option>
+  <option value="2">quemado Reporte de grupo</option>
 </select>
 <h3>Detalle del reporte</h3>
 <div class="seccion">
