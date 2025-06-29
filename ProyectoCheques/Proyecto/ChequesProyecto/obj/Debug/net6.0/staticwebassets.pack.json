@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\Uploads\\Report\\general_449.pdf",
+      "Id": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\Uploads\\Report\\general_449.pdf",
       "PackagePath": "staticwebassets\\Uploads\\Report\\general_449.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ChequesProyecto.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ChequesProyecto.Microsoft.AspNetCore.StaticWebAssets.props",

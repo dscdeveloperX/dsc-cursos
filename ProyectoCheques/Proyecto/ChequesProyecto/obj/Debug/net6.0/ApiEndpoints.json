@@ -1,0 +1,121 @@
+[
+  {
+    "ContainingType": "ChequesProyecto.Controllers.AccountController",
+    "Method": "GetAccountAll",
+    "RelativePath": "api/v1/Account/account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ChequeController",
+    "Method": "ChequeCreate",
+    "RelativePath": "api/v1/Cheque",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chequeCreateRequest",
+        "Type": "ChequesProyecto.Entities.Cheque.ChequeCreateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ChequeController",
+    "Method": "ChequeReport",
+    "RelativePath": "api/v1/Cheque/cheque-report",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chequeReportRequest",
+        "Type": "ChequesProyecto.Entities.Cheque.ChequeReportRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ChequeController",
+    "Method": "Generate",
+    "RelativePath": "api/v1/Cheque/generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReportTypeId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Chequenumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaymentDetail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BeneficiaryFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ChequeController",
+    "Method": "ReceiptReport",
+    "RelativePath": "api/v1/Cheque/receipt-report",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chequeReportRequest",
+        "Type": "ChequesProyecto.Entities.Cheque.ChequeReportRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.CityController",
+    "Method": "GetCityAll",
+    "RelativePath": "api/v1/City/cities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ReportTypeController",
+    "Method": "GetReportTypetAll",
+    "RelativePath": "api/v1/ReportType/report-type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
