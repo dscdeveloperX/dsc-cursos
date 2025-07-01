@@ -9,5 +9,7 @@ namespace ChequesProyecto.Services.Cheque
         Task<List<ChequeReportResponse>> GetChequeReport(ChequeReportRequest chequeReportRequest);
 
         Task<byte[]> GenerateChequeReport(List<ChequeReportResponse> chequeData, string documentType);
+
+        Task<bool> GenerarCheques(ChequeBatchCreate chequeBatchCreate);
     }
 }

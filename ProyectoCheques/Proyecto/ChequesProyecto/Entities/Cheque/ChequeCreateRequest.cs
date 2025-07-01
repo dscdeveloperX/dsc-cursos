@@ -8,9 +8,9 @@
         public string ReportTypeId { get; set; }
 
         public int CityId { get; set; }
-        public string Chequenumber { get; set; }
+        public int Chequenumber { get; set; }
         public decimal Amount { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public string PaymentDetail { get; set; }
     }
 }
