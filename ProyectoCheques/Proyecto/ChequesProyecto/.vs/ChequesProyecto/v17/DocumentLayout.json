@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\repositories\\city\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:repositories\\city\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\services\\city\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:services\\city\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\repositories\\city\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:repositories\\city\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\services\\city\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:services\\city\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|c:\\darwin\\programacion\\darwingit\\dsc-cursos\\proyectocheques\\proyecto\\chequesproyecto\\entities\\account\\accountgetallresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE50680-B675-4DE1-9305-BF74DDD674C8}|ChequesProyecto.csproj|solutionrelative:entities\\account\\accountgetallresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 377,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,78 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAwwCYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T06:54:40.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ICityService.cs",
-              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\City\\ICityService.cs",
-              "RelativeDocumentMoniker": "Services\\City\\ICityService.cs",
-              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\City\\ICityService.cs",
-              "RelativeToolTip": "Services\\City\\ICityService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:01:10.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CityService.cs",
-              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\City\\CityService.cs",
-              "RelativeDocumentMoniker": "Services\\City\\CityService.cs",
-              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Services\\City\\CityService.cs",
-              "RelativeToolTip": "Services\\City\\CityService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:01:08.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICityRepository.cs",
-              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Repositories\\City\\ICityRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\City\\ICityRepository.cs",
-              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Repositories\\City\\ICityRepository.cs",
-              "RelativeToolTip": "Repositories\\City\\ICityRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:00:55.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CityRepository.cs",
-              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Repositories\\City\\CityRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\City\\CityRepository.cs",
-              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Repositories\\City\\CityRepository.cs",
-              "RelativeToolTip": "Repositories\\City\\CityRepository.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwCkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:00:52.887Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CityController.cs",
-              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\CityController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CityController.cs",
-              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\CityController.cs",
-              "RelativeToolTip": "Controllers\\CityController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBIAAAA1AAAA",
+              "Title": "AccountGetAllResponse.cs",
+              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Entities\\Account\\AccountGetAllResponse.cs",
+              "RelativeDocumentMoniker": "Entities\\Account\\AccountGetAllResponse.cs",
+              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Entities\\Account\\AccountGetAllResponse.cs",
+              "RelativeToolTip": "Entities\\Account\\AccountGetAllResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:30:29.312Z",
+              "WhenOpened": "2025-07-01T04:55:25.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAvwBIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T04:54:45.767Z",
               "EditorCaption": ""
             }
           ]

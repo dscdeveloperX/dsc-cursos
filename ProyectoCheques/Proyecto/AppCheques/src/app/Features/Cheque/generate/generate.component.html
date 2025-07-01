@@ -11,34 +11,31 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><button>Seleccionar</button></td>
-      <td>Volkswagen</td>
-      <td>Pacifico</td>
-      <td>095921</td>
+
+
+    <ng-container *ngFor="let item of accountData">
+      <tr>
+      <td><button (click)="OnGetAccountId(item.id)" >Seleccionar</button></td>
+      <td>{{item.companyName}}</td>
+      <td>{{item.bankName}}</td>
+      <td>{{item.accountNumber}}</td>
       
     </tr>
-    <tr>
-      <td><button>Seleccionar</button></td>
-      <td>Mazda</td>
-      <td>Bolivariano</td>
-      <td>094376</td>
-    </tr>
-    <tr>
-      <td><button>Seleccionar</button></td>
-      <td>Nissan</td>
-      <td>Produbanco</td>
-      <td>093856</td>
-    </tr>
+    </ng-container>
+
+
+    
+    
   </tbody>
 </table>
 <em>Seleccione una opcion</em>
 </div>
 
-<h2>Seleccionar beneficiarios</h2>
+<h2>Archivo beneficiarios</h2>
 <div >
-  <button class="btn-blue" >Buscar archivo excel</button>
+  <input type="file">
 </div>
+
 <h2>Ciudad de emisión</h2>
 
 <select > 
@@ -52,9 +49,11 @@
 <h2>Tipo de reporte</h2>
 
 <select >
-  <option value="1">quemado Reporte Individual</option>
-  <option value="2">quemado Reporte de grupo</option>
+ <ng-container *ngFor="let item of reportTypeData">
+<option value="{{item.id}}">{{item.name}}</option>
+ </ng-container>
 </select>
+
 <h3>Detalle del reporte</h3>
 <div class="seccion">
 <textarea rows="10">Pago del fin del mes de Agosto</textarea>

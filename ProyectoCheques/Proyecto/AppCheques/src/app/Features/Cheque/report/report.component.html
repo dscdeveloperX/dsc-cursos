@@ -4,30 +4,31 @@
 <h2>Seleccionar una cuenta</h2>
 
 <table class="tabla-cuenta">
-<thead>
+  <thead>
     <tr>
-        <td>Empresa</td>
-        <td>Banco</td>
-        <td>No Cuenta</td>
+      <td>Seleccionar</td>
+      <td>Empresa</td>
+      <td>Banco</td>
+      <td>No. Cuenta</td>
     </tr>
+  </thead>
+  <tbody>
 
-</thead>
 
-<tbody>
-    <tr>
-        <td>Atun Real</td>
-        <td>Pacifico</td>
-        <td>464738</td>
+    <ng-container *ngFor="let item of accountData">
+      <tr>
+      <td><button (click)="OnGetAccountId(item.id)" >Seleccionar</button></td>
+      <td>{{item.companyName}}</td>
+      <td>{{item.bankName}}</td>
+      <td>{{item.accountNumber}}</td>
+      
     </tr>
-
-    <tr>
-        <td>Galman</td>
-        <td>Bolivariano</td>
-        <td>464578</td>
-    </tr>
-</tbody>
+    </ng-container>
 
 
+    
+    
+  </tbody>
 </table>
 
 
