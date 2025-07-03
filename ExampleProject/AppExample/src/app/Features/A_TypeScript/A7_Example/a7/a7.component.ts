@@ -12,6 +12,7 @@ export class A7Component implements OnDestroy {
 
 
 //contador que incrementará de 1 en 1
+//signal es una funcion que nos permite crear una señal reactiva sobretodo para contadores
 public contador = signal<number>(0);  
 //en esta variable guardaremos el objeto "setInterval" para asi poderlo eliminar
 private intervalo:any=null;
