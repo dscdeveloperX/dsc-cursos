@@ -1,4 +1,5 @@
 ﻿using ChequesProyecto.Entities.Account;
+using ChequesProyecto.Entities.Cheque;
 using ChequesProyecto.Entities.City;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -50,5 +51,7 @@ namespace ChequesProyecto.Repositories.Account
 
         }
 
+
+     
     }
 }

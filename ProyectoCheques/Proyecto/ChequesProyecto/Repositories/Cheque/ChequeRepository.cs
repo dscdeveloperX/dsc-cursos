@@ -91,5 +91,49 @@ namespace ChequesProyecto.Repositories.Cheque
 
         }
 
+
+        public async Task<List<ChequeReportResponse>> GetChequesByDateRange(ChequesGetByDateRangeRequest chequesGetByDateRangeRequest)
+        {
+            List<ChequeReportResponse> chequeReportResponses = new List<ChequeReportResponse>();
+            using (SqlConnection cnn = new SqlConnection(CadenaConexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_ChequesGetByDateRange", cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@AccountId", chequesGetByDateRangeRequest.AccountId);
+                    cmd.Parameters.AddWithValue("@StarDate", chequesGetByDateRangeRequest.StarDate);
+                    cmd.Parameters.AddWithValue("@EndDate", chequesGetByDateRangeRequest.EndDate);
+
+                    await cnn.OpenAsync();
+
+                    using (SqlDataReader dr = await cmd.ExecuteReaderAsync())
+
+                    {
+                        while (await dr.ReadAsync())
+                        {
+                            ChequeReportResponse chequeReportResponse = new ChequeReportResponse()
+                            {
+                                CompanyName = dr["CompanyName"].ToString(),
+                                BankName = dr["BankName"].ToString(),
+                                AccountNumber = dr["AccountNumber"].ToString(),
+                                BeneficiaryId = dr["BeneficiaryId"].ToString(),
+                                ReportTypeName = dr["ReportTypeName"].ToString(),
+                                BeneficiaryName = dr["BeneficiaryName"].ToString(),
+                                CityName = dr["CityName"].ToString(),
+                                ChequeNumber = Convert.ToInt32(dr["ChequeNumber"]),
+                                Amount = Convert.ToDecimal(dr["Amount"]),
+                                Date = Convert.ToDateTime(dr["Date"]),
+                                PaymentDetail = dr["PaymentDetail"].ToString()
+                            };
+                            chequeReportResponses.Add(chequeReportResponse);
+                        }
+                    }
+                }
+                return chequeReportResponses;
+            }
+
+        }
+
+
     }
 }

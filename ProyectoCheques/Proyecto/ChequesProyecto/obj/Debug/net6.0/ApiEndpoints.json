@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "ChequesProyecto.Controllers.ChequeController",
+    "Method": "GetChequesByDateRange",
+    "RelativePath": "api/v1/Cheque/cheque-date-range-report",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chequesGetByDateRangeRequest",
+        "Type": "ChequesProyecto.Entities.Cheque.ChequesGetByDateRangeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChequesProyecto.Controllers.ChequeController",
     "Method": "ChequeReport",
     "RelativePath": "api/v1/Cheque/cheque-report",
     "HttpMethod": "POST",
