@@ -8,6 +8,7 @@ namespace ChequesProyecto.Repositories.Cheque
         public Task<bool> CreateCheque(ChequeCreateRequest chequeCreateRequest);
 
         Task<List<ChequeReportResponse>> GetChequeReport(ChequeReportRequest chequeReportRequest);
+        Task<List<ChequeReportResponse>> GetChequesByDateRange(ChequesGetByDateRangeRequest chequesGetByDateRangeRequest);
 
 
     }

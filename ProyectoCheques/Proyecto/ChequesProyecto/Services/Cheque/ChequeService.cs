@@ -33,7 +33,9 @@ namespace ChequesProyecto.Services.Cheque
             return await _chequeRepository.GetChequeReport(chequeReportRequest) ;
         }
 
-
+        public async Task<List<ChequeReportResponse>> GetChequesByDateRange(ChequesGetByDateRangeRequest chequesGetByDateRangeRequest) {
+            return await _chequeRepository.GetChequesByDateRange(chequesGetByDateRangeRequest);
+        }
 
         public async Task<byte[]> GenerateChequeReport(List<ChequeReportResponse> chequeData, string documentType)
         {
@@ -270,6 +272,477 @@ namespace ChequesProyecto.Services.Cheque
             return true;
 
         }
+
+
+        public async Task<byte[]> GenerateChequeDateRangeReport(List<ChequeReportResponse> chequeData)
+        {
+            
+
+            float width = 7 * 72;  // 576 puntos
+            float height = PageSize.A4.Width; // 216 puntos
+            Rectangle chequeSize = new Rectangle(width, height);
+            int fontSmall = 8;
+            int fontMedium = 10;
+            int fontBig = 12;
+            string fontFamilly = "Arial";
+            float tablaBorderWidth = 0.5f;
+            (float col1, float col2, float col3, float col4, float col5, float col6, float col7) tcol = (110f, 70f, 70f,30f, 40f, 40f, 144f);
+            BaseColor borderColor = BaseColor.GRAY;
+
+            Document pdfDoc = new Document(chequeSize, 25, 25, 25, 15);
+            using var memoryStream = new MemoryStream();
+            PdfWriter writer = PdfWriter.GetInstance(pdfDoc, memoryStream);
+            pdfDoc.Open();
+            int count = 0;
+
+
+
+
+            foreach (ChequeReportResponse item in chequeData)
+            {
+                count++;
+
+                // ------------------------------------------------------------------------------
+           
+
+                // Tabla cabecera
+                PdfPTable tblCheque = new PdfPTable(7);
+                float[] widthsCheque = new float[] { tcol.col1, tcol.col2, tcol.col3, tcol.col4, tcol.col5, tcol.col6, tcol.col7 };
+                tblCheque.SetWidths(widthsCheque);
+                tblCheque.TotalWidth = (tcol.col1 + tcol.col2 + tcol.col3 + tcol.col4 + tcol.col5 + tcol.col6 + tcol.col7);
+                tblCheque.LockedWidth = true;
+                tblCheque.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                //----------------------------------------------------------------------------
+                // CABECERAS beneficiario
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellBeneficiarioCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgBeneficiarioCabecera = new Paragraph(
+                    new Chunk("BENEFICIARIO", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellBeneficiarioCabecera.AddElement(prgBeneficiarioCabecera);
+
+
+
+                tblCheque.AddCell(cellBeneficiarioCabecera);
+
+
+                //----------------------------------------------------------------------------
+                // CABECERAS tipo reporte
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellReportTypeCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgReportTypeCabecera = new Paragraph(
+                    new Chunk("REPORTE", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellReportTypeCabecera.AddElement(prgReportTypeCabecera);
+
+
+
+                tblCheque.AddCell(cellReportTypeCabecera);
+
+
+                //----------------------------------------------------------------------------
+                // CABECERAS Ciudad
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellCiudadCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgCiudadCabecera = new Paragraph(
+                    new Chunk("CIUDAD", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellCiudadCabecera.AddElement(prgCiudadCabecera);
+
+
+
+                tblCheque.AddCell(cellCiudadCabecera);
+
+
+                //----------------------------------------------------------------------------
+                // CABECERAS cheque no
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellChequeNoCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgChequeNoCabecera = new Paragraph(
+                    new Chunk("CHEQUE No", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellChequeNoCabecera.AddElement(prgChequeNoCabecera);
+
+
+
+                tblCheque.AddCell(cellChequeNoCabecera);
+
+
+
+                //----------------------------------------------------------------------------
+                // CABECERAS Monto
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellMontoCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgMontoCabecera = new Paragraph(
+                    new Chunk("MONTO", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellMontoCabecera.AddElement(prgMontoCabecera);
+
+
+
+                tblCheque.AddCell(cellMontoCabecera);
+
+
+
+
+                //----------------------------------------------------------------------------
+                // CABECERAS Fecha
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellFechaCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgFechaCabecera = new Paragraph(
+                    new Chunk("FECHA", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellFechaCabecera.AddElement(prgFechaCabecera);
+
+
+
+                tblCheque.AddCell(cellFechaCabecera);
+
+
+
+                //----------------------------------------------------------------------------
+                // CABECERAS Detalles
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellDetalleCabecera = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgDetalleCabecera = new Paragraph(
+                    new Chunk("DETALLE", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellDetalleCabecera.AddElement(prgDetalleCabecera);
+
+
+
+                tblCheque.AddCell(cellDetalleCabecera);
+
+
+
+
+
+
+
+
+                //----------------------------------------------------------------------------
+                // Celda de beneficiario
+                //----------------------------------------------------------------------------
+                PdfPCell cellBeneficiario = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgBeneficiario = new Paragraph(
+                    new Chunk(item.BeneficiaryName, FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellBeneficiario.AddElement(prgBeneficiario);
+
+                tblCheque.AddCell(cellBeneficiario);
+
+
+
+
+                //----------------------------------------------------------------------------
+                // tipo reporte
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellReportType = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgReportType = new Paragraph(
+                    new Chunk(item.ReportTypeName, FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellReportType.AddElement(prgReportType);
+
+
+
+                tblCheque.AddCell(cellReportType);
+
+
+
+                //----------------------------------------------------------------------------
+                // Ciudad
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellCiudad = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgCiudad = new Paragraph(
+                    new Chunk(item.CityName, FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellCiudad.AddElement(prgCiudad);
+
+
+
+                tblCheque.AddCell(cellCiudad);
+
+
+
+
+                //----------------------------------------------------------------------------
+                // cheque no
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellChequeNo = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgChequeNo = new Paragraph(
+                    new Chunk(item.ChequeNumber.ToString(), FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellChequeNo.AddElement(prgChequeNo);
+
+
+
+                tblCheque.AddCell(cellChequeNo);
+
+
+
+
+
+                //----------------------------------------------------------------------------
+                // Celda de Monto
+                //----------------------------------------------------------------------------
+                PdfPCell cellMonto = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgMonto = new Paragraph(
+                    new Chunk(Math.Round(item.Amount, 2).ToString(), FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellMonto.AddElement(prgMonto);
+
+
+                tblCheque.AddCell(cellMonto);
+
+
+
+                //----------------------------------------------------------------------------
+                // Celda FECHA
+                //----------------------------------------------------------------------------
+                PdfPCell cellCityDate = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgCityDate = new Paragraph(
+                    new Chunk($"{DateTime.Now.ToString("dd 'de' MMMM 'del' yyyy", new System.Globalization.CultureInfo("es-ES"))}", FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellCityDate.AddElement(prgCityDate);
+
+
+                tblCheque.AddCell(cellCityDate);
+
+
+
+                //----------------------------------------------------------------------------
+                // Detalles
+                //----------------------------------------------------------------------------
+
+
+
+                PdfPCell cellDetalle = new PdfPCell
+                {
+                    Padding = 0,
+                    Colspan = 0,
+                    BorderWidth = 0,
+                    BackgroundColor = BaseColor.WHITE,
+                    HorizontalAlignment = PdfPCell.ALIGN_LEFT,
+                    VerticalAlignment = PdfPCell.ALIGN_CENTER
+                };
+
+                Paragraph prgDetalle = new Paragraph(
+                    new Chunk(item.PaymentDetail, FontFactory.GetFont(fontFamilly, fontBig, Font.BOLD, BaseColor.BLACK)))
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+
+                cellDetalle.AddElement(prgDetalle);
+
+
+
+                tblCheque.AddCell(cellDetalle);
+
+
+
+
+
+                // Agrega la tabla al documento
+                pdfDoc.Add(tblCheque);
+
+                // Agrega una nueva página si no es el último registro
+                /*if (count < chequeData.Count)
+                {
+                    pdfDoc.NewPage();
+                }*/
+            }
+
+            pdfDoc.Close();
+            return memoryStream.ToArray();
+        }
+
 
         public static string GetCellText(SpreadsheetDocument doc, string sheetName, string cellReference)
         {

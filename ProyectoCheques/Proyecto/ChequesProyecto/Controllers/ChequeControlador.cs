@@ -70,6 +70,18 @@ namespace ChequesProyecto.Controllers
             return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
         }
 
+        [HttpPost("cheque-date-range-report")]
+        public async Task<IActionResult> GetChequesByDateRange(ChequesGetByDateRangeRequest chequesGetByDateRangeRequest)
+        {
+            List<ChequeReportResponse> chequeData = await _chequeService.GetChequesByDateRange(chequesGetByDateRangeRequest);
+            //return Ok( await _reportRepository.GetChequeReport(chequeRequest));
+            byte[] pdfBytes = await _chequeService.GenerateChequeDateRangeReport(chequeData);
+
+            return File(pdfBytes, "application/pdf", "ChequeGenerado.pdf");
+        }
+
+        
+
 
 
         [HttpPost("receipt-report")]
