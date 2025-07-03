@@ -169,3 +169,6 @@ X:\DSC\DARWINET\darwincitoPrueba\ProyectoCheques\Proyecto\ChequesProyecto\obj\De
 X:\DSC\DARWINET\darwincitoPrueba\ProyectoCheques\Proyecto\ChequesProyecto\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
 X:\DSC\DARWINET\darwincitoPrueba\ProyectoCheques\Proyecto\ChequesProyecto\bin\Debug\net6.0\DocumentFormat.OpenXml.Framework.dll
 X:\DSC\DARWINET\darwincitoPrueba\ProyectoCheques\Proyecto\ChequesProyecto\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\DARWIN\programacion\DarwinGit\dsc-cursos\ProyectoCheques\Proyecto\ChequesProyecto\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\DARWIN\programacion\DarwinGit\dsc-cursos\ProyectoCheques\Proyecto\ChequesProyecto\bin\Debug\net6.0\DocumentFormat.OpenXml.Framework.dll
+C:\DARWIN\programacion\DarwinGit\dsc-cursos\ProyectoCheques\Proyecto\ChequesProyecto\bin\Debug\net6.0\System.IO.Packaging.dll

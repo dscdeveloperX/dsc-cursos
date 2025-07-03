@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7vkPZA6VUUvKf5RMbjTXu1g2QJsDzNdesd6ncM9PuOk=",
+  "Hash": "t7zSy3YBqRzRTG6GmWrfctNY8aM+iC8pZkc7fGL7WSg=",
   "Source": "ChequesProyecto",
   "BasePath": "_content/ChequesProyecto",
   "Mode": "Default",
@@ -10,116 +10,30 @@
     {
       "Name": "ChequesProyecto\\wwwroot",
       "Source": "ChequesProyecto",
-      "ContentRoot": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\",
+      "ContentRoot": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\",
       "BasePath": "_content/ChequesProyecto",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\Uploads\\Report\\general_449.pdf",
+      "Identity": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\Uploads\\Report\\general_449.pdf",
       "SourceId": "ChequesProyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\",
+      "ContentRoot": "C:\\DARWIN\\programacion\\DarwinGit\\dsc-cursos\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\",
       "BasePath": "_content/ChequesProyecto",
-      "RelativePath": "Uploads/Report/general_449#[.{fingerprint}]?.pdf",
+      "RelativePath": "Uploads/Report/general_449.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7bko03h8po",
-      "Integrity": "03g8VoZ7KroRlH1q214vjdIooVhMX1ZE2f2jkZMKiVY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Report\\general_449.pdf"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "Uploads/Report/general_449.7bko03h8po.pdf",
-      "AssetFile": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\Uploads\\Report\\general_449.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "780"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"03g8VoZ7KroRlH1q214vjdIooVhMX1ZE2f2jkZMKiVY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 06:26:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7bko03h8po"
-        },
-        {
-          "Name": "label",
-          "Value": "Uploads/Report/general_449.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-03g8VoZ7KroRlH1q214vjdIooVhMX1ZE2f2jkZMKiVY="
-        }
-      ]
-    },
-    {
-      "Route": "Uploads/Report/general_449.pdf",
-      "AssetFile": "X:\\DSC\\DARWINET\\darwincitoPrueba\\ProyectoCheques\\Proyecto\\ChequesProyecto\\wwwroot\\Uploads\\Report\\general_449.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "780"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"03g8VoZ7KroRlH1q214vjdIooVhMX1ZE2f2jkZMKiVY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 06:26:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-03g8VoZ7KroRlH1q214vjdIooVhMX1ZE2f2jkZMKiVY="
-        }
-      ]
     }
   ]
 }
