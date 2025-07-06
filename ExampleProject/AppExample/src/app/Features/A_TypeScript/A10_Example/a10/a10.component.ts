@@ -11,7 +11,7 @@ import { IPersona } from 'src/app/Core/Models/ipersona';
   styleUrls: ['./a10.component.css']
 })
 export class A10Component {
-
+//signal con tipo Ipersona e inicializa vacio
   public personasData = signal<IPersona[]>([]);
 
 

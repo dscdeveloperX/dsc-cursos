@@ -32,7 +32,8 @@ export class A9Component implements OnDestroy {
     
     //eliminamos la variable "timeout" desde el contructor de la clase
     if(this.timeout != null){
-      clearTimeout(this.timeout);
+      clearTimeout(this.timeout),
+      this.texto.set('Este texto cambiara');
     }
     else{
       alert('Porfavor iniciar timeout');
